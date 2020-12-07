@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ORCDCQ2nw6qy+sNMdcptUZOuolnwI5BgeNrIG+/BkZ7UINgsnk1BtUJHTwnvYbJXVfqLjLr0M3NBxwn4Smtfxg==",
+  "dgSpecHash": "zSrbcfbIo5e7RPwZT2YgEauafD1FK4/bMlEDcNjSjXkF1KhevTeNHCRYAD/+1qg0ERtmAljQdSi4SV49s+ylAg==",
   "success": true,
-  "projectFilePath": "E:\\ASP.Net\\ASP.NET\\Doan\\Doan.csproj",
+  "projectFilePath": "D:\\ASP.NET\\Doan\\Doan.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
@@ -112,12 +112,5 @@
     "C:\\Users\\Admin\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file E:\\ASP.Net\\ASP.NET\\Doan\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
