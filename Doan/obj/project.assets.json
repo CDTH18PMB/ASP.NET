@@ -6069,19 +6069,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HoangLam\\.nuget\\packages\\": {}
+    "C:\\Users\\Kieu Nga\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HoangLam\\Desktop\\CinemaWeb\\Doan\\Doan.csproj",
+      "projectUniqueName": "D:\\GitHub\\ASP.NET\\Doan\\Doan.csproj",
       "projectName": "Doan",
-      "projectPath": "C:\\Users\\HoangLam\\Desktop\\CinemaWeb\\Doan\\Doan.csproj",
-      "packagesPath": "C:\\Users\\HoangLam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HoangLam\\Desktop\\CinemaWeb\\Doan\\obj\\",
+      "projectPath": "D:\\GitHub\\ASP.NET\\Doan\\Doan.csproj",
+      "packagesPath": "C:\\Users\\Kieu Nga\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\ASP.NET\\Doan\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\HoangLam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Kieu Nga\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6093,7 +6093,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -6105,7 +6104,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
@@ -6130,7 +6128,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
