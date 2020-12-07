@@ -6074,11 +6074,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ASP.Net\\ASP.NET\\Doan\\Doan.csproj",
+      "projectUniqueName": "D:\\ASP.NET\\Doan\\Doan.csproj",
       "projectName": "Doan",
-      "projectPath": "E:\\ASP.Net\\ASP.NET\\Doan\\Doan.csproj",
+      "projectPath": "D:\\ASP.NET\\Doan\\Doan.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\ASP.Net\\ASP.NET\\Doan\\obj\\",
+      "outputPath": "D:\\ASP.NET\\Doan\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6133,13 +6133,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file E:\\ASP.Net\\ASP.NET\\Doan\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

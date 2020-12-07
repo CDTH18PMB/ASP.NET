@@ -27,6 +27,17 @@
     <link rel="stylesheet" type="text/css" href="~/css/util.css">
     <link rel="stylesheet" type="text/css" href="~/css/main.css">
     <!--===============================================================================================-->
+    <script type="text/javascript">
+        function validate() {
+            var pass = document.getElementById("pass");
+            var re_pass = document.getElementById("re-pass");
+            if (pass.value != re_pass.value) {
+                alert("Mật khẩu không trùng khớp!");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 <body>
 
@@ -37,13 +48,13 @@
                     <img src="~/images/img-01.png" alt="">
                 </div>
 
-                <form class="login100-form validate-form">
+                <form class="login100-form validate-form" onsubmit="return validate()">
                     <span class="login100-form-title">
                         Sign Up
                     </span>
 
                     <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                        <input class="input100" type="text" name="email" placeholder="Email">
+                        <input class="input100" type="text" name="email" id="email" placeholder="Email">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -51,7 +62,7 @@
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <input class="input100" type="password" name="pass" placeholder="Password">
+                        <input class="input100" type="password" name="pass" id="pass" placeholder="Password">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-lock" aria-hidden="true"></i>
@@ -59,7 +70,7 @@
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <input class="input100" type="password" name="pass" placeholder="Confirm Password">
+                        <input class="input100" type="password" name="re-pass" id="re-pass" placeholder="Confirm Password">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-lock" aria-hidden="true"></i>
@@ -67,7 +78,7 @@
                     </div>
 
                     <div class="container-login100-form-btn">
-                        <button class="login100-form-btn">
+                        <button type="submit" class="login100-form-btn">
                             Sign Up
                         </button>
                     </div>
@@ -104,7 +115,7 @@
     <script>
 		$('.js-tilt').tilt({
 			scale: 1.1
-		})
+        })
     </script>
     <!--===============================================================================================-->
     <script src="~/js/main.js"></script>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ASP.Net\\ASP.NET\\Doan\\Doan.csproj": {}
+    "D:\\ASP.NET\\Doan\\Doan.csproj": {}
   },
   "projects": {
-    "E:\\ASP.Net\\ASP.NET\\Doan\\Doan.csproj": {
+    "D:\\ASP.NET\\Doan\\Doan.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ASP.Net\\ASP.NET\\Doan\\Doan.csproj",
+        "projectUniqueName": "D:\\ASP.NET\\Doan\\Doan.csproj",
         "projectName": "Doan",
-        "projectPath": "E:\\ASP.Net\\ASP.NET\\Doan\\Doan.csproj",
+        "projectPath": "D:\\ASP.NET\\Doan\\Doan.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "E:\\ASP.Net\\ASP.NET\\Doan\\obj\\",
+        "outputPath": "D:\\ASP.NET\\Doan\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
