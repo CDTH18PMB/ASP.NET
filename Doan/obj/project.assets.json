@@ -6069,19 +6069,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HoangLam\\.nuget\\packages\\": {}
+    "C:\\Users\\Nhan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HoangLam\\Desktop\\CinemaWeb\\Doan\\Doan.csproj",
+      "projectUniqueName": "C:\\Users\\Nhan\\ASP.NET\\Doan\\Doan.csproj",
       "projectName": "Doan",
-      "projectPath": "C:\\Users\\HoangLam\\Desktop\\CinemaWeb\\Doan\\Doan.csproj",
-      "packagesPath": "C:\\Users\\HoangLam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HoangLam\\Desktop\\CinemaWeb\\Doan\\obj\\",
+      "projectPath": "C:\\Users\\Nhan\\ASP.NET\\Doan\\Doan.csproj",
+      "packagesPath": "C:\\Users\\Nhan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Nhan\\ASP.NET\\Doan\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\HoangLam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
