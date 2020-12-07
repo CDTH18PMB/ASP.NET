@@ -440,9 +440,13 @@
     var str = ''; var count = 0; var total = 0;
     //Chọn phim
     function ChooseMovie(vitri, dsPhim) {
+        //lấy ra phim
         var Phim = document.forms["bookTicket"]["Phim_" + vitri].value;
 
-        document.getElementById("Phim").innerHTML = Phim;
+        // đổ tên phim vào input
+        document.forms["bookTicket"]["Phim"].value = Phim;
+
+        //đánh dấu đang chọn
         for (var i = 1; i <= dsPhim; i++) {
             if (i == vitri) {
                 document.getElementById("Phim_" + i).style.backgroundColor = "black";
@@ -456,13 +460,16 @@
 
     //Chọn suất
     function ChooseMovieSchedule(vitri, dsSuatChieu) {
+        // lấy suất chiếu
         var NgayChieu = document.forms["bookTicket"]["NgayChieu"].value;
         var Phong = document.forms["bookTicket"]["Phong_" + vitri].value;
         var ThoiGian = document.forms["bookTicket"]["ThoiGian_" + vitri].value;
 
-        document.getElementById("SuatChieu").innerHTML = ThoiGian + " - " + NgayChieu;
-        document.getElementById("Phong").innerHTML = Phong;
+        // đổ dữ liệu vào input
+        document.forms["bookTicket"]["SuatChieu"].value = ThoiGian + " - " + NgayChieu;
+        document.forms["bookTicket"]["Phong"].value = Phong;
 
+        // đánh dấu đang chọn
         for (var i = 1; i <= dsSuatChieu; i++) {
             if (i == vitri) {
                 document.getElementById("Suat_" + i).style.backgroundColor = "black";
@@ -476,34 +483,62 @@
     
     //Chọn ghế
     function ChooseSeat(Word, DayGhe, vitri, col) {
-
+        // lấy ra vị trí ghế
         var Ghe = document.forms["bookTicket"][DayGhe + vitri].value;
-        if (Ghe == '') {
-            alert(DayGhe + vitri);
-            return false;
-        }
-        str += Ghe + ', ';
-        count++;
-        total = 100000 * count;
 
-        document.getElementById("Ghe").innerHTML = str;
-        document.getElementById("TongTien").innerHTML = total;
+        //nếu ghế chưa được chọn
+        if (str.search(Ghe) == -1) {
+            str += Ghe + ' '; // cộng chuỗi
+            count++; // đếm số ghế
+            total = 100000 * count; // tính tổng tiền
 
-        for (var i = 1; i <= col; i++) {
-            if (i == vitri) {
-                document.getElementById(Word + i).style.backgroundColor = "black";
-                document.getElementById(Word + i).style.color = "white";
+            // đổ dữ liệu vào input
+            document.forms["bookTicket"]["Ghe"].value = str;
+            document.forms["bookTicket"]["TongTien"].value = total;
+
+            //đánh dấu
+            for (var i = 1; i <= col; i++) {
+                if (i == vitri) {
+                    document.getElementById(Word + i).style.backgroundColor = "black";
+                    document.getElementById(Word + i).style.color = "white";
+                }
             }
-        } 
+        } else { // ngược lại nếu ghế đã được chọn
+            // bỏ chọn ghế và cập nhật tổng tiền
+            var seat, temp;
+            if (vitri < 10) {
+                // nếu số ghế < 10 (vd: A1) thì lấy ra số ghế + khoảng trắng (A1 ) và thay thế rỗng
+                seat = str.substr(str.indexOf(Ghe), 3);
+                temp = str.replace(seat, '');
+            } else {
+                seat = str.substr(str.indexOf(Ghe), 4);
+                temp = str.replace(seat, '');
+            }
+
+            //gán lại chuỗi đã cập nhật
+            str = temp;
+
+            //cập nhật tổng tiền
+            count--;
+            total = 100000 * count;
+
+            //bỏ đánh dấu và xuất số ghế đang chọn lên input
+            document.forms["bookTicket"]["Ghe"].value = str;
+            document.forms["bookTicket"]["TongTien"].value = total;
+
+            document.getElementById(Word + vitri).style.backgroundColor = "white";
+            document.getElementById(Word + vitri).style.color = "black";
+        }
     }
 
     //Chọn lại
     function Reset() {
+        //cập nhật lại trạng thái ban đầu
         str = ''; count = 0; total = 0;
         var Word = '';
 
-        document.getElementById("Ghe").innerHTML = str;
-        document.getElementById("TongTien").innerHTML = total;
+        document.forms["bookTicket"]["Ghe"].value = str;
+        document.forms["bookTicket"]["TongTien"].value = total;
 
         for (var row = 1; row <= 10; row++) {
 
