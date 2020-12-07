@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Subject\\Asp\\ASP.NET\\Doan\\Doan.csproj": {}
+    "E:\\ASP.Net\\ASP.NET\\Doan\\Doan.csproj": {}
   },
   "projects": {
-    "D:\\Subject\\Asp\\ASP.NET\\Doan\\Doan.csproj": {
+    "E:\\ASP.Net\\ASP.NET\\Doan\\Doan.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Subject\\Asp\\ASP.NET\\Doan\\Doan.csproj",
+        "projectUniqueName": "E:\\ASP.Net\\ASP.NET\\Doan\\Doan.csproj",
         "projectName": "Doan",
-        "projectPath": "D:\\Subject\\Asp\\ASP.NET\\Doan\\Doan.csproj",
-        "packagesPath": "C:\\Users\\HoangLam\\.nuget\\packages\\",
-        "outputPath": "D:\\Subject\\Asp\\ASP.NET\\Doan\\obj\\",
+        "projectPath": "E:\\ASP.Net\\ASP.NET\\Doan\\Doan.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "E:\\ASP.Net\\ASP.NET\\Doan\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HoangLam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
