@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HoangLam\\Desktop\\CinemaWeb\\Doan\\Doan.csproj": {}
+    "D:\\5Data5\\ASPNetCore\\Course projects\\Demo\\ASP.NET\\Doan\\Doan.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HoangLam\\Desktop\\CinemaWeb\\Doan\\Doan.csproj": {
+    "D:\\5Data5\\ASPNetCore\\Course projects\\Demo\\ASP.NET\\Doan\\Doan.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HoangLam\\Desktop\\CinemaWeb\\Doan\\Doan.csproj",
+        "projectUniqueName": "D:\\5Data5\\ASPNetCore\\Course projects\\Demo\\ASP.NET\\Doan\\Doan.csproj",
         "projectName": "Doan",
-        "projectPath": "C:\\Users\\HoangLam\\Desktop\\CinemaWeb\\Doan\\Doan.csproj",
-        "packagesPath": "C:\\Users\\HoangLam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HoangLam\\Desktop\\CinemaWeb\\Doan\\obj\\",
+        "projectPath": "D:\\5Data5\\ASPNetCore\\Course projects\\Demo\\ASP.NET\\Doan\\Doan.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\5Data5\\ASPNetCore\\Course projects\\Demo\\ASP.NET\\Doan\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HoangLam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
