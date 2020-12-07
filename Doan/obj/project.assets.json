@@ -6074,11 +6074,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HoangLam\\Desktop\\CinemaWeb\\Doan\\Doan.csproj",
+      "projectUniqueName": "D:\\Subject\\Asp\\ASP.NET\\Doan\\Doan.csproj",
       "projectName": "Doan",
-      "projectPath": "C:\\Users\\HoangLam\\Desktop\\CinemaWeb\\Doan\\Doan.csproj",
+      "projectPath": "D:\\Subject\\Asp\\ASP.NET\\Doan\\Doan.csproj",
       "packagesPath": "C:\\Users\\HoangLam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HoangLam\\Desktop\\CinemaWeb\\Doan\\obj\\",
+      "outputPath": "D:\\Subject\\Asp\\ASP.NET\\Doan\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HoangLam\\AppData\\Roaming\\NuGet\\NuGet.Config",
