@@ -123,3 +123,4 @@ D:\ASP.NET\Doan\obj\Debug\netcoreapp3.1\Doan.csproj.CopyComplete
 D:\ASP.NET\Doan\obj\Debug\netcoreapp3.1\Doan.dll
 D:\ASP.NET\Doan\obj\Debug\netcoreapp3.1\Doan.pdb
 D:\ASP.NET\Doan\obj\Debug\netcoreapp3.1\Doan.genruntimeconfig.cache
+D:\ASP.NET\Doan\obj\Debug\netcoreapp3.1\Doan.csprojAssemblyReference.cache
