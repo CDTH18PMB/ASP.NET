@@ -6074,11 +6074,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\5Data5\\ASPNetCore\\Course projects\\Demo\\ASP.NET\\Doan\\Doan.csproj",
+      "projectUniqueName": "D:\\ASP.NET\\Doan\\Doan.csproj",
       "projectName": "Doan",
-      "projectPath": "D:\\5Data5\\ASPNetCore\\Course projects\\Demo\\ASP.NET\\Doan\\Doan.csproj",
+      "projectPath": "D:\\ASP.NET\\Doan\\Doan.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\5Data5\\ASPNetCore\\Course projects\\Demo\\ASP.NET\\Doan\\obj\\",
+      "outputPath": "D:\\ASP.NET\\Doan\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

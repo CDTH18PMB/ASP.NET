@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y0UpUMv35ettkaIkfSNh7lyGNFgJWnT7Mh8RbE6gMHnKQHQXEa4/D4zkE1dqkmv+5E+kWdPTp/+DmpNNurAdfA==",
+  "dgSpecHash": "zSrbcfbIo5e7RPwZT2YgEauafD1FK4/bMlEDcNjSjXkF1KhevTeNHCRYAD/+1qg0ERtmAljQdSi4SV49s+ylAg==",
   "success": true,
-  "projectFilePath": "D:\\5Data5\\ASPNetCore\\Course projects\\Demo\\ASP.NET\\Doan\\Doan.csproj",
+  "projectFilePath": "D:\\ASP.NET\\Doan\\Doan.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
