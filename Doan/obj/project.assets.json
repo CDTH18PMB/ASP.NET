@@ -6070,14 +6070,28 @@
   },
   "packageFolders": {
 <<<<<<< HEAD
+    "C:\\Users\\Nhan\\.nuget\\packages\\": {}
+=======
+<<<<<<< HEAD
     "C:\\Users\\Kieu Nga\\.nuget\\packages\\": {}
 =======
     "C:\\Users\\Admin\\.nuget\\packages\\": {}
 >>>>>>> fd3221831c9c554fc862332ec1d3e3c85130bf48
+>>>>>>> b69512bbc1f7728dd5ced7281bbf95450e63a798
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\Users\\Nhan\\ASP.NET\\Doan\\Doan.csproj",
+      "projectName": "Doan",
+      "projectPath": "C:\\Users\\Nhan\\ASP.NET\\Doan\\Doan.csproj",
+      "packagesPath": "C:\\Users\\Nhan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Nhan\\ASP.NET\\Doan\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Nhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
 <<<<<<< HEAD
       "projectUniqueName": "D:\\GitHub\\ASP.NET\\Doan\\Doan.csproj",
       "projectName": "Doan",
@@ -6097,6 +6111,7 @@
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
 >>>>>>> fd3221831c9c554fc862332ec1d3e3c85130bf48
+>>>>>>> b69512bbc1f7728dd5ced7281bbf95450e63a798
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

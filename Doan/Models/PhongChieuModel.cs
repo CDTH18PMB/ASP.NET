@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Doan.Areas.Admin.Models
+namespace Doan.Models
 {
     public class PhongChieuModel
     {

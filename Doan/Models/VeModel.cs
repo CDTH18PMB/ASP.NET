@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Doan.Areas.Admin.Models
+namespace Doan.Models
 {
     public class VeModel
     {   //mã vé
