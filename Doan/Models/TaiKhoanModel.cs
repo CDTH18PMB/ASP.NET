@@ -21,5 +21,7 @@ namespace Doan.Models
         public int trangthai { get; set; }
         public virtual HoaDonModel HoaDon { get; set; }
         public ICollection<BinhLuanModel> lstBinhLuan { get; set; }
+
+        public ICollection<VeModel> ListTaiKhoan { get; set; }
     }
 }
