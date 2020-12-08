@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Nhan\\ASP.NET\\Doan\\Doan.csproj": {}
   },
   "projects": {
@@ -15,6 +16,39 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+<<<<<<< HEAD
+    "D:\\GitHub\\ASP.NET\\Doan\\Doan.csproj": {}
+  },
+  "projects": {
+    "D:\\GitHub\\ASP.NET\\Doan\\Doan.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GitHub\\ASP.NET\\Doan\\Doan.csproj",
+        "projectName": "Doan",
+        "projectPath": "D:\\GitHub\\ASP.NET\\Doan\\Doan.csproj",
+        "packagesPath": "C:\\Users\\Kieu Nga\\.nuget\\packages\\",
+        "outputPath": "D:\\GitHub\\ASP.NET\\Doan\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Kieu Nga\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "D:\\ASP.NET\\Doan\\Doan.csproj": {}
+  },
+  "projects": {
+    "D:\\ASP.NET\\Doan\\Doan.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ASP.NET\\Doan\\Doan.csproj",
+        "projectName": "Doan",
+        "projectPath": "D:\\ASP.NET\\Doan\\Doan.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\ASP.NET\\Doan\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> fd3221831c9c554fc862332ec1d3e3c85130bf48
+>>>>>>> b69512bbc1f7728dd5ced7281bbf95450e63a798
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +60,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -38,7 +71,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -63,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
