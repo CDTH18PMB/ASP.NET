@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace Doan.Areas.Admin.Models
+namespace Doan.Models
 {
     public class TheloaiModel
     {
