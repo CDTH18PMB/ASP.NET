@@ -11,9 +11,9 @@
                 </a>
             </h1>
             <!-- if logo is image enable this
-                    <a class="navbar-brand" href="#index.html">
-                        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-                    </a> -->
+            <a class="navbar-brand" href="#index.html">
+                <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+            </a> -->
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -103,8 +103,21 @@
                     </div>
                 </nav>
             </div>
-            <!-- //toggle switch for light and dark theme -->
-        </div>
-    </nav>
+            <!--toggle sign in/up-->
+            <div class="collapse navbar-collapse" id="navbarSign">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Sign_In">Sign In</a>
+                    </li>
+                    <li> / </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Sign_Up">Sign Up</a>
+                    </li>
+                </ul>
+             
+                    <!-- //toggle switch for light and dark theme -->
+            </div>
+            </div>
+</nav>
     <!--//nav-->
 </header>
