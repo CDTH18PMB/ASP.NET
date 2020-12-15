@@ -10,17 +10,13 @@ namespace Doan.Models
     {
         //mã phòng
         [Key]
-        public int maphong { get; set; }
-        //loại phòng
-        [Required]
-        [MaxLength(50)]
-        [MinLength(10)]
-        public string loaiphong { get; set; }
+        public int MaPhong { get; set; }
+
         //số ghế
-        [Required]
-        public int soghe { get; set; }
+        public int SoGhe { get; set; }
+
         //trạng thái
-        public int trangthai { get; set; }
+        public int TrangThai { get; set; }
 
         public ICollection<VeModel> ListVePhongChieu { get; set; }
         public ICollection<GheModel> ListGhePhongChieu { get; set; }

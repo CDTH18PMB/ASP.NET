@@ -9,13 +9,13 @@ namespace Doan.Models
     public class TheloaiModel
     {
         [Key]
-        public int Maloai { get; set; }
+        public int MaLoai { get; set; }
 
         [Required]
         [StringLength(100)]
-        public string Tenloai { get; set; }
+        public string TenLoai { get; set; }
 
-        public string Trangthai { get; set; }
-        public ICollection<PhimModel> PhimList { get; set; }
+        public string TrangThai { get; set; }
+        public ICollection<PhimModel> ListPhim { get; set; }
     }
 }

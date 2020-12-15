@@ -10,13 +10,15 @@ namespace Doan.Models
     public class HoaDonModel
     {
         [Key]
-        public int mahoadon { get; set; }
-        public string username { get; set; }
-        [ForeignKey("username")]
-        public string vedadat { get; set; }
-        public int tongtien { get; set; }
-        public DateTime ngay { get; set; }
-        public int trangthai { get; set; }
-        public virtual TaiKhoanModel TaiKhoan { get; set; }
+        public int MaHD { get; set; }
+
+        public string Username { get; set; }
+        [ForeignKey("Username")]
+        
+        public string VeDaDat { get; set; }
+        public int TongTien { get; set; }
+        public DateTime Ngay { get; set; }
+        public int TrangThai { get; set; }
+        public virtual TaiKhoanModel taikhoan { get; set; }
     }
 }

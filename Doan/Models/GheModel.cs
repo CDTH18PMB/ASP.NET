@@ -10,15 +10,21 @@ namespace Doan.Models
     public class GheModel
     {   //mã ghế
         [Key]
-        public int maghe { get; set; }
+        public int MaGhe { get; set; }
         //mã phòng
-        [Required]
-        public int maphong { get; set; }
-        [ForeignKey("maphong")]
-        public virtual PhongChieuModel phongchieu { get; set; }
+
+        public int MaPhong { get; set; }
+        [ForeignKey("MaPhong")]
+        
         //giá
-        public int gia { get; set; }
+        public int Gia { get; set; }
         //trạng thái
-        public int trangthai { get; set; }
+        public int TrangThai { get; set; }
+
+        public int LichChieu { get; set; }
+        [ForeignKey("LichChieu")]
+
+        public virtual PhongChieuModel phongchieu { get; set; }
+        public virtual LichChieuModel lichchieu { get; set; }
     }
 }
