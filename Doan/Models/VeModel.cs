@@ -10,37 +10,41 @@ namespace Doan.Models
     public class VeModel
     {   //mã vé
         [Key]
-        public int mave { get; set; }
+        public int MaVe { get; set; }
+
         //mã phim
-        [Required]
-        public int maphim { get; set; }
-        [ForeignKey("maphim")]
-        public virtual PhimModel phim { get; set; }
+        public int MaPhim { get; set; }
+        [ForeignKey("MaPhim")]
+        
         //giá vé
-        [Required]
-        public int gia { get; set; }
+        public int Gia { get; set; }
+
         //mã phòng
-        [Required]
-        public int maphong { get; set; }
-        [ForeignKey("maphong")]
-        public virtual PhongChieuModel phongchieu { get; set; }
+        public int MaPhong { get; set; }
+        [ForeignKey("MaPhong")]
+        
         //mã ghế
-        [Required]
-        public int maghe { get; set; }
-        [ForeignKey("maghe")]
-        public virtual GheModel ghe { get; set; }
+        public int MaGhe { get; set; }
+        [ForeignKey("MaGhe")]
+        
         //Lịch chiếu phim
-        [Required]
-        public int suatchieu { get; set; }
-        [ForeignKey("suatchieu")]
-        public virtual LichChieuModel lichchieu { get; set; }
+        public int SuatChieu { get; set; }
+        [ForeignKey("SuatChieu")]
+
         //ngày mua vé
         [Required]
-        public DateTime ngaymua { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime NgayMua { get; set; }
+
         //người mua vé
-        [Required]
-        public string nguoimua { get; set; }
-        [ForeignKey("nguoimua")]
+        public string NguoiMua { get; set; }
+        [ForeignKey("NguoiMua")]
+
         public virtual TaiKhoanModel taikhoan { get; set; }
+        public virtual PhimModel phim { get; set; }
+        public virtual PhongChieuModel phongchieu { get; set; }
+        public virtual GheModel ghe { get; set; }
+        public virtual LichChieuModel lichchieu { get; set; }
     }
 }

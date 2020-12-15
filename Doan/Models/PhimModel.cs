@@ -9,11 +9,11 @@ namespace Doan.Models
     public class PhimModel
     {
         [Key]
-        public int Maphim { get; set; }
+        public int MaPhim { get; set; }
 
         [Required]
         [StringLength(100)]
-        public string Tenphim { get; set; }
+        public string TenPhim { get; set; }
 
         [Required]
         [StringLength(50)]
@@ -21,7 +21,7 @@ namespace Doan.Models
 
         [Required]
         [StringLength(100)]
-        public string Daodien { get; set; }
+        public string DaoDien { get; set; }
 
         [Required]
         [StringLength(50)]
@@ -29,24 +29,25 @@ namespace Doan.Models
 
         [Required]
         [StringLength(50)]
-        public string Thoiluong { get; set; }
+        public string ThoiLuong { get; set; }
 
-        public string Noidung { get; set; }
+        public string NoiDung { get; set; }
 
         [Required]
         [StringLength(20)]
-        public string Quocgia { get; set; }
-
+        public string QuocGia { get; set; }
         
-        public int Theloai { get; set; }
+        public int TheLoai { get; set; }
         [ForeignKey("Theloai")]
-        public virtual TheloaiModel Theloaiphim { get; set; }
+
         [Required]
         [DataType(DataType.Date)]
-        [Display(Name = "Ngayphat hanh")]
-        public DateTime Ngayphathanh { get; set; } 
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime NgayKhoiChieu { get; set; } 
 
-        public string Trangthai { get; set; }
+        public int TrangThai { get; set; }
+
+        public virtual TheloaiModel theloai { get; set; }
 
         public ICollection<VeModel> ListVePhim { get; set; }
         public ICollection<LichChieuModel> ListLichChieuPhim { get; set; }

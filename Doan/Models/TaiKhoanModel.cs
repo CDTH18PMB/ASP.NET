@@ -10,17 +10,17 @@ namespace Doan.Models
     public class TaiKhoanModel
     {
         [Key]
-        public string username { get; set; }
-        public string password { get; set; }
-        public string hoten { get; set; }
-        public char sdt { get; set; }
-        public int lichsudat { get; set; }
-        //khoa ngoai tu Hoadon mahd
-        [ForeignKey("lichsudat")]
-        public string loaitk { get; set; }
-        public int trangthai { get; set; }
-        public virtual HoaDonModel HoaDon { get; set; }
-        public ICollection<BinhLuanModel> lstBinhLuan { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string HoTen { get; set; }
+        public char SDT { get; set; }
+        
+        public string LoaiTK { get; set; }
+        public int TrangThai { get; set; }
+
+        public ICollection<HoaDonModel> ListHoaDon { get; set; }
+
+        public ICollection<BinhLuanModel> listBinhLuan { get; set; }
 
         public ICollection<VeModel> ListTaiKhoan { get; set; }
     }

@@ -11,26 +11,37 @@ namespace Doan.Models
     {
         //mã lịch chiếu
         [Key]
-        public int malichchieu { get; set; }
+        public int MaLichChieu { get; set; }
+
         //ngày chiếu
         [Required]
-        public DateTime ngaychieu { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime NgayChieu { get; set; }
+
         //thời gian
         [Required]
-        [MaxLength(10)]
-        [MinLength(4)]
-        public string thoigian { get; set; }
+        [StringLength(10, MinimumLength = 4)]
+        public string ThoiGian { get; set; }
+
         //mã phim
         [Required]
-        public int maphim { get; set; }
+        public int MaPhim { get; set; }
         [ForeignKey("maphim")]
-        public virtual PhimModel phim { get; set; }
+    
         //mã phòng
         [Required]
-        public int maphong { get; set; }
-        [ForeignKey("maphong")]
-        public virtual PhongChieuModel phongchieu { get; set; }
+        public int MaPhong { get; set; }
+        [ForeignKey("MaPhong")]
+
+        
         //số ghế trống
-        public int soghetrong { get; set; }
+        public int SoGheTrong { get; set; }
+
+        public virtual PhimModel Phim { get; set; }
+
+        public virtual PhongChieuModel phongchieu { get; set; }
+
+        public ICollection<GheModel> ListGhe { get; set; }
     }
 }
