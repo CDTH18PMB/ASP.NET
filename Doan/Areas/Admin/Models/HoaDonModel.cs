@@ -14,11 +14,12 @@ namespace Doan.Models
 
         public string Username { get; set; }
         [ForeignKey("Username")]
+        public TaiKhoanModel taikhoan { get; set; }
         
         public string VeDaDat { get; set; }
         public int TongTien { get; set; }
         public DateTime Ngay { get; set; }
         public int TrangThai { get; set; }
-        public virtual TaiKhoanModel taikhoan { get; set; }
+        //public virtual TaiKhoanModel taikhoan { get; set; }
     }
 }
