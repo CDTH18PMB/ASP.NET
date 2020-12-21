@@ -13,18 +13,20 @@ namespace Doan.Models
         public int MaGhe { get; set; }
         //mã phòng
 
-        public int MaPhong { get; set; }
+        //public int MaPhong { get; set; }
         [ForeignKey("MaPhong")]
+        public PhongChieuModel phong { get; set; }
         
         //giá
         public int Gia { get; set; }
         //trạng thái
         public int TrangThai { get; set; }
 
-        public int LichChieu { get; set; }
+        //public int LichChieu { get; set; }
         [ForeignKey("LichChieu")]
+        public LichChieuModel lichchieu { get; set; }
 
-        public virtual PhongChieuModel phongchieu { get; set; }
-        public virtual LichChieuModel lichchieu { get; set; }
+        //public virtual phongchieumodel phongchieu { get; set; }
+        //public virtual lichchieumodel lichchieu { get; set; }
     }
 }

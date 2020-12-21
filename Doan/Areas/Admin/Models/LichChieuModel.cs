@@ -26,22 +26,24 @@ namespace Doan.Models
 
         //mã phim
         [Required]
-        public int MaPhim { get; set; }
+        //public int MaPhim { get; set; }
         [ForeignKey("maphim")]
+        public PhimModel phim { get; set; }
     
         //mã phòng
         [Required]
-        public int MaPhong { get; set; }
+        //public int MaPhong { get; set; }
         [ForeignKey("MaPhong")]
+        public PhongChieuModel phong { get; set; }
 
         
         //số ghế trống
         public int SoGheTrong { get; set; }
 
-        public virtual PhimModel Phim { get; set; }
+        //public virtual PhimModel Phim { get; set; }
 
-        public virtual PhongChieuModel phongchieu { get; set; }
+        //public virtual PhongChieuModel phongchieu { get; set; }
 
-        public ICollection<GheModel> ListGhe { get; set; }
+        //public ICollection<GheModel> ListGhe { get; set; }
     }
 }

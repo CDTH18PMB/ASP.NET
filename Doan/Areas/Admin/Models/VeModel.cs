@@ -13,23 +13,27 @@ namespace Doan.Models
         public int MaVe { get; set; }
 
         //mã phim
-        public int MaPhim { get; set; }
+        //public int MaPhim { get; set; }
         [ForeignKey("MaPhim")]
+        public PhimModel phim { get; set; }
         
         //giá vé
         public int Gia { get; set; }
 
         //mã phòng
-        public int MaPhong { get; set; }
+        //public int MaPhong { get; set; }
         [ForeignKey("MaPhong")]
+        public PhongChieuModel phong { get; set; }
         
         //mã ghế
-        public int MaGhe { get; set; }
+        //public int MaGhe { get; set; }
         [ForeignKey("MaGhe")]
+        public GheModel ghe { get; set; }
         
         //Lịch chiếu phim
-        public int SuatChieu { get; set; }
+        //public int SuatChieu { get; set; }
         [ForeignKey("SuatChieu")]
+        public LichChieuModel lichchieu { set; get; }
 
         //ngày mua vé
         [Required]
@@ -38,13 +42,14 @@ namespace Doan.Models
         public DateTime NgayMua { get; set; }
 
         //người mua vé
-        public string NguoiMua { get; set; }
+        //public string NguoiMua { get; set; }
         [ForeignKey("NguoiMua")]
+        public TaiKhoanModel taikhoan { get; set; }
 
-        public virtual TaiKhoanModel taikhoan { get; set; }
-        public virtual PhimModel phim { get; set; }
-        public virtual PhongChieuModel phongchieu { get; set; }
-        public virtual GheModel ghe { get; set; }
-        public virtual LichChieuModel lichchieu { get; set; }
+        //public virtual TaiKhoanModel taikhoan { get; set; }
+        //public virtual PhimModel phim { get; set; }
+        //public virtual PhongChieuModel phongchieu { get; set; }
+        //public virtual GheModel ghe { get; set; }
+        //public virtual LichChieuModel lichchieu { get; set; }
     }
 }

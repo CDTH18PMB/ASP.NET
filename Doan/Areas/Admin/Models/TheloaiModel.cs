@@ -16,6 +16,6 @@ namespace Doan.Models
         public string TenLoai { get; set; }
 
         public string TrangThai { get; set; }
-        public ICollection<PhimModel> ListPhim { get; set; }
+        //public ICollection<PhimModel> ListPhim { get; set; }
     }
 }

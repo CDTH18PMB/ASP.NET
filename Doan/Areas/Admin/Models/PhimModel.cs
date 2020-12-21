@@ -37,8 +37,9 @@ namespace Doan.Models
         [StringLength(20)]
         public string QuocGia { get; set; }
         
-        public int TheLoai { get; set; }
+        //public int TheLoai { get; set; }
         [ForeignKey("Theloai")]
+        public TheloaiModel theloai { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
@@ -47,10 +48,10 @@ namespace Doan.Models
 
         public int TrangThai { get; set; }
 
-        public virtual TheloaiModel theloai { get; set; }
+        //public virtual TheloaiModel theloai { get; set; }
 
-        public ICollection<VeModel> ListVePhim { get; set; }
-        public ICollection<LichChieuModel> ListLichChieuPhim { get; set; }
+        //public ICollection<VeModel> ListVePhim { get; set; }
+        //public ICollection<LichChieuModel> ListLichChieuPhim { get; set; }
 
     }
 }

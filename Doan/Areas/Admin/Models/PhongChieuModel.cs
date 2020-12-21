@@ -18,8 +18,8 @@ namespace Doan.Models
         //trạng thái
         public int TrangThai { get; set; }
 
-        public ICollection<VeModel> ListVePhongChieu { get; set; }
-        public ICollection<GheModel> ListGhePhongChieu { get; set; }
-        public ICollection<LichChieuModel> ListLichChieuPhongChieu { get; set; }
+        //public ICollection<VeModel> ListVePhongChieu { get; set; }
+        //public ICollection<GheModel> ListGhePhongChieu { get; set; }
+        //public ICollection<LichChieuModel> ListLichChieuPhongChieu { get; set; }
     }
 }

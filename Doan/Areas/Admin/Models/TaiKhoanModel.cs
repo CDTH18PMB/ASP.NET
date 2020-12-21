@@ -18,10 +18,10 @@ namespace Doan.Models
         public string LoaiTK { get; set; }
         public int TrangThai { get; set; }
 
-        public ICollection<HoaDonModel> ListHoaDon { get; set; }
+        //public ICollection<HoaDonModel> ListHoaDon { get; set; }
 
-        public ICollection<BinhLuanModel> listBinhLuan { get; set; }
+        //public ICollection<BinhLuanModel> listBinhLuan { get; set; }
 
-        public ICollection<VeModel> ListTaiKhoan { get; set; }
+        //public ICollection<VeModel> ListTaiKhoan { get; set; }
     }
 }
