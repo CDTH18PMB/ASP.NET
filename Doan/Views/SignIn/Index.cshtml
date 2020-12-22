@@ -2,13 +2,14 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    ViewData["Title"] = "Sign Up";
+    ViewData["Title"] = "Sign In";
     Layout = null;
 }
+@model TaiKhoanModel
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sign Up</title>
+    <title>Sign In</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -16,7 +17,7 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="~/vendor/bootstrap/css/bootstrap.min.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="~/vendor/animate/animate.css">
     <!--===============================================================================================-->
@@ -27,17 +28,6 @@
     <link rel="stylesheet" type="text/css" href="~/css/util.css">
     <link rel="stylesheet" type="text/css" href="~/css/main.css">
     <!--===============================================================================================-->
-    <script type="text/javascript">
-        function validate() {
-            var pass = document.getElementById("pass");
-            var re_pass = document.getElementById("re-pass");
-            if (pass.value != re_pass.value) {
-                alert("Mật khẩu không trùng khớp!");
-                return false;
-            }
-            return true;
-        }
-    </script>
 </head>
 <body>
 
@@ -45,16 +35,16 @@
         <div class="container-login100">
             <div class="wrap-login100">
                 <div class="login100-pic js-tilt" data-tilt>
-                    <img src="~/images/img-01.png" alt="">
+                    <img src="~/images/img-01.png" alt="IMG">
                 </div>
 
-                <form class="login100-form validate-form" onsubmit="return validate()">
+                <form class="login100-form validate-form" method="post">
                     <span class="login100-form-title">
-                        Sign Up
+                        Sign In
                     </span>
 
                     <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                        <input class="input100" type="text" name="email" id="email" placeholder="Email">
+                        <input class="input100" type="email" asp-for="Username" name="Username" placeholder="Email">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -62,15 +52,7 @@
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <input class="input100" type="password" name="pass" id="pass" placeholder="Password">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
-                            <i class="fa fa-lock" aria-hidden="true"></i>
-                        </span>
-                    </div>
-
-                    <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <input class="input100" type="password" name="re-pass" id="re-pass" placeholder="Confirm Password">
+                        <input class="input100" type="password" asp-for="Password" name="Password" placeholder="Password">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-lock" aria-hidden="true"></i>
@@ -78,22 +60,25 @@
                     </div>
 
                     <div class="container-login100-form-btn">
-                        <button type="submit" class="login100-form-btn">
-                            Sign Up
+                        <button class="login100-form-btn" type="submit" asp-action="Login">
+                            Sign In
                         </button>
                     </div>
-                    <br />
-                    <br />
+
                     <div class="text-center p-t-12">
                         <span class="txt1">
-                            Have you got account?
+                            Forgot
                         </span>
-                        <a class="txt2" asp-controller="Home" asp-action="Sign_In">
-                            Sign In
+                        <a class="txt2" href="#">
+                            Username / Password?
                         </a>
-                        <span class="txt1">
-                            now.
-                        </span>
+                    </div>
+
+                    <div class="text-center p-t-136">
+                        <a class="txt2" asp-controller="SignIn" asp-action="Sign_Up">
+                            Create your Account
+                            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                        </a>
                     </div>
                 </form>
             </div>
@@ -115,7 +100,7 @@
     <script>
 		$('.js-tilt').tilt({
 			scale: 1.1
-        })
+		})
     </script>
     <!--===============================================================================================-->
     <script src="~/js/main.js"></script>

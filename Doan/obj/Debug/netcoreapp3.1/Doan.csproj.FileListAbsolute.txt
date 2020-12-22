@@ -107,8 +107,6 @@ D:\ASP.NET\Doan\obj\Debug\netcoreapp3.1\Razor\Views\Home\Contact.cshtml.g.cs
 D:\ASP.NET\Doan\obj\Debug\netcoreapp3.1\Razor\Views\Home\Detail.cshtml.g.cs
 D:\ASP.NET\Doan\obj\Debug\netcoreapp3.1\Razor\Views\Home\Genre.cshtml.g.cs
 D:\ASP.NET\Doan\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-D:\ASP.NET\Doan\obj\Debug\netcoreapp3.1\Razor\Views\Home\Sign_In.cshtml.g.cs
-D:\ASP.NET\Doan\obj\Debug\netcoreapp3.1\Razor\Views\Home\Sign_Up.cshtml.g.cs
 D:\ASP.NET\Doan\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_FooterPartial.cshtml.g.cs
 D:\ASP.NET\Doan\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_HeaderPartial.cshtml.g.cs
 D:\ASP.NET\Doan\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_HeadPartial.cshtml.g.cs
@@ -165,3 +163,5 @@ D:\ASP.NET\Doan\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.S
 D:\ASP.NET\Doan\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\ASP.NET\Doan\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\ASP.NET\Doan\obj\Debug\netcoreapp3.1\Doan.csprojAssemblyReference.cache
+D:\ASP.NET\Doan\obj\Debug\netcoreapp3.1\Razor\Views\SignIn\Index.cshtml.g.cs
+D:\ASP.NET\Doan\obj\Debug\netcoreapp3.1\Razor\Views\SignIn\Sign_Up.cshtml.g.cs

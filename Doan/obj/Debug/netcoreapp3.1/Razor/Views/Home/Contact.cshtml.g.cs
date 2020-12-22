@@ -21,13 +21,20 @@ using Doan;
 #nullable disable
 #nullable restore
 #line 2 "D:\ASP.NET\Doan\Views\_ViewImports.cshtml"
+using Doan.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "D:\ASP.NET\Doan\Views\_ViewImports.cshtml"
 using Doan.Controllers;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"11029b3d656714f38a98910df0b0dc7da1c83f47", @"/Views/Home/Contact.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6643a7e4305fdcd4d25117f3e4b29679e3167956", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"99ee734336579f52349c94bf4d0670a9e620d7a7", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Contact : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("action", new global::Microsoft.AspNetCore.Html.HtmlString("https://sendmail.w3layouts.com/submitForm"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -78,7 +85,7 @@ using Doan.Controllers;
             <div class=""contact-view mt-lg-5 mt-4"">
                 <div class=""conhny-form-section"">
                     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "11029b3d656714f38a98910df0b0dc7da1c83f475058", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "11029b3d656714f38a98910df0b0dc7da1c83f475200", async() => {
                 WriteLiteral("\r\n                        <div class=\"form-grids\">\r\n                            <div class=\"form-input\">\r\n                                <input type=\"text\" name=\"w3lName\" id=\"w3lName\" placeholder=\"Enter your name *\"");
                 BeginWriteAttribute("required", " required=\"", 1208, "\"", 1219, 0);
                 EndWriteAttribute();
