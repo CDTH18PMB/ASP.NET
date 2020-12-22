@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using Doan.Data;
 
 namespace Doan
 {
@@ -23,7 +25,18 @@ namespace Doan
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //services.AddDistributedMemoryCache();
+            //{
+            //    services.AddSession(options =>
+            //    {
+            //        options.IdleTimeout = TimeSpan.FromSeconds(300);
+            //        options.Cookie.HttpOnly = true;
+            //        options.Cookie.IsEssential = true;
+
+            //    });
+            //}
             services.AddControllersWithViews();
+            services.AddDbContext<DPContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DPContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,7 +56,7 @@ namespace Doan
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            //app.UseSession();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

@@ -35,13 +35,5 @@ namespace Doan.Controllers
         {
             return View();
         }
-        public IActionResult Sign_In()
-        {
-            return View();
-        }
-        public IActionResult Sign_Up()
-        {
-            return View();
-        }
     }
 }
