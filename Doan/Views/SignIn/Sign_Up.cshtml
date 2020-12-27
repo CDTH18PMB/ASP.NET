@@ -5,6 +5,7 @@
     ViewData["Title"] = "Sign Up";
     Layout = null;
 }
+@model TaiKhoanModel
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +41,12 @@
     </script>
 </head>
 <body>
-
+    @if (TempData["AlertMessage"] != null)
+    {
+        <div id="AlertBox" class="alert @TempData["AlertType"] hide" role="alert">
+            @TempData["AlertMessage"]
+        </div>
+    }
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
@@ -48,13 +54,13 @@
                     <img src="~/images/img-01.png" alt="">
                 </div>
 
-                <form class="login100-form validate-form" onsubmit="return validate()">
+                <form class="login100-form validate-form" onsubmit="return validate()" method="post">
                     <span class="login100-form-title">
                         Sign Up
                     </span>
 
                     <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                        <input class="input100" type="text" name="email" id="email" placeholder="Email">
+                        <input class="input100" type="email" asp-for="Username" name="Username" id="email" placeholder="Email">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -62,7 +68,7 @@
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <input class="input100" type="password" name="pass" id="pass" placeholder="Password">
+                        <input class="input100" type="password" asp-for="Password" name="Password" id="pass" placeholder="Password">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-lock" aria-hidden="true"></i>
@@ -78,7 +84,7 @@
                     </div>
 
                     <div class="container-login100-form-btn">
-                        <button type="submit" class="login100-form-btn">
+                        <button type="submit" class="login100-form-btn" asp-action="Register">
                             Sign Up
                         </button>
                     </div>
@@ -99,9 +105,15 @@
             </div>
         </div>
     </div>
+    @section scripts{
+    <script>
+        $(function () {
+            $('#AlertBox').removeClass('hide');
+            $('#AlertBox').delay(2000).slideUp(500);
+        });
 
-
-
+    </script>
+    }
 
     <!--===============================================================================================-->
     <script src="~/vendor/jquery/jquery-3.2.1.min.js"></script>
@@ -113,8 +125,8 @@
     <!--===============================================================================================-->
     <script src="~/vendor/tilt/tilt.jquery.min.js"></script>
     <script>
-		$('.js-tilt').tilt({
-			scale: 1.1
+        $('.js-tilt').tilt({
+            scale: 1.1
         })
     </script>
     <!--===============================================================================================-->

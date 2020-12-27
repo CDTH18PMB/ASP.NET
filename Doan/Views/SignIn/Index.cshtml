@@ -30,7 +30,12 @@
     <!--===============================================================================================-->
 </head>
 <body>
-
+    @if (TempData["AlertMessage"] != null)
+    {
+        <div id="AlertBox" class="alert @TempData["AlertType"] hide" role="alert">
+            @TempData["AlertMessage"]
+        </div>
+    }
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
@@ -84,9 +89,15 @@
             </div>
         </div>
     </div>
+    @section scripts{
+        <script>
+            $(function () {
+                $('#AlertBox').removeClass('hide');
+                $('#AlertBox').delay(2000).slideUp(500);
+            });
 
-
-
+        </script>
+    }
 
     <!--===============================================================================================-->
     <script src="~/vendor/jquery/jquery-3.2.1.min.js"></script>
@@ -98,9 +109,9 @@
     <!--===============================================================================================-->
     <script src="~/vendor/tilt/tilt.jquery.min.js"></script>
     <script>
-		$('.js-tilt').tilt({
-			scale: 1.1
-		})
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
     </script>
     <!--===============================================================================================-->
     <script src="~/js/main.js"></script>
