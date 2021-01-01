@@ -255,7 +255,24 @@
                             <a asp-controller="Home" asp-action="Book_Tickets"><button class='btn btn-warning' style='width:100%'>QUAY LẠI</button></a>
                         </div>
                         <div class='col-sm-6'>
-                            <button class='btn btn-success' style='width:100%'>THANH TOÁN</button>
+                            <button type="button" class='btn btn-success' style='width:100%' onclick="ThanhToan()">THANH TOÁN</button>
+                        </div>
+                    </div>
+
+                    <!-- modal thanh toán -->
+                    <div class="modal fade" id="thanhtoan_modal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <center>
+                                    <i class='fa fa-check-circle' style="text-align:center; font-size:200px; color:springgreen"></i>
+                                    <h3 style="color:springgreen">THANH TOÁN THÀNH CÔNG</h3>
+                                    <button asp-controller="Home" asp-action="Index" class="btn btn-primary" style="margin-top:100px; width:200px">
+                                        <i class="fa fa-home" style="margin-right:5px"></i>Trang chủ</button>
+                                    </center>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

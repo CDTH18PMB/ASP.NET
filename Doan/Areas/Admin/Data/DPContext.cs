@@ -11,6 +11,7 @@ namespace Doan.Data
     {
         public DPContext(DbContextOptions<DPContext> options) : base(options) { }
 
+        
 
         public DbSet<TaiKhoanModel> TaiKhoan { get; set; }
         public DbSet<TheloaiModel> TheLoai { get; set; }
