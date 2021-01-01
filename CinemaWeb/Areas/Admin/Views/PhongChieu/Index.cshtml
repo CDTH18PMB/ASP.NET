@@ -1,0 +1,74 @@
+﻿@model IEnumerable<CinemaWeb.Areas.Admin.Models.PhongChieuModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Phòng Chiếu</h1>
+
+<p>
+    <div class="row">
+        <div class="col-md-4">
+            <button onclick="showModal('@Url.Action("AddOrEdit","PhongChieu",null,Context.Request.Scheme)','Thêm Phòng Chiếu')" 
+                    class="btn btn-outline-primary">Create New</button>
+        </div>
+        <div class="col-md-8">
+            <input type="search" class="form-control"  placeholder="Nhập để tìm"/>
+        </div>
+    </div>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(Model => Model.MaPhong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Model => Model.SoGhe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Model => Model.TrangThai)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(Model => item.MaPhong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoGhe)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrangThai)
+            </td>
+            <td>
+                <button onclick="showModal('@Url.Action("Details", "PhongChieu", new {id = item.MaPhong },Context.Request.Scheme)', 'Chi tiết phòng chiếu')"
+                   class="btn btn-outline-info">Details</button>
+                <button onclick="showModal('@Url.Action("AddOrEdit","PhongChieu",new {id = item.MaPhong},Context.Request.Scheme)', 'Sửa Phòng Chiếu')"
+                        class="btn btn-outline-warning">Edit</button>
+                <form asp-action="Delete" asp-route-id="@item.MaPhong" class="d-inline">
+                    <input type="hidden" asp-for="@item.MaPhong" />
+                    <button type="submit" class="btn btn-outline-danger">Delete</button>
+                </form>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<div class="modal" tabindex="-1" id="form-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
