@@ -10,7 +10,7 @@ namespace CinemaWeb.Areas.Admin.Models
     public class TaiKhoanModel
     {
         [Key]
-        [Column(TypeName ="nvarchar(50)")]
+        [Column(TypeName ="varchar(50)")]
         public string Email { get; set; }
 
         [Required]
