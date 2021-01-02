@@ -1,0 +1,40 @@
+﻿@model CinemaWeb.Areas.Admin.Models.GheModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details Ghế</h1>
+
+<div>
+
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Mã Phòng
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.maphong.MaPhong)
+        </dd>
+        <dt class = "col-sm-2">
+            Lịch chiếu
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.lichchieu.NgayChieu)
+        </dd>
+        <dt class = "col-sm-2">
+            Trạng Thái
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TrangThai)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.MaGhe" class="btn btn-success">Edit</a>
+    <form asp-action="Delete" asp-route-id="@Model.MaGhe" style="margin:10px 0 10px 0">
+        <input type="hidden" asp-for="MaGhe" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+    </form>
+    <a asp-action="Index">Back to List</a>
+</div>

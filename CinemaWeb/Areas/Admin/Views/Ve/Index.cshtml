@@ -1,0 +1,38 @@
+﻿@model IEnumerable<CinemaWeb.Areas.Admin.Models.VeModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-center" style="margin-bottom:50px">Quản lý vé</h1>
+
+<p>
+    <div class='row'>
+        <div class="col-md-4">
+            <a onclick="showModal('@Url.Action("AddOrEdit","Ve",null,Context.Request.Scheme)', 'Thêm Vé')"
+               class='btn btn-outline-primary'>Create New</a>
+        </div>
+        <div class="col-md-8">
+            <input type="search" class="form-control" placeholder='Nhập để tìm'>
+        </div>
+    </div>
+</p>
+
+
+<div id="view-index">
+    @await Html.PartialAsync("_ViewIndex", Model)
+</div>
+
+
+<div class="modal" tabindex="-1" id="form-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+            </div>
+        </div>
+    </div>
+</div>

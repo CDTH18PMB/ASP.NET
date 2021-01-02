@@ -1,0 +1,28 @@
+﻿@model CinemaWeb.Areas.Admin.Models.PhongChieuModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = null;
+}
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="AddOrEdit" asp-route-id="@Model.MaPhong">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="MaPhong" />
+            <div class="form-group">
+                <label asp-for="SoGhe" class="control-label">Số Ghế</label>
+                <input asp-for="SoGhe" class="form-control"/>
+                <span asp-validation-for="SoGhe" class="text-danger"></span>
+            </div>
+            <input type="hidden"asp-for="TrangThai" value="1"/>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <button class="btn btn-outline-secondary" data-dismiss="modal">Back to List</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

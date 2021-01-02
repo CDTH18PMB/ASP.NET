@@ -1,0 +1,33 @@
+﻿@model CinemaWeb.Areas.Admin.Models.PhongChieuModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = null;
+}
+<div>
+    <dl class="row">
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.MaPhong)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.MaPhong)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.SoGhe)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.SoGhe)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.TrangThai)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.TrangThai)
+        </dd>
+    </dl>
+</div>
+<div>
+    <button onclick="showModal('@Url.Action("AddOrEdit","PhongChieu",new {id = Model.MaPhong},Context.Request.Scheme)', 'Sửa Phòng Chiếu')"
+            class="btn btn-outline-warning">Edit</button>
+    <button class="btn btn-outline-secondary" data-dismiss="modal">Back to List</button>
+</div>
