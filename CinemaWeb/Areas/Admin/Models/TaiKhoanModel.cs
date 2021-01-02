@@ -10,23 +10,24 @@ namespace CinemaWeb.Areas.Admin.Models
     public class TaiKhoanModel
     {
         [Key]
-        [Column(TypeName ="nvarchar(20)")]
+        [Required]
+        [Column(TypeName ="nvarchar(50)")]
         public string Username { get; set; }
 
-        [Column(TypeName = "nvarchar(20)")]
+        [Required]
+        [Column(TypeName = "varchar(50)")]
         public string Password { get; set; }
 
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string HoTen { get; set; }
 
-        [Column(TypeName = "char(10)")]
+        [Column(TypeName = "varchar(10)")]
         public string SDT { get; set; }
 
         [Column(TypeName = "nvarchar(10)")]
         public string LoaiTK { get; set; }
 
-        [Required]
-        public bool TrangThai { get; set; }
+        public int TrangThai { get; set; }
 
         //
         public ICollection<HoaDonModel> ListTaiKhoan_HoaDon { get; set; }

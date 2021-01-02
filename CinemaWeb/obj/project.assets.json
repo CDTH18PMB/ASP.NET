@@ -5797,19 +5797,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HoangLam\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HoangLam\\source\\repos\\CinemaWeb\\CinemaWeb\\CinemaWeb.csproj",
+      "projectUniqueName": "D:\\ASP.NET\\CinemaWeb\\CinemaWeb.csproj",
       "projectName": "CinemaWeb",
-      "projectPath": "C:\\Users\\HoangLam\\source\\repos\\CinemaWeb\\CinemaWeb\\CinemaWeb.csproj",
-      "packagesPath": "C:\\Users\\HoangLam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HoangLam\\source\\repos\\CinemaWeb\\CinemaWeb\\obj\\",
+      "projectPath": "D:\\ASP.NET\\CinemaWeb\\CinemaWeb.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\ASP.NET\\CinemaWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\HoangLam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5870,7 +5870,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
