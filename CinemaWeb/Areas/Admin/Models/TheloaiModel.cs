@@ -13,14 +13,13 @@ namespace CinemaWeb.Areas.Admin.Models
         public int MaLoai { get; set; }
 
         [Required]
-        [StringLength(100)]
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string TenLoai { get; set; }
 
         [Required]
         public bool TrangThai { get; set; }
 
-        //
+        
         public ICollection<PhimModel> ListTheLoai_Phim { get; set; }
     }
 }

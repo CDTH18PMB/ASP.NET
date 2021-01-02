@@ -12,18 +12,21 @@ namespace CinemaWeb.Areas.Admin.Models
         [Key]
         public int MaHD { get; set; }
 
-        [Column(TypeName ="nvarchar(50)")]
-        public string Username { get; set; }
-        [ForeignKey("Username")]
-        public virtual TaiKhoanModel username { get; set; }
+        public string Email { get; set; }
+        [ForeignKey("Email")]
+        public virtual TaiKhoanModel email { get; set; }
 
+        [Required]
         [Column(TypeName ="nvarchar(100)")]
         public string VeDaDat { get; set; }
 
+        [Required]
         public int TongTien { get; set; }
 
+        [Required]
         public DateTime Ngay { get; set; }
 
+        [Required]
         public bool TrangThai { get; set; }
     }
 }
