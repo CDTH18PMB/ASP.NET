@@ -1,0 +1,76 @@
+﻿@model IEnumerable<CinemaWeb.Areas.Admin.Models.VeModel>
+
+<table class="table">
+    <thead>
+        <tr style="text-align:center">
+            <th>
+                @Html.DisplayNameFor(model => model.MaPhim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SuatChieu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaPhong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaGhe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NgayMua)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NguoiMua)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gia)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr style="text-align:center">
+                @*<div class="row">
+                    <div class="col-8">*@
+                        <td>
+                            @Html.DisplayFor(modelItem => item.maphim.TenPhim)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.suatchieu.NgayChieu)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.maphong.MaPhong)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.maghe.MaGhe)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NgayMua)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.nguoimua.Username)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Gia)
+                        </td>
+                    @*</div>
+                    <div class="col-4">*@
+                        <td>
+                            <div class="btn-group">
+                                <a onclick="showModal('@Url.Action("Details","Ve",new {id= item.MaVe},Context.Request.Scheme)', 'Chi tiết Vé')"
+                                   class='btn btn-outline-info'>Details </a>
+                                <a onclick="showModal('@Url.Action("AddOrEdit","Ve",new {id= item.MaVe},Context.Request.Scheme)', 'Cập nhật Vé')"
+                                   class='btn btn-outline-warning'>Edit </a>
+                                <form asp-action="Delete" asp-route-id="@item.MaVe" onsubmit="return Delete(this)">
+                                    <input type="hidden" asp-for="@item.MaVe" />
+                                    <input type="submit" value="Delete" class='btn btn-outline-danger' />
+                                </form>
+                                
+                            </div>
+                        </td>
+                    @*</div>
+                </div>*@
+            </tr>
+        }
+    </tbody>
+</table>

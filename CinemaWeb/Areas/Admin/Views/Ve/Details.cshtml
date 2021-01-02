@@ -1,0 +1,58 @@
+﻿@model CinemaWeb.Areas.Admin.Models.VeModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = null;
+}
+<div>
+    <dl class="row">
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.MaPhim)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.maphim.TenPhim)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.SuatChieu)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.suatchieu.NgayChieu)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.MaPhong)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.maphong.MaPhong)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.MaGhe)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.maghe.MaGhe)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.NgayMua)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.NgayMua)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.NguoiMua)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.nguoimua.Username)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Gia)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Gia)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a onclick="showModal('@Url.Action("AddOrEdit","Ve",new {id= Model.MaVe},Context.Request.Scheme)', 'Cập nhật Vé')"
+       class='btn btn-outline-warning'>Edit </a>
+    <button class="btn btn-outline-secondary" data-dismiss="modal">Back to List</button>
+</div>
+

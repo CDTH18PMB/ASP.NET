@@ -1,0 +1,61 @@
+﻿@model IEnumerable<CinemaWeb.Areas.Admin.Models.GheModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index Ghế</h1>
+
+<p>
+    <div class='row'>
+        <div class="col-md-4">
+            <div style='margin: 10px 0 0px 0'>
+                <a asp-action="Create" class='btn btn-primary'>Create New</a>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class='form-group' style='margin: 10px 0 0px 0'>
+                <input type="search" class="form-control" placeholder='Nhập để tìm'>
+            </div>
+        </div>
+    </div>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Mã Ghế
+            </th>
+            <th>
+                Mã Phòng
+            </th>
+            <th>
+                Lịch Chiếu
+            </th>
+            <th>
+                Trạng Thái
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaGhe)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.maphong.MaPhong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lichchieu.NgayChieu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrangThai)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.MaGhe" class='btn btn-info'>Details</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
