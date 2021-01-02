@@ -52,15 +52,14 @@ namespace CinemaWeb
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
-            });
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapAreaControllerRoute(
-                   "Admin",
-                   "Admin",
-                   "{area:exists}/{controller=PhongChieu}/{action=Index}/{id?}");
+                   name: "Admin",
+                   pattern: "{area:exists}/{controller=LichChieu}/{action=Index}/{id?}");
+
+                endpoints.MapControllerRoute(
+                   name: "default",
+                   pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
             });
         }
     }
