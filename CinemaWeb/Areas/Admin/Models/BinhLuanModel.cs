@@ -15,14 +15,18 @@ namespace CinemaWeb.Areas.Admin.Models
         [ForeignKey("MaPhim")]
         public virtual PhimModel maphim { get; set; }
 
-        public string Username { get; set; }
-        [ForeignKey("Username")]
-        public virtual TaiKhoanModel username { get; set; }
+        public string Email { get; set; }
+        [ForeignKey("Email")]
+        public virtual TaiKhoanModel email { get; set; }
 
+        [Required]
+        [Column(TypeName ="text")]
         public string NoiDung { get; set; }
 
+        [Required]
         public DateTime NgayDang { get; set; }
 
+        [Required]
         public bool TrangThai { get; set; }
     }
 }
