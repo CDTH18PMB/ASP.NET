@@ -12,36 +12,31 @@ namespace CinemaWeb.Areas.Admin.Models
         public int MaPhim { get; set; }
 
         [Required]
-        [StringLength(100)]
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string TenPhim { get; set; }
 
         [Required]
-        [StringLength(50)]
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string Poster { get; set; }
 
         [Required]
-        [StringLength(100)]
-        [Column(TypeName = "varchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string DaoDien { get; set; }
 
         [Required]
-        [StringLength(50)]
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string Trailer { get; set; }
 
         [Required]
-        [StringLength(50)]
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string ThoiLuong { get; set; }
 
+        [Required]
         [Column(TypeName = "text")]
         public string NoiDung { get; set; }
 
         [Required]
-        [StringLength(20)]
-        [Column(TypeName = "varchar(20)")]
+        [Column(TypeName = "nvarchar(20)")]
         public string QuocGia { get; set; }
         
         public int? TheLoai { get; set; }
@@ -49,17 +44,14 @@ namespace CinemaWeb.Areas.Admin.Models
         public TheloaiModel theloai { get; set; }
 
         [Required]
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime NgayKhoiChieu { get; set; } 
 
         [Required]
         public bool TrangThai { get; set; }
 
-        //
+        
         public ICollection<VeModel> ListPhim_Ve { get; set; }
         public ICollection<LichChieuModel> ListPhim_LichChieu { get; set; }
-        //public ICollection<BinhLuanModel> ListPhim_BinhLuan { get; set; }
 
     }
 }

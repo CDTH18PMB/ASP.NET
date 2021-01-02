@@ -26,11 +26,11 @@ namespace CinemaWeb.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Login([Bind("Username,Password")] TaiKhoanModel taikhoan)
+        public IActionResult Login([Bind("Email,Password")] TaiKhoanModel taikhoan)
         {
-            if (taikhoan.Username != null && taikhoan.Password != null)
+            if (taikhoan.Email != null && taikhoan.Password != null)
             {
-                var r = _context.TaiKhoan.Where(m => (m.Username == taikhoan.Username && m.Password ==
+                var r = _context.TaiKhoan.Where(m => (m.Email == taikhoan.Email && m.Password ==
                  StringProcessing.CreateMD5Hash(taikhoan.Password))).ToList();
                 if (r.Count == 0)
                 {
@@ -57,16 +57,18 @@ namespace CinemaWeb.Controllers
             }    
         }
         [HttpPost]
-        public IActionResult Register([Bind("Username,Password")] TaiKhoanModel taikhoan)
+        public IActionResult Register([Bind("Email,Password")] TaiKhoanModel taikhoan)
         {
-            if (taikhoan.Username != null && taikhoan.Password != null)
+            if (taikhoan.Email != null && taikhoan.Password != null)
             {     
-                var check = _context.TaiKhoan.FirstOrDefault(s => s.Username == taikhoan.Username);
+                var check = _context.TaiKhoan.FirstOrDefault(s => s.Email == taikhoan.Email);
                 if (check == null)
                 {
                     taikhoan.Password = StringProcessing.CreateMD5Hash(taikhoan.Password);
                     taikhoan.LoaiTK = "Member";
-                    taikhoan.TrangThai = 1;
+                    taikhoan.HoTen = "Mặc định";
+                    taikhoan.SDT = "084";
+                    taikhoan.TrangThai = true;
                     _context.TaiKhoan.Add(taikhoan);
                     _context.SaveChanges();
                     string message = "Đăng ký thành công.";

@@ -108,7 +108,7 @@
             <div class="collapse navbar-collapse" id="navbarSign">
                 <ul class="navbar-nav ml-auto">
                     <!--Chưa đăng nhập-->
-                    @if (@Model.Username == null)
+                    @if (@Model.Email == null)
                     {
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="SignIn" asp-action="Index">Sign In</a>
@@ -125,7 +125,7 @@
                             <span>
                                 <img src="~/admin/images/icon/avatar-01.jpg" alt="" style="width:40px; height:40px; border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;">
                             </span>
-                            <a class="user-name" href="#" style="text-decoration:none">@Model.Username</a>
+                            <a class="user-name" href="#" style="text-decoration:none">@Model.Email</a>
                         </li>
                         <li>
                             <a class="dropdown-item" asp-controller="SignIn" asp-action="Logout"><i class="dw dw-logout"></i>Log Out</a>

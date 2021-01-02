@@ -19,7 +19,7 @@ namespace CinemaWeb.Areas.Admin.Controllers
             {
                 JObject us = JObject.Parse(HttpContext.Session.GetString("user"));
                 TaiKhoanModel tk = new TaiKhoanModel();
-                tk.Username = us.SelectToken("Username").ToString();
+                tk.Email = us.SelectToken("Email").ToString();
                 tk.Password = us.SelectToken("Password").ToString();
                 tk.HoTen = us.SelectToken("HoTen").ToString();
                 return View(tk);
@@ -27,7 +27,7 @@ namespace CinemaWeb.Areas.Admin.Controllers
             else
             {
                 TaiKhoanModel tk = new TaiKhoanModel();
-                tk.Username = null;
+                tk.Email = null;
                 return View(tk);
             }
         }
