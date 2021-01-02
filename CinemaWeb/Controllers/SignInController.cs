@@ -63,6 +63,7 @@ namespace CinemaWeb.Controllers
                 {
                     taikhoan.Password = StringProcessing.CreateMD5Hash(taikhoan.Password);
                     taikhoan.LoaiTK = "Member";
+                    taikhoan.TrangThai = 1;
                     _context.TaiKhoan.Add(taikhoan);
                     _context.SaveChanges();
                     string message = "Đăng ký thành công.";
