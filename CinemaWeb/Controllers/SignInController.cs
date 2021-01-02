@@ -3,6 +3,9 @@ using System.Linq;
 using CinemaWeb.Data;
 using CinemaWeb.Areas.Admin.Models;
 using CinemaWeb.Areas.Admin.Data;
+using Newtonsoft.Json;
+using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json.Linq;
 
 namespace CinemaWeb.Controllers
 {
@@ -33,18 +36,18 @@ namespace CinemaWeb.Controllers
                 {
                     string message = "Tài khoản hoặc mật khẩu không đúng.";
                     SetAlert(message, 2);
-                    return RedirectToAction("Index", "SignIn"); 
+                    return RedirectToAction("Index", "SignIn");
                 }
-
-                //gắn session
-                //var str = JsonConvert.SerializeObject(taikhoan);
-                //HttpContext.Session.SetString("user", str);
-                if (r[0].LoaiTK == "Admin")
+                else
                 {
-                    //var url = Url.RouteUrl("areas", new { controller = "Admin", action = "Index", area = "Admin" });
-                    return RedirectToAction("Index", "Admin", new { area = "Admin" });
+                    var session = JsonConvert.SerializeObject(taikhoan);
+                    HttpContext.Session.SetString("user", session);
+                    if (r[0].LoaiTK == "Admin")
+                    {
+                        return RedirectToAction("Index", "Admin", new { area = "Admin" });
+                    }
+                    return RedirectToAction("Index", "Home");
                 }
-                return RedirectToAction("Index", "Home");
             }
             else
             {
@@ -104,10 +107,11 @@ namespace CinemaWeb.Controllers
                 TempData["AlertType"] = "alert-info";
             }
         }
-        [HttpPost]
-        public IActionResult Logout()
+        public ActionResult Logout()
         {
-            return RedirectToAction("Index", "Home");
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index", "SignIn");
         }
+
     }
 }

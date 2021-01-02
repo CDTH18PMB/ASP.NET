@@ -6,42 +6,121 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CinemaWeb.Areas.Admin.Models;
+using Newtonsoft.Json.Linq;
+using Microsoft.AspNetCore.Http;
 
 namespace CinemaWeb.Controllers
 {
     public class HomeController : Controller
     {
+
         public IActionResult Index()
         {
-            return View();
+            if (HttpContext.Session.GetString("user")!=null)
+            {
+                JObject us = JObject.Parse(HttpContext.Session.GetString("user"));
+                TaiKhoanModel tk = new TaiKhoanModel();
+                tk.Username = us.SelectToken("Username").ToString();
+                tk.Password = us.SelectToken("Password").ToString();
+                tk.HoTen = us.SelectToken("HoTen").ToString();
+                return View(tk);
+            }
+            else
+            {
+                TaiKhoanModel tk = new TaiKhoanModel();
+                tk.Username = null;
+                return View(tk);
+            }    
         }
         public IActionResult About()
         {
-            return View();
+            if (HttpContext.Session.GetString("user") != null)
+            {
+                JObject us = JObject.Parse(HttpContext.Session.GetString("user"));
+                TaiKhoanModel tk = new TaiKhoanModel();
+                tk.Username = us.SelectToken("Username").ToString();
+                tk.Password = us.SelectToken("Password").ToString();
+                tk.HoTen = us.SelectToken("HoTen").ToString();
+                return View(tk);
+            }
+            else
+            {
+                TaiKhoanModel tk = new TaiKhoanModel();
+                tk.Username = null;
+                return View(tk);
+            }
         }
         public IActionResult Contact()
         {
-            return View();
+            if (HttpContext.Session.GetString("user") != null)
+            {
+                JObject us = JObject.Parse(HttpContext.Session.GetString("user"));
+                TaiKhoanModel tk = new TaiKhoanModel();
+                tk.Username = us.SelectToken("Username").ToString();
+                tk.Password = us.SelectToken("Password").ToString();
+                tk.HoTen = us.SelectToken("HoTen").ToString();
+                return View(tk);
+            }
+            else
+            {
+                TaiKhoanModel tk = new TaiKhoanModel();
+                tk.Username = null;
+                return View(tk);
+            }
         }
         public IActionResult Genre()
         {
-            return View();
+            if (HttpContext.Session.GetString("user") != null)
+            {
+                JObject us = JObject.Parse(HttpContext.Session.GetString("user"));
+                TaiKhoanModel tk = new TaiKhoanModel();
+                tk.Username = us.SelectToken("Username").ToString();
+                tk.Password = us.SelectToken("Password").ToString();
+                tk.HoTen = us.SelectToken("HoTen").ToString();
+                return View(tk);
+            }
+            else
+            {
+                TaiKhoanModel tk = new TaiKhoanModel();
+                tk.Username = null;
+                return View(tk);
+            }
         }
         public IActionResult Detail()
         {
-            return View();
+            if (HttpContext.Session.GetString("user") != null)
+            {
+                JObject us = JObject.Parse(HttpContext.Session.GetString("user"));
+                TaiKhoanModel tk = new TaiKhoanModel();
+                tk.Username = us.SelectToken("Username").ToString();
+                tk.Password = us.SelectToken("Password").ToString();
+                tk.HoTen = us.SelectToken("HoTen").ToString();
+                return View(tk);
+            }
+            else
+            {
+                TaiKhoanModel tk = new TaiKhoanModel();
+                tk.Username = null;
+                return View(tk);
+            }
         }
         public IActionResult Book_Tickets()
         {
-            return View();
-        }
-        public IActionResult Sign_In()
-        {
-            return View();
-        }
-        public IActionResult Sign_Up()
-        {
-            return View();
+            if (HttpContext.Session.GetString("user") != null)
+            {
+                JObject us = JObject.Parse(HttpContext.Session.GetString("user"));
+                TaiKhoanModel tk = new TaiKhoanModel();
+                tk.Username = us.SelectToken("Username").ToString();
+                tk.Password = us.SelectToken("Password").ToString();
+                tk.HoTen = us.SelectToken("HoTen").ToString();
+                return View(tk);
+            }
+            else
+            {
+                TaiKhoanModel tk = new TaiKhoanModel();
+                tk.Username = null;
+                return View(tk);
+            }
         }
     }
 }

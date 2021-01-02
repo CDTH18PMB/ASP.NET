@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CinemaWeb.Areas.Admin.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-
+using Newtonsoft.Json.Linq;
 
 namespace CinemaWeb.Areas.Admin.Controllers
 {
@@ -14,7 +15,21 @@ namespace CinemaWeb.Areas.Admin.Controllers
         // GET: AdminController
         public ActionResult Index()
         {
-            return View();
+            if (HttpContext.Session.GetString("user") != null)
+            {
+                JObject us = JObject.Parse(HttpContext.Session.GetString("user"));
+                TaiKhoanModel tk = new TaiKhoanModel();
+                tk.Username = us.SelectToken("Username").ToString();
+                tk.Password = us.SelectToken("Password").ToString();
+                tk.HoTen = us.SelectToken("HoTen").ToString();
+                return View(tk);
+            }
+            else
+            {
+                TaiKhoanModel tk = new TaiKhoanModel();
+                tk.Username = null;
+                return View(tk);
+            }
         }
 
         // GET: AdminController/Details/5

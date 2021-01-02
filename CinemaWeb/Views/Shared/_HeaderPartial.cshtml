@@ -1,4 +1,5 @@
 ﻿<!-- header -->
+@model CinemaWeb.Areas.Admin.Models.TaiKhoanModel
 <header id="site-header" class="w3l-header fixed-top">
     <!--/nav-->
     <nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
@@ -106,21 +107,9 @@
             <!--toggle sign in/up-->
             <div class="collapse navbar-collapse" id="navbarSign">
                 <ul class="navbar-nav ml-auto">
-                    @if (false)
+                    <!--Chưa đăng nhập-->
+                    @if (@Model.Username == null)
                     {
-                        <li>
-                            <span>
-                                <img src="~/admin/vendors/images/photo1.jpg" alt="" style="width:40px; height:40px; border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;">
-                            </span>
-                            <a class="user-name" href="#" style="text-decoration:none">Hoài Phong</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" asp-controller="Home" asp-action="Index"><i class="dw dw-logout"></i>Log Out</a>
-                        </li>
-                    }
-                    else
-                    {
-                        <!--Chua dang nhap-->
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="SignIn" asp-action="Index">Sign In</a>
                         </li>
@@ -129,11 +118,24 @@
                             <a class="nav-link" asp-controller="SignIn" asp-action="Sign_Up">Sign Up</a>
                         </li>
                     }
+                    else
+                    {
+                        <!--Đã đăng nhập-->
+                        <li>
+                            <span>
+                                <img src="~/admin/images/icon/avatar-01.jpg" alt="" style="width:40px; height:40px; border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;">
+                            </span>
+                            <a class="user-name" href="#" style="text-decoration:none">@Model.Username</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" asp-controller="SignIn" asp-action="Logout"><i class="dw dw-logout"></i>Log Out</a>
+                        </li>
+                    }
                 </ul>
-             
-                    <!-- //toggle switch for light and dark theme -->
+
+                <!-- //toggle switch for light and dark theme -->
             </div>
-            </div>
-</nav>
+        </div>
+    </nav>
     <!--//nav-->
 </header>
