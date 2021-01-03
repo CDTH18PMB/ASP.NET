@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CinemaWeb.Migrations
 {
-    public partial class IniltialCreate : Migration
+    public partial class create : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -25,7 +25,7 @@ namespace CinemaWeb.Migrations
                 name: "TaiKhoan",
                 columns: table => new
                 {
-                    Email = table.Column<string>(type: "nvarchar(50)", nullable: false),
+                    Email = table.Column<string>(type: "varchar(50)", nullable: false),
                     Password = table.Column<string>(type: "varchar(50)", nullable: false),
                     HoTen = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     SDT = table.Column<string>(type: "varchar(10)", nullable: false),
@@ -78,7 +78,7 @@ namespace CinemaWeb.Migrations
                 {
                     MaHD = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Email = table.Column<string>(type: "nvarchar(50)", nullable: true),
+                    Email = table.Column<string>(type: "varchar(50)", nullable: true),
                     VeDaDat = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     TongTien = table.Column<int>(type: "int", nullable: false),
                     Ngay = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -128,7 +128,7 @@ namespace CinemaWeb.Migrations
                 columns: table => new
                 {
                     MaPhim = table.Column<int>(type: "int", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(50)", nullable: true),
+                    Email = table.Column<string>(type: "varchar(50)", nullable: true),
                     NoiDung = table.Column<string>(type: "text", nullable: false),
                     NgayDang = table.Column<DateTime>(type: "datetime2", nullable: false),
                     TrangThai = table.Column<bool>(type: "bit", nullable: false)
@@ -188,7 +188,7 @@ namespace CinemaWeb.Migrations
                     SuatChieu = table.Column<int>(type: "int", nullable: true),
                     MaPhong = table.Column<int>(type: "int", nullable: true),
                     MaGhe = table.Column<int>(type: "int", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(50)", nullable: true),
+                    Email = table.Column<string>(type: "varchar(50)", nullable: true),
                     Gia = table.Column<int>(type: "int", nullable: false),
                     NgayMua = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },

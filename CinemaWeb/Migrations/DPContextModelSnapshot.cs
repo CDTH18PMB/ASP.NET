@@ -22,7 +22,7 @@ namespace CinemaWeb.Migrations
             modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.BinhLuanModel", b =>
                 {
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<int>("MaPhim")
                         .HasColumnType("int");
@@ -76,7 +76,7 @@ namespace CinemaWeb.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<DateTime>("Ngay")
                         .HasColumnType("datetime2");
@@ -201,7 +201,7 @@ namespace CinemaWeb.Migrations
             modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.TaiKhoanModel", b =>
                 {
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("HoTen")
                         .IsRequired()
@@ -254,7 +254,7 @@ namespace CinemaWeb.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<int>("Gia")
                         .HasColumnType("int");

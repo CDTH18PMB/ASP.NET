@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CinemaWeb.Migrations
 {
     [DbContext(typeof(DPContext))]
-    [Migration("20210102070634_IniltialCreate")]
-    partial class IniltialCreate
+    [Migration("20210103032733_create")]
+    partial class create
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,7 +24,7 @@ namespace CinemaWeb.Migrations
             modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.BinhLuanModel", b =>
                 {
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<int>("MaPhim")
                         .HasColumnType("int");
@@ -78,7 +78,7 @@ namespace CinemaWeb.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<DateTime>("Ngay")
                         .HasColumnType("datetime2");
@@ -203,7 +203,7 @@ namespace CinemaWeb.Migrations
             modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.TaiKhoanModel", b =>
                 {
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("HoTen")
                         .IsRequired()
@@ -256,7 +256,7 @@ namespace CinemaWeb.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<int>("Gia")
                         .HasColumnType("int");
