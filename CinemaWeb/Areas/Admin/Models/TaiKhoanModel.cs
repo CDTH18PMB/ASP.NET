@@ -11,7 +11,7 @@ namespace CinemaWeb.Areas.Admin.Models
     {
         [Key]
         [Column(TypeName ="varchar(50)")]
-        public string Email { get; set; }
+        public string Username { get; set; }
 
         [Required]
         [Column(TypeName = "varchar(50)")]
