@@ -26,11 +26,11 @@ namespace CinemaWeb.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Login([Bind("Email,Password")] TaiKhoanModel taikhoan)
+        public IActionResult Login([Bind("Username,Password")] TaiKhoanModel taikhoan)
         {
-            if (taikhoan.Email != null && taikhoan.Password != null)
+            if (taikhoan.Username != null && taikhoan.Password != null)
             {
-                var r = _context.TaiKhoan.Where(m => (m.Email == taikhoan.Email && m.Password ==
+                var r = _context.TaiKhoan.Where(m => (m.Username == taikhoan.Username && m.Password ==
                  StringProcessing.CreateMD5Hash(taikhoan.Password))).ToList();
                 if (r.Count == 0)
                 {
@@ -57,11 +57,11 @@ namespace CinemaWeb.Controllers
             }    
         }
         [HttpPost]
-        public IActionResult Register([Bind("Email,Password")] TaiKhoanModel taikhoan)
+        public IActionResult Register([Bind("Username,Password")] TaiKhoanModel taikhoan)
         {
-            if (taikhoan.Email != null && taikhoan.Password != null)
+            if (taikhoan.Username != null && taikhoan.Password != null)
             {     
-                var check = _context.TaiKhoan.FirstOrDefault(s => s.Email == taikhoan.Email);
+                var check = _context.TaiKhoan.FirstOrDefault(s => s.Username == taikhoan.Username);
                 if (check == null)
                 {
                     taikhoan.Password = StringProcessing.CreateMD5Hash(taikhoan.Password);
@@ -77,7 +77,7 @@ namespace CinemaWeb.Controllers
                 }
                 else
                 {
-                    string message = "Email đã tồn tại.";
+                    string message = "Username đã tồn tại.";
                     SetAlert(message, 2);
                     return RedirectToAction("Sign_Up", "SignIn");
                 }

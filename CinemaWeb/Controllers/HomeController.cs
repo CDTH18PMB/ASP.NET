@@ -20,15 +20,14 @@ namespace CinemaWeb.Controllers
             {
                 JObject us = JObject.Parse(HttpContext.Session.GetString("user"));
                 TaiKhoanModel tk = new TaiKhoanModel();
-                tk.Email = us.SelectToken("Email").ToString();
+                tk.Username = us.SelectToken("Username").ToString();
                 tk.Password = us.SelectToken("Password").ToString();
-                tk.HoTen = us.SelectToken("HoTen").ToString();
                 return View(tk);
             }
             else
             {
                 TaiKhoanModel tk = new TaiKhoanModel();
-                tk.Email = null;
+                tk.Username = null;
                 return View(tk);
             }    
         }
@@ -38,15 +37,14 @@ namespace CinemaWeb.Controllers
             {
                 JObject us = JObject.Parse(HttpContext.Session.GetString("user"));
                 TaiKhoanModel tk = new TaiKhoanModel();
-                tk.Email = us.SelectToken("Email").ToString();
+                tk.Username = us.SelectToken("Username").ToString();
                 tk.Password = us.SelectToken("Password").ToString();
-                tk.HoTen = us.SelectToken("HoTen").ToString();
                 return View(tk);
             }
             else
             {
                 TaiKhoanModel tk = new TaiKhoanModel();
-                tk.Email = null;
+                tk.Username = null;
                 return View(tk);
             }
         }
@@ -56,15 +54,14 @@ namespace CinemaWeb.Controllers
             {
                 JObject us = JObject.Parse(HttpContext.Session.GetString("user"));
                 TaiKhoanModel tk = new TaiKhoanModel();
-                tk.Email = us.SelectToken("Email").ToString();
+                tk.Username = us.SelectToken("Username").ToString();
                 tk.Password = us.SelectToken("Password").ToString();
-                tk.HoTen = us.SelectToken("HoTen").ToString();
                 return View(tk);
             }
             else
             {
                 TaiKhoanModel tk = new TaiKhoanModel();
-                tk.Email = null;
+                tk.Username = null;
                 return View(tk);
             }
         }
@@ -74,15 +71,14 @@ namespace CinemaWeb.Controllers
             {
                 JObject us = JObject.Parse(HttpContext.Session.GetString("user"));
                 TaiKhoanModel tk = new TaiKhoanModel();
-                tk.Email = us.SelectToken("Email").ToString();
+                tk.Username = us.SelectToken("Username").ToString();
                 tk.Password = us.SelectToken("Password").ToString();
-                tk.HoTen = us.SelectToken("HoTen").ToString();
                 return View(tk);
             }
             else
             {
                 TaiKhoanModel tk = new TaiKhoanModel();
-                tk.Email = null;
+                tk.Username = null;
                 return View(tk);
             }
         }
@@ -92,15 +88,14 @@ namespace CinemaWeb.Controllers
             {
                 JObject us = JObject.Parse(HttpContext.Session.GetString("user"));
                 TaiKhoanModel tk = new TaiKhoanModel();
-                tk.Email = us.SelectToken("Email").ToString();
+                tk.Username = us.SelectToken("Username").ToString();
                 tk.Password = us.SelectToken("Password").ToString();
-                tk.HoTen = us.SelectToken("HoTen").ToString();
                 return View(tk);
             }
             else
             {
                 TaiKhoanModel tk = new TaiKhoanModel();
-                tk.Email = null;
+                tk.Username = null;
                 return View(tk);
             }
         }
@@ -110,15 +105,14 @@ namespace CinemaWeb.Controllers
             {
                 JObject us = JObject.Parse(HttpContext.Session.GetString("user"));
                 TaiKhoanModel tk = new TaiKhoanModel();
-                tk.Email = us.SelectToken("Email").ToString();
+                tk.Username = us.SelectToken("Username").ToString();
                 tk.Password = us.SelectToken("Password").ToString();
-                tk.HoTen = us.SelectToken("HoTen").ToString();
                 return View(tk);
             }
             else
             {
                 TaiKhoanModel tk = new TaiKhoanModel();
-                tk.Email = null;
+                tk.Username = null;
                 return View(tk);
             }
         }

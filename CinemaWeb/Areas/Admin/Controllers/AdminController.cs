@@ -15,21 +15,13 @@ namespace CinemaWeb.Areas.Admin.Controllers
         // GET: AdminController
         public ActionResult Index()
         {
-            if (HttpContext.Session.GetString("user") != null)
-            {
-                JObject us = JObject.Parse(HttpContext.Session.GetString("user"));
-                TaiKhoanModel tk = new TaiKhoanModel();
-                tk.Email = us.SelectToken("Email").ToString();
-                tk.Password = us.SelectToken("Password").ToString();
-                tk.HoTen = us.SelectToken("HoTen").ToString();
-                return View(tk);
-            }
-            else
-            {
-                TaiKhoanModel tk = new TaiKhoanModel();
-                tk.Email = null;
-                return View(tk);
-            }
+
+            JObject us = JObject.Parse(HttpContext.Session.GetString("user"));
+            TaiKhoanModel tk = new TaiKhoanModel();
+            tk.Username = us.SelectToken("Username").ToString();
+            tk.Password = us.SelectToken("Password").ToString();
+            return View(tk);
+
         }
 
         // GET: AdminController/Details/5
