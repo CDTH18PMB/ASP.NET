@@ -22,6 +22,8 @@ namespace CinemaWeb.Controllers
                 TaiKhoanModel tk = new TaiKhoanModel();
                 tk.Username = us.SelectToken("Username").ToString();
                 tk.Password = us.SelectToken("Password").ToString();
+                tk.HoTen = us.SelectToken("HoTen").ToString();
+                tk.SDT = us.SelectToken("SDT").ToString();
                 return View(tk);
             }
             else

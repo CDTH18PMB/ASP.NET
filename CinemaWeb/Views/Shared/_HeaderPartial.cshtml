@@ -12,9 +12,9 @@
                 </a>
             </h1>
             <!-- if logo is image enable this
-            <a class="navbar-brand" href="#index.html">
-                <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-            </a> -->
+    <a class="navbar-brand" href="#index.html">
+        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+    </a> -->
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -125,7 +125,7 @@
                             <span>
                                 <img src="~/admin/images/icon/avatar-01.jpg" alt="" style="width:40px; height:40px; border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;">
                             </span>
-                            <a class="user-name" href="#" style="text-decoration:none">@Model.Username</a>
+                            @Model.Username  <a class="fa fa-gear" onclick="showEdit('@Url.Action("Edit","TaiKhoan",new { id = Model.Username })', 'Account Information')"></a> &nbsp;&nbsp;
                         </li>
                         <li>
                             <a class="dropdown-item" asp-controller="SignIn" asp-action="Logout"><i class="zmdi zmdi-power"></i>Logout</a>

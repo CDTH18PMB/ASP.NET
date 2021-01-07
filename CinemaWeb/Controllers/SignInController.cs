@@ -26,7 +26,7 @@ namespace CinemaWeb.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Login([Bind("Username,Password")] TaiKhoanModel taikhoan)
+        public IActionResult Login([Bind("Username,Password,HoTen,SDT,LoaiTK,TrangThai")] TaiKhoanModel taikhoan)
         {
             if (taikhoan.Username != null && taikhoan.Password != null)
             {
