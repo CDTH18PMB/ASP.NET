@@ -5,12 +5,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CinemaWeb.Areas.Admin.Models
+namespace Doan.Models
 {
     public class TaiKhoanModel
     {
         [Key]
-        [Column(TypeName ="varchar(50)")]
+        [Column(TypeName = "varchar(50)")]
         public string Username { get; set; }
 
         [Required]
@@ -18,22 +18,20 @@ namespace CinemaWeb.Areas.Admin.Models
         public string Password { get; set; }
 
         [Required]
-        [Column(TypeName = "nvarchar(100)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string HoTen { get; set; }
 
         [Required]
-        [Column(TypeName = "varchar(10)")]
+        [Column(TypeName = "char(10)")]
         public string SDT { get; set; }
 
         [Required]
-        [Column(TypeName = "nvarchar(10)")]
+        [Column(TypeName = "varchar(10)")]
         public string LoaiTK { get; set; }
 
         [Required]
         public bool TrangThai { get; set; }
 
-        
-        public ICollection<HoaDonModel> ListTaiKhoan_HoaDon { get; set; }
-        public ICollection<VeModel> ListTaiKhoan_Ve { get; set; }
+        public ICollection<HoaDonModel> ListHoaDon { get; set; }
     }
 }

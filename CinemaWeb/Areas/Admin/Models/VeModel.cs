@@ -1,43 +1,65 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CinemaWeb.Areas.Admin.Models
+namespace Doan.Models
 {
     public class VeModel
-    {
+    {   //mã vé
         [Key]
         public int MaVe { get; set; }
 
-        public int? MaPhim { get; set; }
+        //mã phim
         [ForeignKey("MaPhim")]
-        public virtual PhimModel maphim { get; set; }
+        public PhimModel maphim { get; set; }
 
-        public int? SuatChieu { get; set; }
-        [ForeignKey("SuatChieu")]
-        public virtual LichChieuModel suatchieu { set; get; }
+        //giá vé
+        [Required]
+        public int GiaVe { get; set; }
 
-        public int? MaPhong { get; set; }
+        //mã phòng
         [ForeignKey("MaPhong")]
-        public virtual PhongChieuModel maphong { get; set; }
+        public PhongChieuModel maphong { get; set; }
 
-        public int MaGhe { get; set; }
+        //mã ghế
         [ForeignKey("MaGhe")]
-        public virtual GheModel maghe { get; set; }
+        public GheModel maghe { get; set; }
 
-        public string Email { get; set; }
-        [ForeignKey("Email")]
-        public TaiKhoanModel email { get; set; }
+        //Lịch chiếu phim
+        [ForeignKey("SuatChieu")]
+        public LichChieuModel lichchieu { set; get; }
 
+
+        //ngày mua vé
         [Required]
-        public int Gia { get; set; }
-
-        [Required]
+        [Column(TypeName = "date")]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime NgayMua { get; set; }
 
+        //người mua vé
+        [ForeignKey("NguoiMua")]
+        public TaiKhoanModel nguoimua { get; set; }
+
+        [Required]
+        public bool TrangThai { get; set; }
+
+        public VeModel()
+        {
+
+        }
+
+        //public VeModel(int maphim, int gia, int maphong, int maghe, int suatchieu, string nguoimua, bool trangthai)
+        //{
+        //    this.maphim.MaPhim = maphim;
+        //    this.GiaVe = gia;
+        //    this.maphong.MaPhong = maphong;
+        //    this.maghe.MaGhe = maghe;
+        //    this.lichchieu.MaLichChieu = suatchieu;
+        //    this.nguoimua.Username = nguoimua;
+        //    this.TrangThai = trangthai;
+        //}
     }
 }

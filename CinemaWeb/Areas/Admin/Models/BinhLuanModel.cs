@@ -6,24 +6,25 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CinemaWeb.Areas.Admin.Models
+namespace Doan.Models
 {
     [Keyless]
     public class BinhLuanModel
     {
         public int MaPhim { get; set; }
         [ForeignKey("MaPhim")]
-        public virtual PhimModel maphim { get; set; }
+        public PhimModel maphim { get; set; }
 
-        public string Email { get; set; }
-        [ForeignKey("Email")]
-        public virtual TaiKhoanModel email { get; set; }
+        public string Username { get; set; }
+        [ForeignKey("Username")]
+        public TaiKhoanModel username { get; set; }
 
         [Required]
-        [Column(TypeName ="text")]
+        [Column(TypeName = "text")]
         public string NoiDung { get; set; }
 
         [Required]
+        [Column(TypeName = "date")]
         public DateTime NgayDang { get; set; }
 
         [Required]

@@ -14,7 +14,7 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "D:\ASP.NET\CinemaWeb\Views\_ViewImports.cshtml"
-using CinemaWeb.Areas.Admin.Models;
+using Doan.Models;
 
 #line default
 #line hidden
@@ -34,7 +34,7 @@ using CinemaWeb.Controllers;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"11029b3d656714f38a98910df0b0dc7da1c83f47", @"/Views/Home/Contact.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9cc29062a535be06e161637d0019bb2414775b0e", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5594cc8552de89d95409e7ec53849779fc354001", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Contact : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("action", new global::Microsoft.AspNetCore.Html.HtmlString("https://sendmail.w3layouts.com/submitForm"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -85,7 +85,7 @@ using CinemaWeb.Controllers;
             <div class=""contact-view mt-lg-5 mt-4"">
                 <div class=""conhny-form-section"">
                     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "11029b3d656714f38a98910df0b0dc7da1c83f475247", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "11029b3d656714f38a98910df0b0dc7da1c83f475230", async() => {
                 WriteLiteral("\r\n                        <div class=\"form-grids\">\r\n                            <div class=\"form-input\">\r\n                                <input type=\"text\" name=\"w3lName\" id=\"w3lName\" placeholder=\"Enter your name *\"");
                 BeginWriteAttribute("required", " required=\"", 1208, "\"", 1219, 0);
                 EndWriteAttribute();
