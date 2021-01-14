@@ -1,0 +1,129 @@
+﻿@model CinemaWeb.Areas.Admin.Models.PhimModel
+
+
+<div class='container-fluid' style='margin-top: 100px; background-color: black;'>
+    <!--trailer-->
+    <center>
+        <iframe width="1150" height="500"
+                src="@Html.DisplayFor(model => model.Trailer)" frameborder="0" allowfullscreen>
+        </iframe>
+    </center>
+</div>
+<div class='container' style='margin-top:70px'>
+
+    <!--Thông tin phim-->
+    <div class='row' style='margin-bottom:75px'>
+        <div class='col-sm-4'>
+            <img src="~/user/images/poster/@Html.DisplayFor(model => model.Poster)" alt="hình ảnh" id='image' style='width: 100%; height: 450px'>
+            <button type="button" id="buttonBookTicket" class='btn btn-primary' style='width:100%; margin-top:20px'>Đặt vé</button>
+        </div>
+        <div class='col-sm-8'>
+            <div style='font-size: 32px; font-weight: bold;'>@Html.DisplayFor(model => model.TenPhim)</div><hr />
+
+            <p>Thời lượng: @Html.DisplayFor(model => model.ThoiLuong)</p>
+            <p>Đạo diễn: @Html.DisplayFor(model => model.DaoDien)</p>
+            <p>Thể loại: @ViewBag.TheLoai.TenLoai</p>
+            <p>Quốc gia: @Html.DisplayFor(model => model.QuocGia)</p>
+            <p>Ngày khởi chiếu: @Html.DisplayFor(model => model.NgayKhoiChieu)</p>
+        </div>
+    </div>
+
+    <h3>NỘI DUNG PHIM</h3><hr>
+    <div style='margin:0 0 100px 0; padding:0 50px 0 50px; text-align: justify'>
+        @Html.DisplayFor(model => model.NoiDung)
+    </div>
+
+
+    <!--Bình luận-->
+    <h3>BÌNH LUẬN</h3>
+
+    <form action="#" method="POST" style='margin-top:30px'>
+        <!-- Username -->
+        <input id="Username" value="@ViewBag.TaiKhoan.Username" hidden/>
+        <!-- Mã phim -->
+        <input id="MaPhim" value="@Html.DisplayFor(model => model.MaPhim)" hidden />
+
+        <!-- Nhập nội dung -->
+        <div class='row'>
+            <div class='col-sm-10'>
+                <textarea id="CommentContent" class='form-control' cols="30" rows="3" placeholder="Nêu cảm nhận của bạn về phim" maxlength="200"></textarea>
+            </div>
+            <div class='col-sm-2'>
+                <button type="button" id="PostComment" class='btn btn-primary' style='width:100%; height:100%'>Bình luận</button>
+            </div>
+        </div>
+    </form>
+
+    <!--Load Bình luận vào đây-->
+    <div id="LoadComment" style="margin:50px 0 150px 0"></div>
+</div>
+
+<!-- Modal Bình luận thành công-->
+<div class="modal fade" id="CommentSuccessful">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <center>
+                    <i class="fa fa-check-circle" style="font-size: 200px; color:springgreen"></i>
+                    <h5 style="margin-top:10px">Bình luận của bạn sẽ được duyệt trong 24 giờ</h5>
+                </center>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline-danger" data-dismiss="modal">
+                    <i class="fa fa-close" style="margin-right:5px"></i>Đóng
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal đăng nhập-->
+<div class="modal fade" id="CommentMissingUsername">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <center>
+                    <i class="fa fa-warning" style="font-size: 200px; color:orange"></i>
+                    <h5 style="margin-top:10px">Vui lòng đăng nhập để có thể thực hiện chức năng</h5>
+                </center>
+            </div>
+            <div class="modal-footer">
+                <a asp-controller="SignIn" asp-action="Index" class="btn btn-outline-success">
+                    <i class="fa fa-sign-in" style="margin-right:5px"></i>Đăng nhập
+                </a>
+                <button class="btn btn-outline-danger" data-dismiss="modal">
+                    <i class="fa fa-close" style="margin-right:5px"></i>Đóng
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Bình luận thiếu nội dung-->
+<div class="modal fade" id="CommentMissingContent">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <center>
+                    <i class="fa fa-warning" style="font-size: 200px; color:orange"></i>
+                    <h5 style="margin-top:10px">Hãy nhập nội dung</h5>
+                </center>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline-danger" data-dismiss="modal">
+                    <i class="fa fa-close" style="margin-right:5px"></i>Đóng
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- script render bình luận-->
+<script id="listBinhLuan" type="x-tmpl-mustache">
+    <div style='padding:30px 0 30px 30px'>
+        <span style='background-color:darkcyan; color:white; padding:5px 10px 5px 10px; font-size:20px; border-radius:10px'>{{NguoiDang}}</span>
+        <div style='margin:15px 0 15px 0;word-wrap:break-word; text-align: justify'>{{NoiDung}}</div>
+        <span style='font-size:12px'>Ngày đăng: {{NgayDang}}</span>
+    </div>
+    <hr>
+</script>
