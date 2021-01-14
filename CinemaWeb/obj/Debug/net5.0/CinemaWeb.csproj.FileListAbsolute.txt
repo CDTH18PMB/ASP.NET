@@ -127,11 +127,6 @@ D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_Layout.csh
 D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_SidebarPartial.cshtml.g.cs
 D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
-D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Views\Home\About.cshtml.g.cs
-D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Views\Home\Book_Tickets.cshtml.g.cs
-D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Views\Home\Contact.cshtml.g.cs
-D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Views\Home\Detail.cshtml.g.cs
-D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Views\Home\Genre.cshtml.g.cs
 D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Views\Shared\_FooterPartial.cshtml.g.cs
 D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Views\Shared\_HeaderPartial.cshtml.g.cs
@@ -298,3 +293,9 @@ D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Areas\Admin\Views\TrangThaiGhe\Index
 D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Areas\Admin\Views\Ve\Edit.cshtml.g.cs
 D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Areas\Admin\Views\Ve\Index.cshtml.g.cs
 D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Areas\Admin\Views\Ve\SearchEdit.cshtml.g.cs
+<<<<<<< HEAD
+=======
+D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Views\Home\Detail.cshtml.g.cs
+D:\ASP.NET\CinemaWeb\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Views\BookTicket\Index.cshtml.g.cs
+>>>>>>> afe335f5f613e5d6f1be2eaed5c8ed45baa1841f
