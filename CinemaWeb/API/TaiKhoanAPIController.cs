@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CinemaWeb.Areas.Admin.Models;
-using CinemaWeb.Data;
+using CinemaWeb.Areas.Admin.Data;
 
 namespace CinemaWeb.API
 {

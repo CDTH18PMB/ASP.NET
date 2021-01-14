@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CinemaWeb.Areas.Admin.Models;
-using CinemaWeb.Data;
 using CinemaWeb.Areas.Admin.Data;
 
 namespace CinemaWeb.Controllers

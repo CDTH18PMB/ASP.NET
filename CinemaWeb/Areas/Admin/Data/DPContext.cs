@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using CinemaWeb.Areas.Admin.Models;
 
-namespace CinemaWeb.Data
+namespace CinemaWeb.Areas.Admin.Data
 {
     public class DPContext : DbContext
     {

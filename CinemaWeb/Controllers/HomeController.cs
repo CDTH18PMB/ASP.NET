@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 using CinemaWeb.Areas.Admin.Models;
 using Newtonsoft.Json.Linq;
 using Microsoft.AspNetCore.Http;
-using CinemaWeb.Data;
+using CinemaWeb.Areas.Admin.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace CinemaWeb.Controllers

@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Linq;
-using CinemaWeb.Data;
-using CinemaWeb.Areas.Admin.Models;
 using CinemaWeb.Areas.Admin.Data;
+using CinemaWeb.Areas.Admin.Models;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json.Linq;
