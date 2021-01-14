@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CinemaWeb.Migrations
 {
-    public partial class Database : Migration
+    public partial class create : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -27,7 +27,7 @@ namespace CinemaWeb.Migrations
                 {
                     Username = table.Column<string>(type: "varchar(50)", nullable: false),
                     Password = table.Column<string>(type: "varchar(50)", nullable: false),
-                    HoTen = table.Column<string>(type: "nvarchar(50)", nullable: false),
+                    HoTen = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     SDT = table.Column<string>(type: "char(10)", nullable: false),
                     LoaiTK = table.Column<string>(type: "varchar(10)", nullable: false),
                     TrangThai = table.Column<bool>(type: "bit", nullable: false)
@@ -57,16 +57,16 @@ namespace CinemaWeb.Migrations
                 {
                     MaGhe = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TenGhe = table.Column<string>(type: "char(5)", nullable: false),
-                    MaPhong = table.Column<int>(type: "int", nullable: false),
+                    TenGhe = table.Column<string>(type: "varchar(5)", nullable: false),
+                    Phong = table.Column<int>(type: "int", nullable: false),
                     TrangThai = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Ghe", x => x.MaGhe);
                     table.ForeignKey(
-                        name: "FK_Ghe_PhongChieu_MaPhong",
-                        column: x => x.MaPhong,
+                        name: "FK_Ghe_PhongChieu_Phong",
+                        column: x => x.Phong,
                         principalTable: "PhongChieu",
                         principalColumn: "MaPhong",
                         onDelete: ReferentialAction.Cascade);
@@ -78,8 +78,8 @@ namespace CinemaWeb.Migrations
                 {
                     MaHD = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Username = table.Column<string>(type: "varchar(50)", nullable: true),
-                    VeDaDat = table.Column<string>(type: "varchar(100)", nullable: false),
+                    Username = table.Column<string>(type: "varchar(50)", nullable: false),
+                    GheDaDat = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     TongTien = table.Column<int>(type: "int", nullable: false),
                     Ngay = table.Column<DateTime>(type: "date", nullable: false),
                     TrangThai = table.Column<bool>(type: "bit", nullable: false)
@@ -92,7 +92,7 @@ namespace CinemaWeb.Migrations
                         column: x => x.Username,
                         principalTable: "TaiKhoan",
                         principalColumn: "Username",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -106,10 +106,10 @@ namespace CinemaWeb.Migrations
                     DaoDien = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     Trailer = table.Column<string>(type: "varchar(200)", nullable: false),
                     ThoiLuong = table.Column<string>(type: "nvarchar(50)", nullable: false),
-                    NoiDung = table.Column<string>(type: "text", nullable: false),
+                    NoiDung = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     QuocGia = table.Column<string>(type: "nvarchar(50)", nullable: false),
                     TheLoai = table.Column<int>(type: "int", nullable: false),
-                    NgayKhoiChieu = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    NgayKhoiChieu = table.Column<DateTime>(type: "Date", nullable: false),
                     TrangThai = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
@@ -127,23 +127,26 @@ namespace CinemaWeb.Migrations
                 name: "BinhLuan",
                 columns: table => new
                 {
-                    MaPhim = table.Column<int>(type: "int", nullable: false),
-                    Username = table.Column<string>(type: "varchar(50)", nullable: true),
-                    NoiDung = table.Column<string>(type: "text", nullable: false),
-                    NgayDang = table.Column<DateTime>(type: "date", nullable: false),
+                    MaBinhLuan = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Phim = table.Column<int>(type: "int", nullable: false),
+                    NguoiDang = table.Column<string>(type: "varchar(50)", nullable: true),
+                    NoiDung = table.Column<string>(type: "nvarchar(200)", nullable: false),
+                    NgayDang = table.Column<DateTime>(type: "datetime2", nullable: false),
                     TrangThai = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
+                    table.PrimaryKey("PK_BinhLuan", x => x.MaBinhLuan);
                     table.ForeignKey(
-                        name: "FK_BinhLuan_Phim_MaPhim",
-                        column: x => x.MaPhim,
+                        name: "FK_BinhLuan_Phim_Phim",
+                        column: x => x.Phim,
                         principalTable: "Phim",
                         principalColumn: "MaPhim",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_BinhLuan_TaiKhoan_Username",
-                        column: x => x.Username,
+                        name: "FK_BinhLuan_TaiKhoan_NguoiDang",
+                        column: x => x.NguoiDang,
                         principalTable: "TaiKhoan",
                         principalColumn: "Username",
                         onDelete: ReferentialAction.Restrict);
@@ -157,8 +160,8 @@ namespace CinemaWeb.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     NgayChieu = table.Column<DateTime>(type: "Date", nullable: false),
                     ThoiGian = table.Column<TimeSpan>(type: "Time", nullable: false),
-                    MaPhim = table.Column<int>(type: "int", nullable: false),
-                    MaPhong = table.Column<int>(type: "int", nullable: false),
+                    Phim = table.Column<int>(type: "int", nullable: false),
+                    Phong = table.Column<int>(type: "int", nullable: false),
                     SoGheTrong = table.Column<int>(type: "int", nullable: false),
                     TrangThai = table.Column<bool>(type: "bit", nullable: false)
                 },
@@ -166,17 +169,44 @@ namespace CinemaWeb.Migrations
                 {
                     table.PrimaryKey("PK_LichChieu", x => x.MaLichChieu);
                     table.ForeignKey(
-                        name: "FK_LichChieu_Phim_MaPhim",
-                        column: x => x.MaPhim,
+                        name: "FK_LichChieu_Phim_Phim",
+                        column: x => x.Phim,
                         principalTable: "Phim",
                         principalColumn: "MaPhim",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_LichChieu_PhongChieu_MaPhong",
-                        column: x => x.MaPhong,
+                        name: "FK_LichChieu_PhongChieu_Phong",
+                        column: x => x.Phong,
                         principalTable: "PhongChieu",
                         principalColumn: "MaPhong",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TrangThaiGhe",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Suat = table.Column<int>(type: "int", nullable: true),
+                    Ghe = table.Column<int>(type: "int", nullable: false),
+                    TrangThai = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TrangThaiGhe", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_TrangThaiGhe_Ghe_Ghe",
+                        column: x => x.Ghe,
+                        principalTable: "Ghe",
+                        principalColumn: "MaGhe",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_TrangThaiGhe_LichChieu_Suat",
+                        column: x => x.Suat,
+                        principalTable: "LichChieu",
+                        principalColumn: "MaLichChieu",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -185,64 +215,64 @@ namespace CinemaWeb.Migrations
                 {
                     MaVe = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    MaPhim = table.Column<int>(type: "int", nullable: true),
+                    Phim = table.Column<int>(type: "int", nullable: false),
                     GiaVe = table.Column<int>(type: "int", nullable: false),
-                    MaPhong = table.Column<int>(type: "int", nullable: true),
-                    MaGhe = table.Column<int>(type: "int", nullable: true),
-                    SuatChieu = table.Column<int>(type: "int", nullable: true),
+                    Phong = table.Column<int>(type: "int", nullable: true),
+                    Ghe = table.Column<int>(type: "int", nullable: false),
+                    Suat = table.Column<int>(type: "int", nullable: true),
+                    User = table.Column<string>(type: "varchar(50)", nullable: false),
                     NgayMua = table.Column<DateTime>(type: "date", nullable: false),
-                    NguoiMua = table.Column<string>(type: "varchar(50)", nullable: true),
                     TrangThai = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Ve", x => x.MaVe);
                     table.ForeignKey(
-                        name: "FK_Ve_Ghe_MaGhe",
-                        column: x => x.MaGhe,
+                        name: "FK_Ve_Ghe_Ghe",
+                        column: x => x.Ghe,
                         principalTable: "Ghe",
                         principalColumn: "MaGhe",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Ve_LichChieu_SuatChieu",
-                        column: x => x.SuatChieu,
+                        name: "FK_Ve_LichChieu_Suat",
+                        column: x => x.Suat,
                         principalTable: "LichChieu",
                         principalColumn: "MaLichChieu",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Ve_Phim_MaPhim",
-                        column: x => x.MaPhim,
+                        name: "FK_Ve_Phim_Phim",
+                        column: x => x.Phim,
                         principalTable: "Phim",
                         principalColumn: "MaPhim",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Ve_PhongChieu_MaPhong",
-                        column: x => x.MaPhong,
+                        name: "FK_Ve_PhongChieu_Phong",
+                        column: x => x.Phong,
                         principalTable: "PhongChieu",
                         principalColumn: "MaPhong",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Ve_TaiKhoan_NguoiMua",
-                        column: x => x.NguoiMua,
+                        name: "FK_Ve_TaiKhoan_User",
+                        column: x => x.User,
                         principalTable: "TaiKhoan",
                         principalColumn: "Username",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_BinhLuan_MaPhim",
+                name: "IX_BinhLuan_NguoiDang",
                 table: "BinhLuan",
-                column: "MaPhim");
+                column: "NguoiDang");
 
             migrationBuilder.CreateIndex(
-                name: "IX_BinhLuan_Username",
+                name: "IX_BinhLuan_Phim",
                 table: "BinhLuan",
-                column: "Username");
+                column: "Phim");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Ghe_MaPhong",
+                name: "IX_Ghe_Phong",
                 table: "Ghe",
-                column: "MaPhong");
+                column: "Phong");
 
             migrationBuilder.CreateIndex(
                 name: "IX_HoaDon_Username",
@@ -250,14 +280,14 @@ namespace CinemaWeb.Migrations
                 column: "Username");
 
             migrationBuilder.CreateIndex(
-                name: "IX_LichChieu_MaPhim",
+                name: "IX_LichChieu_Phim",
                 table: "LichChieu",
-                column: "MaPhim");
+                column: "Phim");
 
             migrationBuilder.CreateIndex(
-                name: "IX_LichChieu_MaPhong",
+                name: "IX_LichChieu_Phong",
                 table: "LichChieu",
-                column: "MaPhong");
+                column: "Phong");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Phim_TheLoai",
@@ -265,29 +295,39 @@ namespace CinemaWeb.Migrations
                 column: "TheLoai");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Ve_MaGhe",
-                table: "Ve",
-                column: "MaGhe");
+                name: "IX_TrangThaiGhe_Ghe",
+                table: "TrangThaiGhe",
+                column: "Ghe");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Ve_MaPhim",
-                table: "Ve",
-                column: "MaPhim");
+                name: "IX_TrangThaiGhe_Suat",
+                table: "TrangThaiGhe",
+                column: "Suat");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Ve_MaPhong",
+                name: "IX_Ve_Ghe",
                 table: "Ve",
-                column: "MaPhong");
+                column: "Ghe");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Ve_NguoiMua",
+                name: "IX_Ve_Phim",
                 table: "Ve",
-                column: "NguoiMua");
+                column: "Phim");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Ve_SuatChieu",
+                name: "IX_Ve_Phong",
                 table: "Ve",
-                column: "SuatChieu");
+                column: "Phong");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Ve_Suat",
+                table: "Ve",
+                column: "Suat");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Ve_User",
+                table: "Ve",
+                column: "User");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -297,6 +337,9 @@ namespace CinemaWeb.Migrations
 
             migrationBuilder.DropTable(
                 name: "HoaDon");
+
+            migrationBuilder.DropTable(
+                name: "TrangThaiGhe");
 
             migrationBuilder.DropTable(
                 name: "Ve");

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Doan.Models;
+using CinemaWeb.Areas.Admin.Models;
 using CinemaWeb.Data;
 using CinemaWeb.Areas.Admin.Data;
 

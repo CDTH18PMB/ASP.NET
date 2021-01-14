@@ -19,61 +19,72 @@ namespace CinemaWeb.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.1");
 
-            modelBuilder.Entity("Doan.Models.BinhLuanModel", b =>
+            modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.BinhLuanModel", b =>
                 {
-                    b.Property<int>("MaPhim")
-                        .HasColumnType("int");
+                    b.Property<int>("MaBinhLuan")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
 
                     b.Property<DateTime>("NgayDang")
-                        .HasColumnType("date");
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("NguoiDang")
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("NoiDung")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<int>("Phim")
+                        .HasColumnType("int");
 
                     b.Property<bool>("TrangThai")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Username")
-                        .HasColumnType("varchar(50)");
+                    b.HasKey("MaBinhLuan");
 
-                    b.HasIndex("MaPhim");
+                    b.HasIndex("NguoiDang");
 
-                    b.HasIndex("Username");
+                    b.HasIndex("Phim");
 
                     b.ToTable("BinhLuan");
                 });
 
-            modelBuilder.Entity("Doan.Models.GheModel", b =>
+            modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.GheModel", b =>
                 {
                     b.Property<int>("MaGhe")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("MaPhong")
+                    b.Property<int>("Phong")
                         .HasColumnType("int");
 
                     b.Property<string>("TenGhe")
                         .IsRequired()
-                        .HasColumnType("char(5)");
+                        .HasColumnType("varchar(5)");
 
                     b.Property<bool>("TrangThai")
                         .HasColumnType("bit");
 
                     b.HasKey("MaGhe");
 
-                    b.HasIndex("MaPhong");
+                    b.HasIndex("Phong");
 
                     b.ToTable("Ghe");
                 });
 
-            modelBuilder.Entity("Doan.Models.HoaDonModel", b =>
+            modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.HoaDonModel", b =>
                 {
                     b.Property<int>("MaHD")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
+
+                    b.Property<string>("GheDaDat")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<DateTime>("Ngay")
                         .HasColumnType("date");
@@ -85,11 +96,8 @@ namespace CinemaWeb.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Username")
-                        .HasColumnType("varchar(50)");
-
-                    b.Property<string>("VeDaDat")
                         .IsRequired()
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("varchar(50)");
 
                     b.HasKey("MaHD");
 
@@ -98,21 +106,21 @@ namespace CinemaWeb.Migrations
                     b.ToTable("HoaDon");
                 });
 
-            modelBuilder.Entity("Doan.Models.LichChieuModel", b =>
+            modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.LichChieuModel", b =>
                 {
                     b.Property<int>("MaLichChieu")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("MaPhim")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MaPhong")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("NgayChieu")
                         .HasColumnType("Date");
+
+                    b.Property<int>("Phim")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Phong")
+                        .HasColumnType("int");
 
                     b.Property<int>("SoGheTrong")
                         .HasColumnType("int");
@@ -125,14 +133,14 @@ namespace CinemaWeb.Migrations
 
                     b.HasKey("MaLichChieu");
 
-                    b.HasIndex("MaPhim");
+                    b.HasIndex("Phim");
 
-                    b.HasIndex("MaPhong");
+                    b.HasIndex("Phong");
 
                     b.ToTable("LichChieu");
                 });
 
-            modelBuilder.Entity("Doan.Models.PhimModel", b =>
+            modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.PhimModel", b =>
                 {
                     b.Property<int>("MaPhim")
                         .ValueGeneratedOnAdd()
@@ -144,11 +152,11 @@ namespace CinemaWeb.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<DateTime>("NgayKhoiChieu")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("Date");
 
                     b.Property<string>("NoiDung")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Poster")
                         .IsRequired()
@@ -183,7 +191,7 @@ namespace CinemaWeb.Migrations
                     b.ToTable("Phim");
                 });
 
-            modelBuilder.Entity("Doan.Models.PhongChieuModel", b =>
+            modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.PhongChieuModel", b =>
                 {
                     b.Property<int>("MaPhong")
                         .ValueGeneratedOnAdd()
@@ -201,14 +209,14 @@ namespace CinemaWeb.Migrations
                     b.ToTable("PhongChieu");
                 });
 
-            modelBuilder.Entity("Doan.Models.TaiKhoanModel", b =>
+            modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.TaiKhoanModel", b =>
                 {
                     b.Property<string>("Username")
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("HoTen")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("LoaiTK")
                         .IsRequired()
@@ -230,7 +238,7 @@ namespace CinemaWeb.Migrations
                     b.ToTable("TaiKhoan");
                 });
 
-            modelBuilder.Entity("Doan.Models.TheloaiModel", b =>
+            modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.TheloaiModel", b =>
                 {
                     b.Property<int>("MaLoai")
                         .ValueGeneratedOnAdd()
@@ -249,100 +257,128 @@ namespace CinemaWeb.Migrations
                     b.ToTable("TheLoai");
                 });
 
-            modelBuilder.Entity("Doan.Models.VeModel", b =>
+            modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.TrangThaiGheModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int>("Ghe")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Suat")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("TrangThai")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Ghe");
+
+                    b.HasIndex("Suat");
+
+                    b.ToTable("TrangThaiGhe");
+                });
+
+            modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.VeModel", b =>
                 {
                     b.Property<int>("MaVe")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<int>("Ghe")
+                        .HasColumnType("int");
+
                     b.Property<int>("GiaVe")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("MaGhe")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("MaPhim")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("MaPhong")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("NgayMua")
                         .HasColumnType("date");
 
-                    b.Property<string>("NguoiMua")
-                        .HasColumnType("varchar(50)");
+                    b.Property<int>("Phim")
+                        .HasColumnType("int");
 
-                    b.Property<int?>("SuatChieu")
+                    b.Property<int?>("Phong")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Suat")
                         .HasColumnType("int");
 
                     b.Property<bool>("TrangThai")
                         .HasColumnType("bit");
 
+                    b.Property<string>("User")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
                     b.HasKey("MaVe");
 
-                    b.HasIndex("MaGhe");
+                    b.HasIndex("Ghe");
 
-                    b.HasIndex("MaPhim");
+                    b.HasIndex("Phim");
 
-                    b.HasIndex("MaPhong");
+                    b.HasIndex("Phong");
 
-                    b.HasIndex("NguoiMua");
+                    b.HasIndex("Suat");
 
-                    b.HasIndex("SuatChieu");
+                    b.HasIndex("User");
 
                     b.ToTable("Ve");
                 });
 
-            modelBuilder.Entity("Doan.Models.BinhLuanModel", b =>
+            modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.BinhLuanModel", b =>
                 {
-                    b.HasOne("Doan.Models.PhimModel", "maphim")
+                    b.HasOne("CinemaWeb.Areas.Admin.Models.TaiKhoanModel", "username")
                         .WithMany()
-                        .HasForeignKey("MaPhim")
+                        .HasForeignKey("NguoiDang");
+
+                    b.HasOne("CinemaWeb.Areas.Admin.Models.PhimModel", "maphim")
+                        .WithMany()
+                        .HasForeignKey("Phim")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("Doan.Models.TaiKhoanModel", "username")
-                        .WithMany()
-                        .HasForeignKey("Username");
 
                     b.Navigation("maphim");
 
                     b.Navigation("username");
                 });
 
-            modelBuilder.Entity("Doan.Models.GheModel", b =>
+            modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.GheModel", b =>
                 {
-                    b.HasOne("Doan.Models.PhongChieuModel", "maphong")
-                        .WithMany("lstGhe")
-                        .HasForeignKey("MaPhong")
+                    b.HasOne("CinemaWeb.Areas.Admin.Models.PhongChieuModel", "maphong")
+                        .WithMany("ListPhongChieu_Ghe")
+                        .HasForeignKey("Phong")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("maphong");
                 });
 
-            modelBuilder.Entity("Doan.Models.HoaDonModel", b =>
+            modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.HoaDonModel", b =>
                 {
-                    b.HasOne("Doan.Models.TaiKhoanModel", "username")
-                        .WithMany("ListHoaDon")
-                        .HasForeignKey("Username");
+                    b.HasOne("CinemaWeb.Areas.Admin.Models.TaiKhoanModel", "username")
+                        .WithMany("ListTaiKhoan_HoaDon")
+                        .HasForeignKey("Username")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("username");
                 });
 
-            modelBuilder.Entity("Doan.Models.LichChieuModel", b =>
+            modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.LichChieuModel", b =>
                 {
-                    b.HasOne("Doan.Models.PhimModel", "maphim")
-                        .WithMany()
-                        .HasForeignKey("MaPhim")
+                    b.HasOne("CinemaWeb.Areas.Admin.Models.PhimModel", "maphim")
+                        .WithMany("ListPhim_LichChieu")
+                        .HasForeignKey("Phim")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Doan.Models.PhongChieuModel", "maphong")
-                        .WithMany()
-                        .HasForeignKey("MaPhong")
+                    b.HasOne("CinemaWeb.Areas.Admin.Models.PhongChieuModel", "maphong")
+                        .WithMany("ListPhongChieu_LichChieu")
+                        .HasForeignKey("Phong")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -351,10 +387,10 @@ namespace CinemaWeb.Migrations
                     b.Navigation("maphong");
                 });
 
-            modelBuilder.Entity("Doan.Models.PhimModel", b =>
+            modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.PhimModel", b =>
                 {
-                    b.HasOne("Doan.Models.TheloaiModel", "theloai")
-                        .WithMany("ListPhim")
+                    b.HasOne("CinemaWeb.Areas.Admin.Models.TheloaiModel", "theloai")
+                        .WithMany("ListTheLoai_Phim")
                         .HasForeignKey("TheLoai")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -362,29 +398,50 @@ namespace CinemaWeb.Migrations
                     b.Navigation("theloai");
                 });
 
-            modelBuilder.Entity("Doan.Models.VeModel", b =>
+            modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.TrangThaiGheModel", b =>
                 {
-                    b.HasOne("Doan.Models.GheModel", "maghe")
+                    b.HasOne("CinemaWeb.Areas.Admin.Models.GheModel", "ghemodel")
                         .WithMany()
-                        .HasForeignKey("MaGhe");
+                        .HasForeignKey("Ghe")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.HasOne("Doan.Models.PhimModel", "maphim")
+                    b.HasOne("CinemaWeb.Areas.Admin.Models.LichChieuModel", "lichchieu")
                         .WithMany()
-                        .HasForeignKey("MaPhim");
+                        .HasForeignKey("Suat");
 
-                    b.HasOne("Doan.Models.PhongChieuModel", "maphong")
-                        .WithMany()
-                        .HasForeignKey("MaPhong");
-
-                    b.HasOne("Doan.Models.TaiKhoanModel", "nguoimua")
-                        .WithMany()
-                        .HasForeignKey("NguoiMua");
-
-                    b.HasOne("Doan.Models.LichChieuModel", "lichchieu")
-                        .WithMany()
-                        .HasForeignKey("SuatChieu");
+                    b.Navigation("ghemodel");
 
                     b.Navigation("lichchieu");
+                });
+
+            modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.VeModel", b =>
+                {
+                    b.HasOne("CinemaWeb.Areas.Admin.Models.GheModel", "maghe")
+                        .WithMany("ListGhe_Ve")
+                        .HasForeignKey("Ghe")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CinemaWeb.Areas.Admin.Models.PhimModel", "maphim")
+                        .WithMany("ListPhim_Ve")
+                        .HasForeignKey("Phim")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CinemaWeb.Areas.Admin.Models.PhongChieuModel", "maphong")
+                        .WithMany("ListPhongChieu_Ve")
+                        .HasForeignKey("Phong");
+
+                    b.HasOne("CinemaWeb.Areas.Admin.Models.LichChieuModel", "suatchieu")
+                        .WithMany("ListLichChieu_Ve")
+                        .HasForeignKey("Suat");
+
+                    b.HasOne("CinemaWeb.Areas.Admin.Models.TaiKhoanModel", "nguoimua")
+                        .WithMany("ListTaiKhoan_Ve")
+                        .HasForeignKey("User")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("maghe");
 
@@ -393,21 +450,46 @@ namespace CinemaWeb.Migrations
                     b.Navigation("maphong");
 
                     b.Navigation("nguoimua");
+
+                    b.Navigation("suatchieu");
                 });
 
-            modelBuilder.Entity("Doan.Models.PhongChieuModel", b =>
+            modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.GheModel", b =>
                 {
-                    b.Navigation("lstGhe");
+                    b.Navigation("ListGhe_Ve");
                 });
 
-            modelBuilder.Entity("Doan.Models.TaiKhoanModel", b =>
+            modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.LichChieuModel", b =>
                 {
-                    b.Navigation("ListHoaDon");
+                    b.Navigation("ListLichChieu_Ve");
                 });
 
-            modelBuilder.Entity("Doan.Models.TheloaiModel", b =>
+            modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.PhimModel", b =>
                 {
-                    b.Navigation("ListPhim");
+                    b.Navigation("ListPhim_LichChieu");
+
+                    b.Navigation("ListPhim_Ve");
+                });
+
+            modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.PhongChieuModel", b =>
+                {
+                    b.Navigation("ListPhongChieu_Ghe");
+
+                    b.Navigation("ListPhongChieu_LichChieu");
+
+                    b.Navigation("ListPhongChieu_Ve");
+                });
+
+            modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.TaiKhoanModel", b =>
+                {
+                    b.Navigation("ListTaiKhoan_HoaDon");
+
+                    b.Navigation("ListTaiKhoan_Ve");
+                });
+
+            modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.TheloaiModel", b =>
+                {
+                    b.Navigation("ListTheLoai_Phim");
                 });
 #pragma warning restore 612, 618
         }
