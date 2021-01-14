@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Doan.Models;
+using CinemaWeb.Areas.Admin.Models;
 using Newtonsoft.Json.Linq;
 using Microsoft.AspNetCore.Http;
 using CinemaWeb.Data;

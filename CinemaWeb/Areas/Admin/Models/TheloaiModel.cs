@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Doan.Models
+namespace CinemaWeb.Areas.Admin.Models
 {
     public class TheloaiModel
     {
@@ -19,6 +19,7 @@ namespace Doan.Models
         [Required]
         public bool TrangThai { get; set; }
 
-        public ICollection<PhimModel> ListPhim { get; set; }
+        
+        public ICollection<PhimModel> ListTheLoai_Phim { get; set; }
     }
 }

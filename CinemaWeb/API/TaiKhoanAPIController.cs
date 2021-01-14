@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Doan.Models;
+using CinemaWeb.Areas.Admin.Models;
 using CinemaWeb.Data;
 
 namespace CinemaWeb.API

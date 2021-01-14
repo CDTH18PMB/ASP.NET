@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-namespace Doan.Models
+namespace CinemaWeb.Areas.Admin.Models
 {
     public class PhimModel
     {
@@ -32,24 +32,28 @@ namespace Doan.Models
         public string ThoiLuong { get; set; }
 
         [Required]
-        [Column(TypeName = "text")]
+        [Column(TypeName = "nvarchar(max)")]
         public string NoiDung { get; set; }
 
         [Required]
         [Column(TypeName = "nvarchar(50)")]
         public string QuocGia { get; set; }
-
-        [Required]
+        
+        public int TheLoai { get; set; }
         [ForeignKey("TheLoai")]
         public TheloaiModel theloai { get; set; }
 
-
         [Required]
-        [DataType(DataType.Date)]
+        [Column(TypeName = "Date")]
         [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
-        public DateTime NgayKhoiChieu { get; set; }
+        public DateTime NgayKhoiChieu { get; set; } 
 
         [Required]
         public bool TrangThai { get; set; }
+
+        
+        public ICollection<VeModel> ListPhim_Ve { get; set; }
+        public ICollection<LichChieuModel> ListPhim_LichChieu { get; set; }
+
     }
 }

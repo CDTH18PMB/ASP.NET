@@ -14,7 +14,7 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "D:\ASP.NET\CinemaWeb\Views\_ViewImports.cshtml"
-using Doan.Models;
+using CinemaWeb.Areas.Admin.Models;
 
 #line default
 #line hidden
@@ -34,7 +34,7 @@ using CinemaWeb.Controllers;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e680711a2dd012b82ad77f8a80532cda2b695fca", @"/Views/Home/Book_Tickets.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5594cc8552de89d95409e7ec53849779fc354001", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"51e646528bc322c2b10fbb346d6a88b244cbf390", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Book_Tickets : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("src", new global::Microsoft.AspNetCore.Html.HtmlString("~/user/images/1.jpg"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -74,7 +74,7 @@ using CinemaWeb.Controllers;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<div class=\'container\' style=\'margin-top: 150px\'>\r\n    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e680711a2dd012b82ad77f8a80532cda2b695fca6624", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e680711a2dd012b82ad77f8a80532cda2b695fca6641", async() => {
                 WriteLiteral(@"
     <!-- Nav tabs -->
     <ul class=""nav nav-tabs"" role=""tablist"">
@@ -142,7 +142,7 @@ WriteAttributeValue(" ", 1523, dsPhim, 1524, 7, false);
                 WriteAttributeValue("", 1531, ")", 1531, 1, true);
                 EndWriteAttribute();
                 WriteLiteral(">\r\n                                        <div class=\'row\' style=\'padding:10px\'>\r\n                                            <div class=\'col-sm-4\'>\r\n                                                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "e680711a2dd012b82ad77f8a80532cda2b695fca9664", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "e680711a2dd012b82ad77f8a80532cda2b695fca9681", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -904,7 +904,7 @@ WriteAttributeValue("", 9077, j, 9077, 2, false);
                         <div class='col-sm-8'>
                             <input id=""TongTien"" class=""form-control"" disabled style='");
                 WriteLiteral("margin-left: 50px; background-color:white; font-weight:bold\'>\r\n                        </div>\r\n                    </div>\r\n\r\n                    <div class=\'row\'>\r\n                        <div class=\'col-sm-6\'>\r\n                            ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e680711a2dd012b82ad77f8a80532cda2b695fca41758", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e680711a2dd012b82ad77f8a80532cda2b695fca41775", async() => {
                     WriteLiteral("<button class=\'btn btn-warning\' style=\'width:100%\'>QUAY LẠI</button>");
                 }
                 );
