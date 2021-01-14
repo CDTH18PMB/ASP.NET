@@ -14,7 +14,7 @@ namespace CinemaWeb.Areas.Admin.Models
         [Display(Name ="Mã")]
         public int MaLichChieu { get; set; }
 
-        //=====================================================================================================================
+        //======================================================================================================================
         [Display(Name = "Ngày chiếu")]
         [Required(ErrorMessage = "Bạn cần thêm ngày chiếu")]
         [Column(TypeName = "Date")]
