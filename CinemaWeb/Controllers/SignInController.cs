@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using CinemaWeb.Data;
-using Doan.Models;
+using CinemaWeb.Areas.Admin.Models;
 using CinemaWeb.Areas.Admin.Data;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Http;

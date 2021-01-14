@@ -14,7 +14,7 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "D:\ASP.NET\CinemaWeb\Views\_ViewImports.cshtml"
-using Doan.Models;
+using CinemaWeb.Areas.Admin.Models;
 
 #line default
 #line hidden
@@ -34,7 +34,7 @@ using CinemaWeb.Controllers;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1db74ef3b7251d1b66894f5bcc959b547b23dc41", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5594cc8552de89d95409e7ec53849779fc354001", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"51e646528bc322c2b10fbb346d6a88b244cbf390", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("img-fluid"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -225,7 +225,7 @@ using CinemaWeb.Controllers;
                     <div class=""box16"">
                         <a href=""https://www.youtube.com/e");
             WriteLiteral("mbed/uOvWB-I7fN8\">\r\n                            <figure>\r\n                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4118340", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4118357", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -262,7 +262,7 @@ using CinemaWeb.Controllers;
                         <a href=""https://www.youtube.com/embed/PqNGHKLyPD0"">
                             <figure>
                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4120523", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4120540", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -299,7 +299,7 @@ using CinemaWeb.Controllers;
                         <a href=""https://www.youtube.com/embed/XRm1P7oGpMQ"">
                             <figure>
                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4122709", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4122726", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -336,7 +336,7 @@ using CinemaWeb.Controllers;
                         <a href=""https://www.youtube.com/embed/PCK1929UvvQ"">
                             <figure>
                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4124884", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4124901", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -394,7 +394,7 @@ using CinemaWeb.Controllers;
                         <a href=""https://www.youtube.com/embed/uOvWB-I7fN8"">
                             <figure>
                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4127837", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4127854", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -426,7 +426,7 @@ using CinemaWeb.Controllers;
                         </a>
                     </div>
                     <h3> ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4129787", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4129804", async() => {
                 WriteLiteral("Violet Evergarden");
             }
             );
@@ -443,7 +443,7 @@ using CinemaWeb.Controllers;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</h3>\r\n                    <p>Câu chuyện xoay quanh những Búp bê ghi chép tự động búp bê được tạo ra bởi Dr. Orland để giúp người vợ mù...</p>\r\n                    <div class=\"button-center text-center mt-4\">\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4131275", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4131292", async() => {
                 WriteLiteral("Details");
             }
             );
@@ -468,7 +468,7 @@ using CinemaWeb.Controllers;
                         <a href=""https://www.youtube.com/embed/PqNGHKLyPD0"">
                             <figure>
                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4132814", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4132831", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -501,7 +501,7 @@ using CinemaWeb.Controllers;
                         </a>
                     </div>
                     <h3> ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4134772", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4134789", async() => {
                 WriteLiteral("Tiệc trăng máu");
             }
             );
@@ -518,7 +518,7 @@ using CinemaWeb.Controllers;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</h3>\r\n                    <p>Một nhóm bạn thân chơi với nhau gần 40 năm tụ họp lại với nhau trong một buổi tiệc tân gia. Cùng với những...</p>\r\n                    <div class=\"button-center text-center mt-4\">\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4136258", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4136275", async() => {
                 WriteLiteral("Details");
             }
             );
@@ -542,7 +542,7 @@ using CinemaWeb.Controllers;
                         <a href=""https://www.youtube.com/embed/WvOgvFtcIAw"">
                             <figure>
                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4137795", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4137812", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -575,7 +575,7 @@ using CinemaWeb.Controllers;
                         </a>
                     </div>
                     <h3> ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4139754", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4139771", async() => {
                 WriteLiteral("THE CROODS 2: A NEW AGE");
             }
             );
@@ -592,7 +592,7 @@ using CinemaWeb.Controllers;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</h3>\r\n                    <p>Sinh tồn trong một thế giới tiền sử luôn rình rập hiểm nguy từ đủ loài quái thú hung dữ...</p>\r\n                    <div class=\"button-center text-center mt-4\">\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4141230", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4141247", async() => {
                 WriteLiteral("Details");
             }
             );
@@ -616,7 +616,7 @@ using CinemaWeb.Controllers;
                         <a href=""https://www.youtube.com/embed/DbDdy3j1jBU"">
                             <figure>
                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4142767", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4142784", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -649,7 +649,7 @@ using CinemaWeb.Controllers;
                         </a>
                     </div>
                     <h3> ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4144726", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4144743", async() => {
                 WriteLiteral("Bán đảo Peninsula");
             }
             );
@@ -666,7 +666,7 @@ using CinemaWeb.Controllers;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</h3>\r\n                    <p>Quyết định đâm đầu vào chỗ chết, cựu quân nhân Jung Seok trở lại bán đảo vì số tiền hậu hĩnh lên đến 2,5 triệu USD...</p>\r\n                    <div class=\"button-center text-center mt-4\">\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4146223", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4146240", async() => {
                 WriteLiteral("Details");
             }
             );
@@ -691,7 +691,7 @@ using CinemaWeb.Controllers;
                         <a href=""https://www.youtube.com/embed/o1LlKT1fNPA"">
                             <figure>
                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4147762", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4147779", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -724,7 +724,7 @@ using CinemaWeb.Controllers;
                         </a>
                     </div>
                     <h3> ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4149721", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4149738", async() => {
                 WriteLiteral("Bí Mật Của Gió");
             }
             );
@@ -741,7 +741,7 @@ using CinemaWeb.Controllers;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</h3>\r\n                    <p>Bí Mật Của Gió kể câu chuyện tình lãng mạn giữa cô bé tinh nghịch hồn nhiên và hồn ma đến từ quá khứ...</p>\r\n                    <div class=\"button-center text-center mt-4\">\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4151201", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4151218", async() => {
                 WriteLiteral("Details");
             }
             );
@@ -765,7 +765,7 @@ using CinemaWeb.Controllers;
                         <a href=""https://www.youtube.com/embed/LLwIqcjMp8c"">
                             <figure>
                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4152738", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4152755", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -798,7 +798,7 @@ using CinemaWeb.Controllers;
                         </a>
                     </div>
                     <h3> ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4154697", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4154714", async() => {
                 WriteLiteral("Trái Tim Quái Vật");
             }
             );
@@ -818,7 +818,7 @@ using CinemaWeb.Controllers;
                     <p>Khánh là một người mẹ đơn thân. Mong muốn sống và làm ăn lương thiện của cô bị thử thách khi chẳng may vướng vào vòng xoáy tội ác...</p>
                     <div class=""button-center text-center mt-4"">
                         ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4156204", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4156221", async() => {
                 WriteLiteral("Details");
             }
             );
@@ -842,7 +842,7 @@ using CinemaWeb.Controllers;
                         <a href=""https://www.youtube.com/embed/PCK1929UvvQ"">
                             <figure>
                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4157741", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4157758", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -875,7 +875,7 @@ using CinemaWeb.Controllers;
                         </a>
                     </div>
                     <h3> ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4159699", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4159716", async() => {
                 WriteLiteral("Frozen II (2019)");
             }
             );
@@ -892,7 +892,7 @@ using CinemaWeb.Controllers;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</h3>\r\n                    <p>Frozen lấy cảm hứng từ câu chuyện Nữ Hoàng Tuyết được nhà văn Andersen chắp bút nhưng nội dung hoàn toàn khác...</p>\r\n                    <div class=\"button-center text-center mt-4\">\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4161190", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4161207", async() => {
                 WriteLiteral("Details");
             }
             );
@@ -916,7 +916,7 @@ using CinemaWeb.Controllers;
                         <a href=""https://www.youtube.com/embed/XRm1P7oGpMQ"">
                             <figure>
                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4162727", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4162744", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -949,7 +949,7 @@ using CinemaWeb.Controllers;
                         </a>
                     </div>
                     <h3> ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4164685", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4164702", async() => {
                 WriteLiteral("Ròm");
             }
             );
@@ -966,7 +966,7 @@ using CinemaWeb.Controllers;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</h3>\r\n                    <p>Lấy bối cảnh một khu chung cư cũ đang chờ giải tỏa tại Sài Gòn, Ròm kể câu chuyện về cuộc sống của những người dân lao động...</p>\r\n                    <div class=\"button-center text-center mt-4\">\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4166177", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4166194", async() => {
                 WriteLiteral("Details");
             }
             );
@@ -990,7 +990,7 @@ using CinemaWeb.Controllers;
                         <a href=""https://www.youtube.com/embed/jiHzd87NpNM"">
                             <figure>
                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4167714", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4167731", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -1023,7 +1023,7 @@ using CinemaWeb.Controllers;
                         </a>
                     </div>
                     <h3> ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4169673", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4169690", async() => {
                 WriteLiteral("Điệp Viên Siêu Lầy");
             }
             );
@@ -1040,7 +1040,7 @@ using CinemaWeb.Controllers;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</h3>\r\n                    <p>Câu chuyện theo chân Jason Jones (Dave Bautista) biệt danh là JJ, anh là một điệp viên CIA chuyên nghiệp...</p>\r\n                    <div class=\"button-center text-center mt-4\">\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4171161", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4171178", async() => {
                 WriteLiteral("Details");
             }
             );
@@ -1064,7 +1064,7 @@ using CinemaWeb.Controllers;
                         <a href=""https://www.youtube.com/embed/Ny5X2qtIyTw"">
                             <figure>
                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4172698", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4172715", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -1097,7 +1097,7 @@ using CinemaWeb.Controllers;
                         </a>
                     </div>
                     <h3> ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4174657", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4174674", async() => {
                 WriteLiteral("Mãi Bên Em -  Endless");
             }
             );
@@ -1114,7 +1114,7 @@ using CinemaWeb.Controllers;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("</h3>\r\n                    <p>Hai học sinh tốt nghiệp trung học có tình cảm với nhau Riley (Alexandra Shipp) và Chris bị ngăn cách bởi một tai nạn thảm thốc...</p>\r\n                    <div class=\"button-center text-center mt-4\">\r\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4176170", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4176187", async() => {
                 WriteLiteral("Details");
             }
             );
@@ -1159,7 +1159,7 @@ using CinemaWeb.Controllers;
                                     <div class=""slider-info"">
                                         <div c");
             WriteLiteral("lass=\"img-circle\">\r\n                                            <a href=\"https://www.youtube.com/embed/XRm1P7oGpMQ\">\r\n\r\n                                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4178666", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4178683", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -1184,7 +1184,7 @@ using CinemaWeb.Controllers;
                                         </div>
                                         <div class=""message"">
                                             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4180411", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4180428", async() => {
                 WriteLiteral("Ròm");
             }
             );
@@ -1220,7 +1220,7 @@ using CinemaWeb.Controllers;
                                             <a href=""https://www.youtube.com/embed/PqNGHKLyPD0"">
 
                                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4182653", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4182670", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -1245,7 +1245,7 @@ using CinemaWeb.Controllers;
                                         </div>
                                         <div class=""message"">
                                             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4184398", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4184415", async() => {
                 WriteLiteral("Tiệc trăng máu");
             }
             );
@@ -1281,7 +1281,7 @@ using CinemaWeb.Controllers;
                                             <a href=""https://www.youtube.com/embed/WvOgvFtcIAw"">
 
                                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4186654", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4186671", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -1306,7 +1306,7 @@ using CinemaWeb.Controllers;
                                         </div>
                                         <div class=""message"">
                                             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4188400", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4188417", async() => {
                 WriteLiteral("THE CROODS 2");
             }
             );
@@ -1343,7 +1343,7 @@ using CinemaWeb.Controllers;
                                         <div class=""img-circle"">
                                             <a href=""https://www.youtube.com/embed/XRm");
             WriteLiteral("1P7oGpMQ\">\r\n\r\n                                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4190778", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4190795", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -1368,7 +1368,7 @@ using CinemaWeb.Controllers;
                                         </div>
                                         <div class=""message"">
                                             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4192524", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4192541", async() => {
                 WriteLiteral("Bán đảo Peninsula");
             }
             );
@@ -1404,7 +1404,7 @@ using CinemaWeb.Controllers;
                                             <a href=""https://www.youtube.com/embed/o1LlKT1fNPA"">
 
                                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4194778", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4194795", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -1429,7 +1429,7 @@ using CinemaWeb.Controllers;
                                         </div>
                                         <div class=""message"">
                                             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4196524", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc4196541", async() => {
                 WriteLiteral("Bí Mật Của Gió");
             }
             );
@@ -1465,7 +1465,7 @@ using CinemaWeb.Controllers;
                                             <a href=""https://www.youtube.com/embed/Ny5X2qtIyTw"">
 
                                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4198785", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc4198802", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -1490,7 +1490,7 @@ using CinemaWeb.Controllers;
                                         </div>
                                         <div class=""message"">
                                             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc41100531", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc41100548", async() => {
                 WriteLiteral("Mãi Bên Em -  Endless");
             }
             );
@@ -1527,7 +1527,7 @@ using CinemaWeb.Controllers;
                                         <div class=""img-circle"">
                                             <a href=""https://www.youtube.com/embed/jiHzd");
             WriteLiteral("87NpNM\">\r\n\r\n                                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc41102917", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc41102934", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -1552,7 +1552,7 @@ using CinemaWeb.Controllers;
                                         </div>
                                         <div class=""message"">
                                             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc41104664", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc41104681", async() => {
                 WriteLiteral("Điệp Viên Siêu Lầy");
             }
             );
@@ -1588,7 +1588,7 @@ using CinemaWeb.Controllers;
                                             <a href=""https://www.youtube.com/embed/XRm1P7oGpMQ"">
 
                                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc41106919", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc41106936", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -1613,7 +1613,7 @@ using CinemaWeb.Controllers;
                                         </div>
                                         <div class=""message"">
                                             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc41108666", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc41108683", async() => {
                 WriteLiteral("Trái Tim Quái Vật");
             }
             );
@@ -1649,7 +1649,7 @@ using CinemaWeb.Controllers;
                                             <a href=""https://www.youtube.com/embed/XRm1P7oGpMQ"">
 
                                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc41110923", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc41110940", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -1674,7 +1674,7 @@ using CinemaWeb.Controllers;
                                         </div>
                                         <div class=""message"">
                                             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc41112669", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc41112686", async() => {
                 WriteLiteral("Violet Evergarden");
             }
             );
@@ -1713,7 +1713,7 @@ using CinemaWeb.Controllers;
                                 <div class=""col-lg-4 new-relise-gd mt-lg-0 mt-0"">
                                     <div class=""slid");
             WriteLiteral("er-info\">\r\n                                        <div class=\"img-circle\">\r\n                                            <a href=\"https://www.youtube.com/embed/XRm1P7oGpMQ\">\r\n\r\n                                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc41115224", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc41115241", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -1738,7 +1738,7 @@ using CinemaWeb.Controllers;
                                         </div>
                                         <div class=""message"">
                                             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc41116970", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc41116987", async() => {
                 WriteLiteral("Ròm");
             }
             );
@@ -1774,7 +1774,7 @@ using CinemaWeb.Controllers;
                                             <a href=""https://www.youtube.com/embed/PqNGHKLyPD0"">
 
                                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc41119213", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc41119230", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -1799,7 +1799,7 @@ using CinemaWeb.Controllers;
                                         </div>
                                         <div class=""message"">
                                             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc41120959", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc41120976", async() => {
                 WriteLiteral("Tiệc trăng máu");
             }
             );
@@ -1837,7 +1837,7 @@ using CinemaWeb.Controllers;
                                         <div class=""img-circle"">
                                             <a h");
             WriteLiteral("ref=\"https://www.youtube.com/embed/XRm1P7oGpMQ\">\r\n\r\n                                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc41123378", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc41123395", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -1862,7 +1862,7 @@ using CinemaWeb.Controllers;
                                         </div>
                                         <div class=""message"">
                                             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc41125125", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc41125142", async() => {
                 WriteLiteral("Bán đảo Peninsula");
             }
             );
@@ -1898,7 +1898,7 @@ using CinemaWeb.Controllers;
                                             <a href=""https://www.youtube.com/embed/o1LlKT1fNPA"">
 
                                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc41127380", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc41127397", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -1923,7 +1923,7 @@ using CinemaWeb.Controllers;
                                         </div>
                                         <div class=""message"">
                                             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc41129127", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc41129144", async() => {
                 WriteLiteral("Bí Mật Của Gió");
             }
             );
@@ -1960,7 +1960,7 @@ using CinemaWeb.Controllers;
                                         <div class=""img-circle"">
                                             <a href=""https://www.youtube.com/");
             WriteLiteral("embed/jiHzd87NpNM\">\r\n\r\n                                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc41131517", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc41131534", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -1985,7 +1985,7 @@ using CinemaWeb.Controllers;
                                         </div>
                                         <div class=""message"">
                                             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc41133264", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc41133281", async() => {
                 WriteLiteral("Điệp Viên Siêu Lầy");
             }
             );
@@ -2021,7 +2021,7 @@ using CinemaWeb.Controllers;
                                             <a href=""https://www.youtube.com/embed/XRm1P7oGpMQ"">
 
                                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc41135519", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1db74ef3b7251d1b66894f5bcc959b547b23dc41135536", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -2046,7 +2046,7 @@ using CinemaWeb.Controllers;
                                         </div>
                                         <div class=""message"">
                                             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc41137266", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db74ef3b7251d1b66894f5bcc959b547b23dc41137283", async() => {
                 WriteLiteral("Trái Tim Quái Vật");
             }
             );
