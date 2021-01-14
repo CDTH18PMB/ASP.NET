@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using CinemaWeb.Areas.Admin.Models;
+using Doan.Models;
 using CinemaWeb.Data;
+using CinemaWeb.Areas.Admin.Data;
 
 namespace CinemaWeb.Controllers
 {
@@ -49,32 +50,12 @@ namespace CinemaWeb.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(string id, [Bind("Username,Password,HoTen,SDT,LoaiTK,TrangThai")] TaiKhoanModel taiKhoanModel)
         {
-            if (id != taiKhoanModel.Username)
+            if (id == taiKhoanModel.Username)
             {
-                return NotFound();
+                taiKhoanModel.Password = StringProcessing.CreateMD5Hash(taiKhoanModel.Password);
+                _context.TaiKhoan.Add(taiKhoanModel);
             }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(taiKhoanModel);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!TaiKhoanModelExists(taiKhoanModel.Username))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(taiKhoanModel);
+            return RedirectToAction("Index", "Home");
         }
 
         private bool TaiKhoanModelExists(string id)

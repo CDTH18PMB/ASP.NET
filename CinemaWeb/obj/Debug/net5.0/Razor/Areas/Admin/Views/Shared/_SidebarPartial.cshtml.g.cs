@@ -21,7 +21,7 @@ using CinemaWeb;
 #nullable disable
 #nullable restore
 #line 2 "D:\ASP.NET\CinemaWeb\Areas\Admin\Views\_ViewImports.cshtml"
-using CinemaWeb.Areas.Admin.Models;
+using Doan.Models;
 
 #line default
 #line hidden
@@ -34,7 +34,7 @@ using CinemaWeb.Controllers;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"90f5176d3cd9ca97c721daf74084874bdf54f6ba", @"/Areas/Admin/Views/Shared/_SidebarPartial.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"34be26e1a44e7baae44a32827faa3b382622299f", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"868ab65d6feb6ba53fc2e37fa3b08fb9e8be5fd2", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     public class Areas_Admin_Views_Shared__SidebarPartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<TaiKhoanModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("src", new global::Microsoft.AspNetCore.Html.HtmlString("~/admin/images/icon/logo.png"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -88,7 +88,7 @@ using CinemaWeb.Controllers;
         {
             WriteLiteral("<!-- MENU SIDEBAR-->\r\n");
             WriteLiteral("<aside class=\"menu-sidebar d-none d-lg-block\">\r\n    <div class=\"logo\">\r\n        <a href=\"#\">\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "90f5176d3cd9ca97c721daf74084874bdf54f6ba10979", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "90f5176d3cd9ca97c721daf74084874bdf54f6ba10962", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -103,7 +103,7 @@ using CinemaWeb.Controllers;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n        </a>\r\n    </div>\r\n    <div class=\"menu-sidebar__content js-scrollbar1\">\r\n        <nav class=\"navbar-sidebar\">\r\n            <ul class=\"list-unstyled navbar__list\">\r\n                <li>\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90f5176d3cd9ca97c721daf74084874bdf54f6ba12325", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90f5176d3cd9ca97c721daf74084874bdf54f6ba12308", async() => {
                 WriteLiteral("\r\n                        <i class=\"fas fa-film\"></i>Phim\r\n                    ");
             }
             );
@@ -122,7 +122,7 @@ using CinemaWeb.Controllers;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                </li>\r\n                <li>\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90f5176d3cd9ca97c721daf74084874bdf54f6ba13918", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90f5176d3cd9ca97c721daf74084874bdf54f6ba13901", async() => {
                 WriteLiteral("\r\n                        <i class=\"fas fa-list-ul\"></i>Thể loại\r\n                    ");
             }
             );
@@ -141,7 +141,7 @@ using CinemaWeb.Controllers;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                </li>\r\n                <li>\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90f5176d3cd9ca97c721daf74084874bdf54f6ba15518", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90f5176d3cd9ca97c721daf74084874bdf54f6ba15501", async() => {
                 WriteLiteral("\r\n                        <i class=\"far fa-calendar-alt\"></i>Lịch chiếu\r\n                    ");
             }
             );
@@ -160,7 +160,7 @@ using CinemaWeb.Controllers;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                </li>\r\n                <li>\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90f5176d3cd9ca97c721daf74084874bdf54f6ba17125", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90f5176d3cd9ca97c721daf74084874bdf54f6ba17108", async() => {
                 WriteLiteral("\r\n                        <i class=\"fas fa-archive\"></i>Phòng\r\n                    ");
             }
             );
@@ -179,7 +179,7 @@ using CinemaWeb.Controllers;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                </li>\r\n                <li>\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90f5176d3cd9ca97c721daf74084874bdf54f6ba18722", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90f5176d3cd9ca97c721daf74084874bdf54f6ba18705", async() => {
                 WriteLiteral("\r\n                        <i class=\"far fa-square\"></i>Ghế\r\n                    ");
             }
             );
@@ -198,7 +198,7 @@ using CinemaWeb.Controllers;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                </li>\r\n                <li>\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90f5176d3cd9ca97c721daf74084874bdf54f6ba20316", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90f5176d3cd9ca97c721daf74084874bdf54f6ba20299", async() => {
                 WriteLiteral("\r\n                        <i class=\"fas fa-ticket-alt\"></i>Vé\r\n                    ");
             }
             );
@@ -217,7 +217,7 @@ using CinemaWeb.Controllers;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                </li>\r\n                <li>\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90f5176d3cd9ca97c721daf74084874bdf54f6ba21913", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90f5176d3cd9ca97c721daf74084874bdf54f6ba21896", async() => {
                 WriteLiteral("\r\n                        <i class=\"fas fa-dollar-sign\"></i>Hóa đơn\r\n                    ");
             }
             );
@@ -236,7 +236,7 @@ using CinemaWeb.Controllers;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                </li>\r\n                <li>\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90f5176d3cd9ca97c721daf74084874bdf54f6ba23518", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90f5176d3cd9ca97c721daf74084874bdf54f6ba23501", async() => {
                 WriteLiteral("\r\n                        <i class=\"fas fa-user\"></i>Tài khoản\r\n                    ");
             }
             );
@@ -255,7 +255,7 @@ using CinemaWeb.Controllers;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                </li>\r\n                <li>\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90f5176d3cd9ca97c721daf74084874bdf54f6ba25118", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90f5176d3cd9ca97c721daf74084874bdf54f6ba25101", async() => {
                 WriteLiteral("\r\n                        <i class=\"fas fa-comment\"></i>Bình luận\r\n                    ");
             }
             );
@@ -288,7 +288,7 @@ using CinemaWeb.Controllers;
             <div class=""container-fluid"">
                 <div class=""header-wrap"">
                     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90f5176d3cd9ca97c721daf74084874bdf54f6ba27054", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90f5176d3cd9ca97c721daf74084874bdf54f6ba27037", async() => {
                 WriteLiteral(@"
                         <input class=""au-input au-input--xl"" type=""text"" name=""search"" placeholder=""Search for datas &amp; reports..."" />
                         <button class=""au-btn--submit"" type=""submit"">
@@ -319,7 +319,7 @@ using CinemaWeb.Controllers;
                             <div class=""account-item clearfix js-item-menu"">
                                 <div class=""image"">
                                     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "90f5176d3cd9ca97c721daf74084874bdf54f6ba29297", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "90f5176d3cd9ca97c721daf74084874bdf54f6ba29280", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -348,7 +348,7 @@ using CinemaWeb.Controllers;
                                         <div class=""image"">
                                             <a href=""#"">
                                                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "90f5176d3cd9ca97c721daf74084874bdf54f6ba31215", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "90f5176d3cd9ca97c721daf74084874bdf54f6ba31198", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -382,7 +382,7 @@ using CinemaWeb.Controllers;
                                     
                                     <div class=""account-dropdown__footer"">
                                         ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90f5176d3cd9ca97c721daf74084874bdf54f6ba33186", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90f5176d3cd9ca97c721daf74084874bdf54f6ba33169", async() => {
                 WriteLiteral("\r\n                                            <i class=\"zmdi zmdi-power\"></i>Logout\r\n                                        ");
             }
             );

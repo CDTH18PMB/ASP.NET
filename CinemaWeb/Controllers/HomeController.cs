@@ -5,18 +5,24 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using CinemaWeb.Areas.Admin.Models;
+using Doan.Models;
 using Newtonsoft.Json.Linq;
 using Microsoft.AspNetCore.Http;
+using CinemaWeb.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace CinemaWeb.Controllers
 {
     public class HomeController : Controller
     {
-
+        private readonly DPContext _context;
+        public HomeController(DPContext context)
+        {
+            _context = context;
+        }
         public IActionResult Index()
         {
-            if (HttpContext.Session.GetString("user")!=null)
+            if (HttpContext.Session.GetString("user") != null)
             {
                 JObject us = JObject.Parse(HttpContext.Session.GetString("user"));
                 TaiKhoanModel tk = new TaiKhoanModel();
@@ -31,7 +37,7 @@ namespace CinemaWeb.Controllers
                 TaiKhoanModel tk = new TaiKhoanModel();
                 tk.Username = null;
                 return View(tk);
-            }    
+            }
         }
         public IActionResult About()
         {

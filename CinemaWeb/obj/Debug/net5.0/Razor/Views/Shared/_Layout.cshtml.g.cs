@@ -14,7 +14,7 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "D:\ASP.NET\CinemaWeb\Views\_ViewImports.cshtml"
-using CinemaWeb.Areas.Admin.Models;
+using Doan.Models;
 
 #line default
 #line hidden
@@ -34,7 +34,7 @@ using CinemaWeb.Controllers;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8c499d5e087d434ded53ae084e0237f80e1228bd", @"/Views/Shared/_Layout.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9cc29062a535be06e161637d0019bb2414775b0e", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5594cc8552de89d95409e7ec53849779fc354001", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__Layout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<TaiKhoanModel>
     {
         #line hidden
@@ -63,7 +63,7 @@ using CinemaWeb.Controllers;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!DOCTYPE html>\r\n<html lang=\"zxx\">\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8c499d5e087d434ded53ae084e0237f80e1228bd3341", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8c499d5e087d434ded53ae084e0237f80e1228bd3324", async() => {
                 WriteLiteral("\r\n    ");
 #nullable restore
 #line 5 "D:\ASP.NET\CinemaWeb\Views\Shared\_Layout.cshtml"
@@ -93,7 +93,7 @@ Write(RenderSection("css", required: false));
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8c499d5e087d434ded53ae084e0237f80e1228bd4754", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8c499d5e087d434ded53ae084e0237f80e1228bd4737", async() => {
                 WriteLiteral("\r\n    <div>\r\n        ");
 #nullable restore
 #line 10 "D:\ASP.NET\CinemaWeb\Views\Shared\_Layout.cshtml"

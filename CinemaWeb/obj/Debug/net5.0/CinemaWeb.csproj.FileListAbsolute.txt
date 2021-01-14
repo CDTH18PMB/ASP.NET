@@ -120,7 +120,6 @@ D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\scopedcss\bundle\CinemaWeb.styles.css
 D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\CinemaWeb.TagHelpers.input.cache
 D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\CinemaWeb.TagHelpers.output.cache
 D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\CinemaWeb.RazorCoreGenerate.cache
-D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Areas\Admin\Views\Admin\Index.cshtml.g.cs
 D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_FooterPartial.cshtml.g.cs
 D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_HeaderPartial.cshtml.g.cs
 D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_HeadPartial.cshtml.g.cs
@@ -289,3 +288,4 @@ D:\ASP.NET\CinemaWeb\bin\Debug\net5.0\runtimes\win-arm64\native\e_sqlite3.dll
 D:\ASP.NET\CinemaWeb\bin\Debug\net5.0\runtimes\win-x64\native\e_sqlite3.dll
 D:\ASP.NET\CinemaWeb\bin\Debug\net5.0\runtimes\win-x86\native\e_sqlite3.dll
 D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Views\TaiKhoan\Edit.cshtml.g.cs
+D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Areas\Admin\Views\Admin\Index.cshtml.g.cs
