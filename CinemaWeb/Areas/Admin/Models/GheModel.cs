@@ -5,24 +5,25 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Doan.Models
+namespace CinemaWeb.Areas.Admin.Models
 {
     public class GheModel
-    {   //mã ghế
+    {
         [Key]
         public int MaGhe { get; set; }
 
         [Required]
-        [Column(TypeName = "char(5)")]
+        [Column(TypeName ="varchar(5)")]
         public string TenGhe { get; set; }
 
-        //mã phòng
         [Required]
-        [ForeignKey("MaPhong")]
-        public PhongChieuModel maphong { get; set; }
+        public int Phong { get; set; }
+        [ForeignKey("Phong")]
+        public virtual PhongChieuModel maphong { get; set; }
 
-        //trạng thái
         [Required]
         public bool TrangThai { get; set; }
+
+        public ICollection<VeModel> ListGhe_Ve { get; set; }
     }
 }

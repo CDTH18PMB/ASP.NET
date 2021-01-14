@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Doan.Models;
+using CinemaWeb.Areas.Admin.Models;
 
 namespace CinemaWeb.Data
 {
@@ -32,5 +32,6 @@ namespace CinemaWeb.Data
         public DbSet<HoaDonModel> HoaDon { get; set; }
         public DbSet<VeModel> Ve { get; set; }
         public DbSet<BinhLuanModel> BinhLuan { get; set; }
+        public DbSet<TrangThaiGheModel> TrangThaiGhe { get; set; }
     }
 }

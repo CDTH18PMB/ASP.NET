@@ -5,20 +5,21 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Doan.Models
+namespace CinemaWeb.Areas.Admin.Models
 {
     public class HoaDonModel
     {
         [Key]
         public int MaHD { get; set; }
 
+        [Required]
         public string Username { get; set; }
         [ForeignKey("Username")]
-        public TaiKhoanModel username { get; set; }
+        public virtual TaiKhoanModel username { get; set; }
 
         [Required]
-        [Column(TypeName = "varchar(100)")]
-        public string VeDaDat { get; set; }
+        [Column(TypeName ="nvarchar(100)")]
+        public string GheDaDat { get; set; }
 
         [Required]
         public int TongTien { get; set; }
@@ -35,10 +36,11 @@ namespace Doan.Models
         {
 
         }
-        public HoaDonModel(string username, string ve, int tongtien, DateTime ngay, bool trangthai)
+
+        public HoaDonModel(string username, string ghedadat, int tongtien, DateTime ngay, bool trangthai)
         {
             this.Username = username;
-            this.VeDaDat = ve;
+            this.GheDaDat = ghedadat;
             this.TongTien = tongtien;
             this.Ngay = ngay;
             this.TrangThai = trangthai;
