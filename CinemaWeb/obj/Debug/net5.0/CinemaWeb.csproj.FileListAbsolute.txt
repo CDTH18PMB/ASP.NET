@@ -188,3 +188,5 @@ D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\ref\CinemaWeb.dll
 D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\CinemaWeb.pdb
 D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\CinemaWeb.genruntimeconfig.cache
 D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\CinemaWeb.csprojAssemblyReference.cache
+D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_Modal.cshtml.g.cs
+D:\ASP.NET\CinemaWeb\obj\Debug\net5.0\Razor\Areas\Admin\Views\Ve\Details.cshtml.g.cs

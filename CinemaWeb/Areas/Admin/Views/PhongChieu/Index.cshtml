@@ -11,6 +11,30 @@
     </div>
 </div>
 <!-- Hết tiêu đề-->
+<!--Thông báo-->
+@{
+    if (TempData["Message"] != null)
+    {
+        @section Modal{
+            <div class="modal" tabindex="-1" role="dialog" id="modal-sieu-cap-vip-pro">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <p>@TempData["Message"]</p>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Đóng">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+}
+<!--Hết thông báo-->
 <div class="row">
     <div class="col-md-8">
         <div class="card text-center">
@@ -84,64 +108,51 @@
                 <!-- Hết nội dung-->
             </div>
             <div class="card-footer text-muted">
-                Thiếu Phân trang
             </div>
-        </div> 
+        </div>
     </div>
     <div class="col-md-4">
-        @{
-            if (TempData["Message"] != null)
-            {
-                <div id="msg" class="card text-center">
-                    <div class="card-header">
-                        <h4>@TempData["Message"]</h4>
-                    </div>
-                </div>
-            }
-        }
         <partial name="Create" />
     </div>
 </div>
 <!-- Tập lệnh-->
 @section Scripts {
-@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-<script>
-    $('button[name=btn_update_stt').click(function () {
-        var id = $(this).attr('data-id');
-        var soghe = $(this).attr('data-soghe');
-        var stt = ($(this).attr('data-stt') == 0 ? false : true);
-        $.ajax({
-            method: "POST",
-            url: "../api/PhongChieu_API/UpdateStatus/",
-            contentType: 'application/json; charset=UTF-8',
-            data: JSON.stringify({ "ma": id, "stt": stt })
-        })
-            .done(function (msg) {
-                if (msg == '0') {
-                    alert('Cập nhật thất bại');
-                }
-                else {
-                    var r = JSON.parse(msg);
-                    if (r.stt == 'True') {
-                        $('button[name=btn_update_stt][data-id=' + r.id + ']').html('Đóng');
-                        $('button[name=btn_update_stt][data-id=' + r.id + ']').attr("data-stt", "0");
-                        $('td[name=td_update_stt][data-id=' + r.id + ']').html('Mở cửa');
-
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        $('button[name=btn_update_stt').click(function () {
+            var id = $(this).attr('data-id');
+            var soghe = $(this).attr('data-soghe');
+            var stt = ($(this).attr('data-stt') == 0 ? false : true);
+            $.ajax({
+                method: "POST",
+                url: "../api/PhongChieu_API/UpdateStatus/",
+                contentType: 'application/json; charset=UTF-8',
+                data: JSON.stringify({ "ma": id, "stt": stt })
+            })
+                .done(function (msg) {
+                    if (msg == '0') {
+                        alert('Cập nhật thất bại');
                     }
                     else {
-                        $('button[name=btn_update_stt][data-id=' + r.id + ']').html('Mở');
-                        $('button[name=btn_update_stt][data-id=' + r.id + ']').attr("data-stt", "1");
-                        $('td[name=td_update_stt][data-id=' + r.id + ']').html('Đóng cửa');
+                        var r = JSON.parse(msg);
+                        if (r.stt == 'True') {
+                            $('button[name=btn_update_stt][data-id=' + r.id + ']').html('Đóng');
+                            $('button[name=btn_update_stt][data-id=' + r.id + ']').attr("data-stt", "0");
+                            $('td[name=td_update_stt][data-id=' + r.id + ']').html('Mở cửa');
+
+                        }
+                        else {
+                            $('button[name=btn_update_stt][data-id=' + r.id + ']').html('Mở');
+                            $('button[name=btn_update_stt][data-id=' + r.id + ']').attr("data-stt", "1");
+                            $('td[name=td_update_stt][data-id=' + r.id + ']').html('Đóng cửa');
+                        }
+                        alert('Cập nhật thành công');
                     }
-                    alert('Cập nhật thành công');
-                }
-            });
-    })
-</script>
-<script>
-    setTimeout(function () {
-        $('#msg').fadeOut('slow');
-    }, 3000);
-</script>
+                });
+        })
+    </script>
+    <script>
+        $('#modal-sieu-cap-vip-pro').modal('show');
+    </script>
 }
 <!-- Hết tập lệnh-->

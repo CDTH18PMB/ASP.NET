@@ -85,7 +85,7 @@ namespace CinemaWeb.Areas.Admin.Controllers
             ViewData["Phim"] = new SelectList(_context.Phim.Where(p => p.TrangThai == true), "MaPhim", "TenPhim", veModel.Phim);
             if (Phim != null)
             {   //chọn suất
-                ViewData["Suat"] = new SelectList(_context.LichChieu.Where(l => l.Phim == Phim).Where(l => l.TrangThai == true), "MaLichChieu", "MaLichChieu");
+                ViewData["Suat"] = new SelectList(_context.LichChieu.Where(l => l.Phim == Phim).Where(l => l.TrangThai == true), "MaLichChieu", "ThoiGian");
             }
             if (Suat != null)
             {   //chọn ghế
@@ -128,7 +128,7 @@ namespace CinemaWeb.Areas.Admin.Controllers
                     _context.Update(ve);
                     await _context.SaveChangesAsync();
                     //nội dung thông báo
-                    Message = $"Chỉnh sửa thành công vé mã {veModel.MaVe}.";
+                    Message = $"Chỉnh sửa thành công vé mã số {veModel.MaVe}.";
                     //đổi trạng thái cho trạng thái ghế mới
                     (from tt in _context.TrangThaiGhe
                      where tt.Ghe == veModel.Ghe
@@ -149,6 +149,28 @@ namespace CinemaWeb.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            return View(veModel);
+        }
+
+        // GET: Admin/Ve/Details/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var veModel = await _context.Ve
+                .Include(v => v.maghe)
+                .Include(v => v.maphim)
+                .Include(v => v.maphong)
+                .Include(v => v.nguoimua)
+                .Include(v => v.suatchieu)
+                .FirstOrDefaultAsync(m => m.MaVe == id);
+            if (veModel == null)
+            {
+                return NotFound();
+            }
+
             return View(veModel);
         }
 

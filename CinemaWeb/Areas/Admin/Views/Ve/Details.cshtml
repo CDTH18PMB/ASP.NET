@@ -1,0 +1,59 @@
+﻿@model CinemaWeb.Areas.Admin.Models.VeModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = null;
+}
+<div>
+    <dl class="row">
+        <dt class="col-sm-4">
+            Mã
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.MaVe)
+        </dd>
+        <dt class="col-sm-4">
+            Phim
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.maphim.TenPhim)
+        </dd>
+        <dt class="col-sm-4">
+            Phòng
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Phong)
+        </dd>
+        <dt class="col-sm-4">
+            Ghế
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.maghe.TenGhe)
+        </dd>
+        <dt class="col-sm-4">
+            Thời gian
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.suatchieu.ThoiGian)  
+            @Html.DisplayFor(model => model.suatchieu.NgayChieu)
+        </dd>
+        <dt class="col-sm-4">
+            Người mua
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.nguoimua.Username)
+        </dd>
+        <dt class="col-sm-4">
+            Ngày mua
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.NgayMua)
+        </dd>
+        <dt class="col-sm-4">
+            Giá
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.GiaVe)
+        </dd>
+    </dl>
+</div>
