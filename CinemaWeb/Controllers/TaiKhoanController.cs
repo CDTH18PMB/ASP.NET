@@ -48,17 +48,37 @@ namespace CinemaWeb.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Username,Password,HoTen,SDT,LoaiTK,TrangThai")] TaiKhoanModel taiKhoanModel)
+        public async Task<IActionResult> Edit(string id, [Bind("Username,Password,HoTen,SDT")] TaiKhoanModel taiKhoanModel)
         {
-            if (id == taiKhoanModel.Username)
+            if (id != taiKhoanModel.Username)
             {
-                taiKhoanModel.Password = StringProcessing.CreateMD5Hash(taiKhoanModel.Password);
-                _context.TaiKhoan.Add(taiKhoanModel);
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    taiKhoanModel.Password = StringProcessing.CreateMD5Hash(taiKhoanModel.Password);
+                    _context.Update(taiKhoanModel);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!TaiKhoanModelExists(taiKhoanModel.Username))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction("Index", "Home");
             }
             return RedirectToAction("Index", "Home");
         }
-
-        private bool TaiKhoanModelExists(string id)
+        private bool TaiKhoanModelExists(String id)
         {
             return _context.TaiKhoan.Any(e => e.Username == id);
         }

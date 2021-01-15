@@ -1,9 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-<<<<<<< HEAD
 using Microsoft.Extensions.Logging;
-=======
->>>>>>> afe335f5f613e5d6f1be2eaed5c8ed45baa1841f
 using CinemaWeb.Areas.Admin.Models;
 using Newtonsoft.Json.Linq;
 using Microsoft.AspNetCore.Http;

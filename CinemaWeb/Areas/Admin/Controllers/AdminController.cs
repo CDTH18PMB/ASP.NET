@@ -19,7 +19,8 @@ namespace CinemaWeb.Areas.Admin.Controllers
             TaiKhoanModel tk = new TaiKhoanModel();
             tk.Username = us.SelectToken("Username").ToString();
             tk.Password = us.SelectToken("Password").ToString();
-            return View(tk);
+            ViewBag.TaiKhoan = tk;
+            return View();
         }
 
         // GET: AdminController/Details/5

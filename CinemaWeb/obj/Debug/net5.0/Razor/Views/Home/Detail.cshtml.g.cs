@@ -33,15 +33,9 @@ using CinemaWeb.Controllers;
 #line default
 #line hidden
 #nullable disable
-<<<<<<< HEAD
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"243f5ed9757949fde4b84025230f0a940097f7e1", @"/Views/Home/Detail.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"51e646528bc322c2b10fbb346d6a88b244cbf390", @"/Views/_ViewImports.cshtml")]
-    public class Views_Home_Detail : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
-=======
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f14e1d94e38e19d10a5b0f96cbea77546f2306fc", @"/Views/Home/Detail.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"51e646528bc322c2b10fbb346d6a88b244cbf390", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Detail : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<CinemaWeb.Areas.Admin.Models.PhimModel>
->>>>>>> afe335f5f613e5d6f1be2eaed5c8ed45baa1841f
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("alt", new global::Microsoft.AspNetCore.Html.HtmlString("hình ảnh"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_1 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("id", new global::Microsoft.AspNetCore.Html.HtmlString("image"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.SingleQuotes);
@@ -85,20 +79,12 @@ using CinemaWeb.Controllers;
 #line 8 "D:\ASP.NET\CinemaWeb\Views\Home\Detail.cshtml"
 WriteAttributeValue("", 232, Html.DisplayFor(model => model.Trailer), 232, 40, false);
 
-<<<<<<< HEAD
-    <!--Thông tin phim-->
-    <div class='row' style='margin-bottom:75px'>
-        <div class='col-sm-4'>
-            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "243f5ed9757949fde4b84025230f0a940097f7e17343", async() => {
-=======
 #line default
 #line hidden
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(" frameborder=\"0\" allowfullscreen>\r\n        </iframe>\r\n    </center>\r\n</div>\r\n<div class=\'container\' style=\'margin-top:70px\'>\r\n\r\n    <!--Thông tin phim-->\r\n    <div class=\'row\' style=\'margin-bottom:75px\'>\r\n        <div class=\'col-sm-4\'>\r\n            ");
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "f14e1d94e38e19d10a5b0f96cbea77546f2306fc7443", async() => {
->>>>>>> afe335f5f613e5d6f1be2eaed5c8ed45baa1841f
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -123,11 +109,6 @@ AddHtmlAttributeValue("", 553, Html.DisplayFor(model => model.Poster), 553, 39, 
             }
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
-<<<<<<< HEAD
-            WriteLiteral("\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "243f5ed9757949fde4b84025230f0a940097f7e18635", async() => {
-                WriteLiteral("<button class=\'btn btn-primary\' style=\'width:100%; margin-top:20px\'>Đặt vé</button>");
-=======
             WriteLiteral("\r\n            <button type=\"button\" id=\"buttonBookTicket\" class=\'btn btn-primary\' style=\'width:100%; margin-top:20px\'>Đặt vé</button>\r\n        </div>\r\n        <div class=\'col-sm-8\'>\r\n            <div style=\'font-size: 32px; font-weight: bold;\'>");
 #nullable restore
 #line 21 "D:\ASP.NET\CinemaWeb\Views\Home\Detail.cshtml"
@@ -218,7 +199,6 @@ WriteAttributeValue("", 1791, Html.DisplayFor(model => model.MaPhim), 1791, 39, 
             </div>
         </div>
     ");
->>>>>>> afe335f5f613e5d6f1be2eaed5c8ed45baa1841f
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_FormTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.FormTagHelper>();
@@ -261,22 +241,6 @@ WriteAttributeValue("", 1791, Html.DisplayFor(model => model.MaPhim), 1791, 39, 
     </div>
 </div>
 
-<<<<<<< HEAD
-    <!--Bình luận-->
-    <h3>BÌNH LUẬN</h3>
-
-    <div>
-        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "243f5ed9757949fde4b84025230f0a940097f7e110866", async() => {
-                WriteLiteral(@"
-            <div class='row'>
-                <div class='col-sm-10'>
-                    <textarea class='form-control' cols=""30"" rows=""3"" placeholder=""Nêu cảm nhận của bạn về phim""></textarea>
-                </div>
-                <div class='col-sm-2'>
-                    <button type='button' class='btn btn-primary' style='width:100%; height:100%'>Bình luận</button>
-                </div>
-=======
 <!-- Modal đăng nhập-->
 <div class=""modal fade"" id=""CommentMissingUsername"">
     <div class=""modal-dialog"">
@@ -287,7 +251,6 @@ WriteAttributeValue("", 1791, Html.DisplayFor(model => model.MaPhim), 1791, 39, 
                     <i class=""fa fa-warning"" style=""font-size: 200px; color:orange""></i>
                     <h5 style=""margin-top:10px"">Vui lòng đăng nhập để có thể thực hiện chức năng</h5>
                 </center>
->>>>>>> afe335f5f613e5d6f1be2eaed5c8ed45baa1841f
             </div>
             <div class=""modal-footer"">
                 ");
