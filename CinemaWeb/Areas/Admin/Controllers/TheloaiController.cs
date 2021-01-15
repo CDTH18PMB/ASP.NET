@@ -57,7 +57,7 @@ namespace CinemaWeb.Areas.Admin.Controllers
             {
                 _context.Add(theloaiModel);
                 await _context.SaveChangesAsync();
-                Message = $"Tạo thành công {theloaiModel.MaLoai}";
+                Message = $"Tạo thể loại thành công {theloaiModel.MaLoai}";
                 return RedirectToAction(nameof(Index));
             }
             return RedirectToAction(nameof(Index));
@@ -82,7 +82,7 @@ namespace CinemaWeb.Areas.Admin.Controllers
                 {
                     _context.Update(theloaiModel);
                     await _context.SaveChangesAsync();
-                    Message = $"Cập nhật thành công {theloaiModel.MaLoai}";
+                    Message = $"Cập nhật thể loại thành công {theloaiModel.MaLoai}";
                 }
                 catch (DbUpdateConcurrencyException)
                 {
