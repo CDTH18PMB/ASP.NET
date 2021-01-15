@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CinemaWeb.Areas.Admin.Models;
 using CinemaWeb.Data;
+using Newtonsoft.Json.Linq;
+using Microsoft.AspNetCore.Http;
 
 namespace CinemaWeb.Areas.Admin.Controllers
 {
@@ -30,6 +32,11 @@ namespace CinemaWeb.Areas.Admin.Controllers
                 ViewData["TenLichChieu"] = (from f in _context.TrangThaiGhe where f.Suat == search select f.Suat).First();
                 return View(await trangthaighe.ToListAsync());
             }
+            JObject us = JObject.Parse(HttpContext.Session.GetString("user"));
+            TaiKhoanModel tk = new TaiKhoanModel();
+            tk.Username = us.SelectToken("Username").ToString();
+            tk.Password = us.SelectToken("Password").ToString();
+            ViewBag.TaiKhoan = tk;
             return View();
         }
 

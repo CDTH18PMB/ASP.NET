@@ -81,7 +81,7 @@
                 </div>
             </div>
         </div>
- 
+
         <div class="below-section">
             <div class="container">
                 <div class="copyright-footer">
@@ -138,8 +138,22 @@
 
     </section>
 </footer>
-<!--//footer-66 -->
 
+<!-- modal edit tài khoản-->
+<div class="modal" tabindex="-1" id="form-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body"></div>
+        </div>
+
+    </div>
+</div>
+
+<!--//footer-66 -->
 <!-- responsive tabs -->
 <script src="~/user/js/jquery-1.9.1.min.js"></script>
 <script src="~/user/js/site.js" asp-append-version="true"></script>
@@ -441,137 +455,7 @@
     });
 </script>
 <!--//MENU-JS-->
-
-<script>
-    var str = ''; var count = 0; var total = 0;
-    //Chọn phim
-    function ChooseMovie(vitri, dsPhim) {
-        //lấy ra phim
-        var Phim = document.forms["bookTicket"]["Phim_" + vitri].value;
-
-        // đổ tên phim vào input
-        document.forms["bookTicket"]["Phim"].value = Phim;
-
-        //đánh dấu đang chọn
-        for (var i = 1; i <= dsPhim; i++) {
-            if (i == vitri) {
-                document.getElementById("Phim_" + i).style.backgroundColor = "black";
-                document.getElementById("Phim_" + i).style.color = "white";
-            } else {
-                document.getElementById("Phim_" + i).style.backgroundColor = "white";
-                document.getElementById("Phim_" + i).style.color = "black";
-            }
-        }
-    }
-
-    //Chọn suất
-    function ChooseMovieSchedule(vitri, dsSuatChieu) {
-        // lấy suất chiếu
-        var NgayChieu = document.forms["bookTicket"]["NgayChieu"].value;
-        var Phong = document.forms["bookTicket"]["Phong_" + vitri].value;
-        var ThoiGian = document.forms["bookTicket"]["ThoiGian_" + vitri].value;
-
-        // đổ dữ liệu vào input
-        document.forms["bookTicket"]["SuatChieu"].value = ThoiGian + " - " + NgayChieu;
-        document.forms["bookTicket"]["Phong"].value = Phong;
-
-        // đánh dấu đang chọn
-        for (var i = 1; i <= dsSuatChieu; i++) {
-            if (i == vitri) {
-                document.getElementById("Suat_" + i).style.backgroundColor = "black";
-                document.getElementById("Suat_" + i).style.color = "white";
-            } else {
-                document.getElementById("Suat_" + i).style.backgroundColor = "white";
-                document.getElementById("Suat_" + i).style.color = "black";
-            }
-        }
-    }
-    
-    //Chọn ghế
-    function ChooseSeat(Word, DayGhe, vitri, col) {
-        if (count == 10) {
-            alert("Bạn chỉ được đặt 10 ghế mỗi lần");
-            return;
-        } else {
-            // lấy ra vị trí ghế
-            var Ghe = document.forms["bookTicket"][DayGhe + vitri].value;
-
-            //nếu ghế chưa được chọn
-            if (str.search(Ghe) == -1) {
-                str += Ghe + ' '; // cộng chuỗi
-                count++; // đếm số ghế
-                total = 100000 * count; // tính tổng tiền
-
-                // đổ dữ liệu vào input
-                document.forms["bookTicket"]["Ghe"].value = str;
-                document.forms["bookTicket"]["TongTien"].value = total;
-
-                //đánh dấu
-                for (var i = 1; i <= col; i++) {
-                    if (i == vitri) {
-                        document.getElementById(Word + i).style.backgroundColor = "black";
-                        document.getElementById(Word + i).style.color = "white";
-                    }
-                }
-            } else { // ngược lại nếu ghế đã được chọn
-                // bỏ chọn ghế và cập nhật tổng tiền
-                var seat, temp;
-                if (vitri < 10) {
-                    // nếu số ghế < 10 (vd: A1) thì lấy ra số ghế + khoảng trắng (A1 ) và thay thế rỗng
-                    seat = str.substr(str.indexOf(Ghe), 3);
-                    temp = str.replace(seat, '');
-                } else {
-                    seat = str.substr(str.indexOf(Ghe), 4);
-                    temp = str.replace(seat, '');
-                }
-
-                //gán lại chuỗi đã cập nhật
-                str = temp;
-
-                //cập nhật tổng tiền
-                count--;
-                total = 100000 * count;
-
-                //bỏ đánh dấu và xuất số ghế đang chọn lên input
-                document.forms["bookTicket"]["Ghe"].value = str;
-                document.forms["bookTicket"]["TongTien"].value = total;
-
-                document.getElementById(Word + vitri).style.backgroundColor = "white";
-                document.getElementById(Word + vitri).style.color = "black";
-            }
-        }
-    }
-
-    //Chọn lại
-    function Reset() {
-        //cập nhật lại trạng thái ban đầu
-        str = ''; count = 0; total = 0;
-        var Word = '';
-
-        document.forms["bookTicket"]["Ghe"].value = str;
-        document.forms["bookTicket"]["TongTien"].value = total;
-
-        for (var row = 1; row <= 10; row++) {
-
-            Word = String.fromCharCode(64 + row);
-
-            for (var seat = 1; seat < 5; seat++) {
-                document.getElementById(Word + seat).style.backgroundColor = "white";
-                document.getElementById(Word + seat).style.color = "black";
-            }
-
-            for (var seat = 5; seat < 15; seat++) {
-                document.getElementById(Word + seat).style.backgroundColor = "white";
-                document.getElementById(Word + seat).style.color = "black";
-            }
-
-            for (var seat = 15; seat < 19; seat++) {
-                document.getElementById(Word + seat).style.backgroundColor = "white";
-                document.getElementById(Word + seat).style.color = "black";
-            }
-        }
-    }
-</script>
-
 <script src="~/user/js/bootstrap.min.js"></script>
 <script src="~/user/js/bootstrap.js"></script>
+<script src="~/user/js/mustache.min.js"></script>
+<script src="~/user/js/site.js"></script>

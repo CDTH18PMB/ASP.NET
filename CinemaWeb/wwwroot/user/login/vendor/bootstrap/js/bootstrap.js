@@ -2150,7 +2150,7 @@ var Modal = function ($) {
       var animate = $(this._element).hasClass(ClassName.FADE) ? ClassName.FADE : '';
 
       if (this._isShown && this._config.backdrop) {
-        var doAnimate = Util.supportsTransitionEnd() && animate;
+        var CinemaWebimate = Util.supportsTransitionEnd() && animate;
 
         this._backdrop = document.createElement('div');
         this._backdrop.className = ClassName.BACKDROP;
@@ -2176,7 +2176,7 @@ var Modal = function ($) {
           }
         });
 
-        if (doAnimate) {
+        if (CinemaWebimate) {
           Util.reflow(this._backdrop);
         }
 
@@ -2186,7 +2186,7 @@ var Modal = function ($) {
           return;
         }
 
-        if (!doAnimate) {
+        if (!CinemaWebimate) {
           callback();
           return;
         }

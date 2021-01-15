@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Doan.Models;
+using CinemaWeb.Areas.Admin.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
@@ -19,7 +19,8 @@ namespace CinemaWeb.Areas.Admin.Controllers
             TaiKhoanModel tk = new TaiKhoanModel();
             tk.Username = us.SelectToken("Username").ToString();
             tk.Password = us.SelectToken("Password").ToString();
-            return View(tk);
+            ViewBag.TaiKhoan = tk;
+            return View();
         }
 
         // GET: AdminController/Details/5

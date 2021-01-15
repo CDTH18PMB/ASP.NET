@@ -10,18 +10,30 @@
     </div>
 </div>
 <!--hết tiêu đề-->
-<!--Thông báo-->
+@*Thông báo*@
 @{
     if (TempData["Message"] != null)
     {
-        <div id="msg" class="card text-center">
-            <div class="card-header">
-                <h4>@TempData["Message"]</h4>
+        @section Modal{
+            <div class="modal" tabindex="-1" role="dialog" id="modal-sieu-cap-vip-pro">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <p>@TempData["Message"]</p>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Đóng">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        }
     }
 }
-<!--Hết thông báo-->
+@*Hết thông báo*@
 <div class="card text-center">
     <div class="card-header">
         <!--tìm kiếm-->
@@ -30,7 +42,7 @@
             <div class="col-md-8">
                 <form asp-action="Index">
                     <div class="input-group">
-                        <input type="text" name="SearchString" value="@ViewData["Search"]" class="form-control" placeholder='Nhập tên phim để tìm' />
+                        <input type="text" name="SearchString" value="@ViewData["Search"]" class="form-control" placeholder='Nhập số điện thoại khách hàng để tìm' />
                         <select class="form-select" name="SearchStatus">
                             <option value="" selected>Tất cả trạng thái</option>
                             <option value="false">Kết thúc</option>
@@ -45,9 +57,12 @@
     </div>
     <div class="card-body">
         <!--nội dung-->
-        <table class="table">
+        <table class="table table-success table-striped">
             <thead>
                 <tr>
+                    <th>
+                        Xem Chi tiết
+                    </th>
                     <th>
                         Phim
                     </th>
@@ -58,16 +73,10 @@
                         Ghế
                     </th>
                     <th>
-                        Suất
+                        Suất chiếu
                     </th>
                     <th>
                         Người Mua
-                    </th>
-                    <th>
-                        Ngày mua
-                    </th>
-                    <th>
-                        Giá
                     </th>
                     <th>
                         Trạng thái
@@ -80,6 +89,11 @@
                 {
                     <tr>
                         <td>
+                            <button onclick="showModalDetails('@Url.Action("Details", "Ve", new { id = item.MaVe })','Xem chi tiết vé')" class="btn btn-outline-dark">
+                                Mã số @Html.DisplayFor(modelItem => item.MaVe)
+                            </button>
+                        </td>
+                        <td>
                             @Html.DisplayFor(modelItem => item.maphim.TenPhim)
                         </td>
                         <td>
@@ -89,17 +103,10 @@
                             @Html.DisplayFor(modelItem => item.maghe.TenGhe)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.suatchieu.NgayChieu)
-                            @Html.DisplayFor(modelItem => item.suatchieu.ThoiGian)
+                            Số @Html.DisplayFor(modelItem => item.suatchieu.MaLichChieu)
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.nguoimua.Username)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.NgayMua)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.GiaVe)
                         </td>
                         <td name="td_update_stt" data-id="@item.MaVe">
                             @{
@@ -153,7 +160,7 @@
             </a>*@
     </div>
 </div>
-<!--Tập Lệnh-->
+@*Tập Lệnh*@
 @section Scripts{
     <script>
         $('button[name=btn_update_stt').click(function () {
@@ -189,9 +196,20 @@
         })
     </script>
     <script>
-        setTimeout(function () {
-            $('#msg').fadeOut('slow');
-        }, 3000);
+        showModalDetails = (url, title) => {
+            $.ajax({
+                type: "GET",
+                url: url,
+                success: function (res) {
+                    $("#Modal-Details .modal-body").html(res);
+                    $("#Modal-Details .modal-title").html(title);
+                    $("#Modal-Details").modal("show");
+                }
+            })
+        }
+    </script>
+    <script>
+        $('#modal-sieu-cap-vip-pro').modal('show');
     </script>
 }
-<!--Hết tập Lệnh-->
+@*Hết tập Lệnh*@
