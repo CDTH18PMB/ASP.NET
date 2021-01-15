@@ -17,7 +17,7 @@ namespace CinemaWeb.Areas.Admin.Models
         public string TenPhim { get; set; }
 
         [Required]
-        [Column(TypeName = "varchar(50)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string Poster { get; set; }
 
         [Required]
