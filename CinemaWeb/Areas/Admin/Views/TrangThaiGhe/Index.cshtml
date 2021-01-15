@@ -1,0 +1,52 @@
+﻿@model IEnumerable<CinemaWeb.Areas.Admin.Models.TrangThaiGheModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- Tiêu đề-->
+<div class="card text-center">
+    <div class="card-header">
+        <h2 class="text-center">Quản lý Sơ đồ ghế được đặt</h2>
+    </div>
+</div>
+<!-- Hết tiêu đề-->
+<div class="row">
+    <!-- Tìm kiếm-->
+    <div class="col-md-4">
+        <div class="card text-center">
+            <div class="card-header">
+                <h4 class="modal-title">Tìm sơ đồ đặt ghế theo lịch chiếu</h4>
+            </div>
+            <div class="card-body">
+                <form asp-action="Index">
+                    <select name="search" id="search" class="form-control" asp-items="ViewBag.MaLichChieu"></select>
+                    <button style="margin-top:10px" class="btn btn-primary col-md-12">Tìm</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Hết tìm kiếm-->
+    <!-- Danh sách ghế-->
+    <div class="col-md-8">
+        @{ if (ViewData["TenLichChieu"] != null)
+            {
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h4 class="modal-title">Sơ đồ ghế lịch chiếu @ViewData["TenLichChieu"]</h4>
+                    </div>
+                    <div class="card-body">
+                        @foreach (var item in Model)
+                        {
+                            <button style="margin-bottom:4px; width: 35px; height: 35px"
+                                    class="btn @(item.TrangThai != true?"btn-outline-secondary":"btn-success") btn-sm">
+                                @Html.DisplayFor(modelItem => item.ghemodel.TenGhe)
+                            </button>
+                        }
+                    </div>
+                </div>
+            }
+        }
+    </div>
+    <!-- Hết danh sách ghế-->
+</div>

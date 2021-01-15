@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    @await Html.PartialAsync("_HeadPartial.cshtml")
+    @RenderSection("css", required: false)
+</head>
+<body class="animsition">
+    @await Html.PartialAsync("_HeaderPartial.cshtml")
+    @await Html.PartialAsync("_SidebarPartial.cshtml")
+
+    <div class="main-content">
+        <div class="section__content section__content--p30">
+            @RenderBody()
+        </div>
+    </div>
+    @RenderSection("Modal", required: false)
+    @await Html.PartialAsync("_Modal.cshtml")
+    @await Html.PartialAsync("_FooterPartial.cshtml")
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

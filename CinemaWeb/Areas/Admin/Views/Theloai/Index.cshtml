@@ -1,0 +1,133 @@
+﻿@model CinemaWeb.Areas.Admin.Models.TheloaiModel
+@using CinemaWeb.Areas.Admin.Models;
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="card text-center">
+    <div class="card-header">
+        <h2 class="text-center">Quản lý thể loại phim</h2>
+    </div>
+</div>
+<partial name="Create" /> @*//Thêm Create View vào trong Index View dưới dạng PartialView*@
+<p>
+    <a asp-action="Index" asp-route-id="">Tạo mới</a>
+</p>
+<div class="row">
+    <div class="col-md-8">
+        <div class="card text-center">
+
+            <div class="card-body">
+                <table class="table table-success table-striped" style="margin-top:5px">
+                    <thead>
+                        <tr style='text-align:center'>
+                            <th>
+                                Mã Loại
+                            </th>
+                            <th>
+                                Tên Loại
+                            </th>
+                            <th>
+                                Trạng thái
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (TheloaiModel item in ViewBag.Listtheloai)
+                        {
+                            <tr style='text-align:center'>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.MaLoai)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.TenLoai)
+                                </td>
+                                <td name="td_update_stt" data-id="@item.MaLoai">
+                                    @{
+                                        if (item.TrangThai == true)
+                                        {
+                                            @:Hiện
+                                        }
+                                        else
+                                        {
+                                            @:Ẩn
+                                        }
+                                    }
+                                </td>
+                                <td style='text-align:left'>
+                                    <a asp-action="Index" asp-route-id="@item.MaLoai" class="btn btn-outline-primary">Chỉnh sửa</a>
+                                    <button class="btn btn-outline-warning" name="btn_update_stt" data-id="@item.MaLoai" data-stt="@(item.TrangThai == true ?0:1)">
+                                        @{if (item.TrangThai == true)
+                                            {
+                                                @:Ẩn
+                                            }
+                                            else
+                                            {
+                                                @:Hiện
+                                            }
+                                        }
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        @{
+            if (TempData["Message"] != null)
+            {
+                <div id="msg" class="card text-center">
+                    <div class="card-header">
+                        <h4>@TempData["Message"]</h4>
+                    </div>
+                </div>
+            }
+        }
+        
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        $('button[name=btn_update_stt').click(function () {
+            console.log("cc");
+            var id = $(this).attr('data-id');
+            var soghe = $(this).attr('data-name');
+            var stt = ($(this).attr('data-stt') == 0 ? false : true);
+            $.ajax({
+                method: "POST",
+                url: "../api/Theloai_API/UpdateStatus/",
+                contentType: 'application/json; charset=UTF-8',
+                data: JSON.stringify({ "ma": id, "stt": stt })
+            })
+                .done(function (msg) {
+                    if (msg == '0') {
+                        alert('Cập nhật thất bại');
+                    }
+                    else {
+                        var r = JSON.parse(msg);
+                        if (r.stt == 'True') {
+                            $('button[name=btn_update_stt][data-id=' + r.id + ']').html('Ẩn');
+                            $('button[name=btn_update_stt][data-id=' + r.id + ']').attr("data-stt", "0");
+                            $('td[name=td_update_stt][data-id=' + r.id + ']').html('Hiện');
+
+                        }
+                        else {
+                            $('button[name=btn_update_stt][data-id=' + r.id + ']').html('Hiện');
+                            $('button[name=btn_update_stt][data-id=' + r.id + ']').attr("data-stt", "1");
+                            $('td[name=td_update_stt][data-id=' + r.id + ']').html('Ẩn');
+                        }
+                        alert('Cập nhật thành công');
+                    }
+                });
+        })
+    </script>
+    <script>
+        setTimeout(function () {
+            $('#msg').fadeOut('slow');
+        }, 6000);
+    </script>
+}

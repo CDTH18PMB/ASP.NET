@@ -1,0 +1,215 @@
+﻿@model IEnumerable<CinemaWeb.Areas.Admin.Models.VeModel>
+@*@model PaginatedList<CinemaWeb.Areas.Admin.Models.VeModel>*@
+@{
+    ViewData["Title"] = "Index";
+}
+<!--Tiêu đề-->
+<div class="card text-center">
+    <div class="card-header">
+        <h2>Quản lý vé</h2>
+    </div>
+</div>
+<!--hết tiêu đề-->
+@*Thông báo*@
+@{
+    if (TempData["Message"] != null)
+    {
+        @section Modal{
+            <div class="modal" tabindex="-1" role="dialog" id="modal-sieu-cap-vip-pro">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <p>@TempData["Message"]</p>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Đóng">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+}
+@*Hết thông báo*@
+<div class="card text-center">
+    <div class="card-header">
+        <!--tìm kiếm-->
+        <div class='row'>
+            <div class="col-md-4"></div>
+            <div class="col-md-8">
+                <form asp-action="Index">
+                    <div class="input-group">
+                        <input type="text" name="SearchString" value="@ViewData["Search"]" class="form-control" placeholder='Nhập số điện thoại khách hàng để tìm' />
+                        <select class="form-select" name="SearchStatus">
+                            <option value="" selected>Tất cả trạng thái</option>
+                            <option value="false">Kết thúc</option>
+                            <option value="true">Hoạt động</option>
+                        </select>
+                        <input class="btn btn-outline-info" type="submit" value="Tìm kiếm" />
+                        <a class="btn btn-outline-secondary" asp-action="index">X</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <!--nội dung-->
+        <table class="table table-success table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Xem Chi tiết
+                    </th>
+                    <th>
+                        Phim
+                    </th>
+                    <th>
+                        Phòng
+                    </th>
+                    <th>
+                        Ghế
+                    </th>
+                    <th>
+                        Suất chiếu
+                    </th>
+                    <th>
+                        Người Mua
+                    </th>
+                    <th>
+                        Trạng thái
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <button onclick="showModalDetails('@Url.Action("Details", "Ve", new { id = item.MaVe })','Xem chi tiết vé')" class="btn btn-outline-dark">
+                                Mã số @Html.DisplayFor(modelItem => item.MaVe)
+                            </button>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.maphim.TenPhim)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.maphong.MaPhong)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.maghe.TenGhe)
+                        </td>
+                        <td>
+                            Số @Html.DisplayFor(modelItem => item.suatchieu.MaLichChieu)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.nguoimua.Username)
+                        </td>
+                        <td name="td_update_stt" data-id="@item.MaVe">
+                            @{
+                                if (item.TrangThai == true)
+                                {
+                                    @:Còn dùng
+                                }
+                                else
+                                {
+                                    @:Hết hạng
+                                }
+                            }
+                        </td>
+                        <td style='text-align:left'>
+                            <a style="@(item.TrangThai != true ?"display:none":"")" data-id="@item.MaVe" name="btn_edit" asp-action="SearchEdit" asp-route-id="@item.MaVe" class="btn btn-outline-info">chỉnh sửa</a>
+                            <button class="btn btn-outline-warning" name="btn_update_stt" data-id="@item.MaVe" data-stt="@(item.TrangThai == true ?0:1)">
+                                @{if (item.TrangThai == true)
+                                    {
+                                        @:Huỷ
+                                    }
+                                    else
+                                    {
+                                        @:Mở
+                                    }
+                                }
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer text-muted">
+
+        @*@{
+                var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+                var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+            }
+
+            <a asp-action="Index"
+               asp-route-pageNumber="@(Model.PageIndex - 1)"
+               asp-route-searchString="@ViewData["Search"]"
+               class="btn btn-default @prevDisabled">
+                Previous
+            </a>
+            <a asp-action="Index"
+               asp-route-pageNumber="@(Model.PageIndex + 1)"
+               asp-route-searchString="@ViewData["Search"]"
+               class="btn btn-default @nextDisabled">
+                Next
+            </a>*@
+    </div>
+</div>
+@*Tập Lệnh*@
+@section Scripts{
+    <script>
+        $('button[name=btn_update_stt').click(function () {
+            var id = $(this).attr('data-id');
+            var stt = ($(this).attr('data-stt') == 0 ? false : true);
+            $.ajax({
+                method: "POST",
+                url: "../api/Ve_API/UpdateStatus/",
+                contentType: 'application/json; charset=UTF-8',
+                data: JSON.stringify({ "ma": id, "stt": stt })
+            })
+                .done(function (msg) {
+                    if (msg == '0') {
+                        alert('Cập nhật thất bại');
+                    }
+                    else {
+                        var r = JSON.parse(msg);
+                        if (r.stt == 'True') {
+                            $('button[name=btn_update_stt][data-id=' + r.id + ']').html('Huỷ');
+                            $('button[name=btn_update_stt][data-id=' + r.id + ']').attr("data-stt", "0");
+                            $('td[name=td_update_stt][data-id=' + r.id + ']').html('Còn dùng');
+                            $('a[name=btn_edit][data-id=' + r.id + ']').show();
+                        }
+                        else {
+                            $('button[name=btn_update_stt][data-id=' + r.id + ']').html('Mở');
+                            $('button[name=btn_update_stt][data-id=' + r.id + ']').attr("data-stt", "1");
+                            $('td[name=td_update_stt][data-id=' + r.id + ']').html('Hết hạng');
+                            $('a[name=btn_edit][data-id=' + r.id + ']').hide();
+                        }
+                        alert('Cập nhật thành công');
+                    }
+                });
+        })
+    </script>
+    <script>
+        showModalDetails = (url, title) => {
+            $.ajax({
+                type: "GET",
+                url: url,
+                success: function (res) {
+                    $("#Modal-Details .modal-body").html(res);
+                    $("#Modal-Details .modal-title").html(title);
+                    $("#Modal-Details").modal("show");
+                }
+            })
+        }
+    </script>
+    <script>
+        $('#modal-sieu-cap-vip-pro').modal('show');
+    </script>
+}
+@*Hết tập Lệnh*@
