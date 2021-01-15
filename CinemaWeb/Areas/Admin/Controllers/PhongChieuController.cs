@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using CinemaWeb.Areas.Admin.Models;
 using CinemaWeb.Data;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Newtonsoft.Json.Linq;
+using Microsoft.AspNetCore.Http;
 
 namespace CinemaWeb.Areas.Admin.Controllers
 {
@@ -45,6 +47,11 @@ namespace CinemaWeb.Areas.Admin.Controllers
                                   where f.MaPhong == search
                                   select f).ToList();
             }
+            JObject us = JObject.Parse(HttpContext.Session.GetString("user"));
+            TaiKhoanModel tk = new TaiKhoanModel();
+            tk.Username = us.SelectToken("Username").ToString();
+            tk.Password = us.SelectToken("Password").ToString();
+            ViewBag.TaiKhoan = tk;
             return View(phongChieu);
         }
 

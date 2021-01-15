@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CinemaWeb.Migrations
 {
     [DbContext(typeof(DPContext))]
-    [Migration("20210114090531_create")]
-    partial class create
+    [Migration("20210114182425_Database")]
+    partial class Database
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -19,7 +19,7 @@ namespace CinemaWeb.Migrations
             modelBuilder
                 .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.1");
+                .HasAnnotation("ProductVersion", "5.0.2");
 
             modelBuilder.Entity("CinemaWeb.Areas.Admin.Models.BinhLuanModel", b =>
                 {

@@ -386,7 +386,7 @@
           }
         }
       },
-      "Microsoft.Data.Sqlite.Core/5.0.2": {
+      "Microsoft.Data.Sqlite.Core/5.0.1": {
         "type": "package",
         "dependencies": {
           "SQLitePCLRaw.core": "2.0.4"
@@ -474,10 +474,10 @@
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Relational.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Sqlite/5.0.2": {
+      "Microsoft.EntityFrameworkCore.Sqlite/5.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Sqlite.Core": "5.0.2",
+          "Microsoft.EntityFrameworkCore.Sqlite.Core": "5.0.1",
           "SQLitePCLRaw.bundle_e_sqlite3": "2.0.4"
         },
         "compile": {
@@ -487,12 +487,12 @@
           "lib/netstandard2.1/_._": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Sqlite.Core/5.0.2": {
+      "Microsoft.EntityFrameworkCore.Sqlite.Core/5.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Data.Sqlite.Core": "5.0.2",
+          "Microsoft.Data.Sqlite.Core": "5.0.1",
           "Microsoft.DotNet.PlatformAbstractions": "3.1.6",
-          "Microsoft.EntityFrameworkCore.Relational": "5.0.2",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.1",
           "Microsoft.Extensions.DependencyModel": "5.0.0"
         },
         "compile": {
@@ -502,11 +502,11 @@
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Sqlite.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.SqlServer/5.0.2": {
+      "Microsoft.EntityFrameworkCore.SqlServer/5.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Data.SqlClient": "2.0.1",
-          "Microsoft.EntityFrameworkCore.Relational": "5.0.2"
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.1"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
@@ -515,10 +515,10 @@
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Tools/5.0.2": {
+      "Microsoft.EntityFrameworkCore.Tools/5.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "5.0.2"
+          "Microsoft.EntityFrameworkCore.Design": "5.0.1"
         },
         "compile": {
           "lib/netstandard2.1/_._": {}
@@ -2714,17 +2714,17 @@
         "runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.pdb"
       ]
     },
-    "Microsoft.Data.Sqlite.Core/5.0.2": {
-      "sha512": "yVg0iPiiHCd/p//ez3xJxWf/9RrggYFyZXMnkcwbu7ZxlNfFmB32lXcHvsmoXpDN4pVUvDIhEchfDsJzg8hM2w==",
+    "Microsoft.Data.Sqlite.Core/5.0.1": {
+      "sha512": "coC0Lo7PgP9d7XXBd/aYik/hNWTc4cJ+fzJqPgYXNVI1OlbwdrvM5vQWwS0edWsBNnWn0+qkKPN4rTtTiKxPhg==",
       "type": "package",
-      "path": "microsoft.data.sqlite.core/5.0.2",
+      "path": "microsoft.data.sqlite.core/5.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.0/Microsoft.Data.Sqlite.dll",
         "lib/netstandard2.0/Microsoft.Data.Sqlite.xml",
-        "microsoft.data.sqlite.core.5.0.2.nupkg.sha512",
+        "microsoft.data.sqlite.core.5.0.1.nupkg.sha512",
         "microsoft.data.sqlite.core.nuspec"
       ]
     },
@@ -2819,58 +2819,58 @@
         "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Sqlite/5.0.2": {
-      "sha512": "tqRK0QeLA5X0r8QbRUX1adqBjCuLYbWFqlW1qPd6JWjSL7ZLbu4ch+XDWhXGBQsiV93UFlx7A5XUfceGpb3b6A==",
+    "Microsoft.EntityFrameworkCore.Sqlite/5.0.1": {
+      "sha512": "4HJD3Uux59E7GHARkNMsCqFh/IDTtJUR1RXeSWRPF1tK7LGD5mR//PEMP+IJakNX1Dumar3uLdtKwGk6ateLHQ==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.sqlite/5.0.2",
+      "path": "microsoft.entityframeworkcore.sqlite/5.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.1/_._",
-        "microsoft.entityframeworkcore.sqlite.5.0.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.sqlite.5.0.1.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlite.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Sqlite.Core/5.0.2": {
-      "sha512": "1AAN+o30YLsciFel/yrg9nAw6xU+bOi64loObyDdiXQdHcd+9O8XSz4mII8mNLGAoviaE0009mbpoYRoOCyYzw==",
+    "Microsoft.EntityFrameworkCore.Sqlite.Core/5.0.1": {
+      "sha512": "+wuQrByixIpOHLfdpysddUel/5VE9z6+HKOYovY3wqppkOJw5/To/E4FrOmUZevrT7z9V9f6yO8cTiKGApxEhQ==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.sqlite.core/5.0.2",
+      "path": "microsoft.entityframeworkcore.sqlite.core/5.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Sqlite.dll",
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Sqlite.xml",
-        "microsoft.entityframeworkcore.sqlite.core.5.0.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.sqlite.core.5.0.1.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlite.core.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.SqlServer/5.0.2": {
-      "sha512": "4s2Ydo9/TEj2qD4KceFrhnUZvavNsPHd2cNE47cu5lvGZzFY9GlxR2a6GnlB0maEDVGJdhJ4Pu0giXmvSGKlwA==",
+    "Microsoft.EntityFrameworkCore.SqlServer/5.0.1": {
+      "sha512": "FHo52VV2pvAJZBfNIYmre6MLe4LHTUZxMdmNJIOahcwdVpl2UG5YPEnI0qwKauan1PdJyPKmBsbLQvIEfvYLOQ==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.sqlserver/5.0.2",
+      "path": "microsoft.entityframeworkcore.sqlserver/5.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.dll",
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.xml",
-        "microsoft.entityframeworkcore.sqlserver.5.0.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.sqlserver.5.0.1.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlserver.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Tools/5.0.2": {
-      "sha512": "eJf7HbWRS6w7wJiOyjpkbkO1fTThElNzOru1d3+yWBLoEGv5v5eSN9aPXmHcXfyR9Uzx3fmjNIuMcyppDq5o/A==",
+    "Microsoft.EntityFrameworkCore.Tools/5.0.1": {
+      "sha512": "aWC8uiAHkuZzOOxQwqzUyqRMGCCcqjthIUsJVn9I601UkVhxmHwvB/oARO1xb0GBaCfJuCJglo2wkehBjegwRQ==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.tools/5.0.2",
+      "path": "microsoft.entityframeworkcore.tools/5.0.1",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.1/_._",
-        "microsoft.entityframeworkcore.tools.5.0.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.tools.5.0.1.nupkg.sha512",
         "microsoft.entityframeworkcore.tools.nuspec",
         "tools/EntityFrameworkCore.PS2.psd1",
         "tools/EntityFrameworkCore.PS2.psm1",
@@ -7464,14 +7464,14 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "Microsoft.EntityFrameworkCore.Design >= 5.0.2",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.2",
-      "Microsoft.EntityFrameworkCore.Sqlite >= 5.0.2",
-      "Microsoft.EntityFrameworkCore.Tools >= 5.0.2",
+      "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.1",
+      "Microsoft.EntityFrameworkCore.Sqlite >= 5.0.1",
+      "Microsoft.EntityFrameworkCore.Tools >= 5.0.1",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HoangLam\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -7479,11 +7479,11 @@
       "projectUniqueName": "D:\\ASP.NET\\CinemaWeb\\CinemaWeb.csproj",
       "projectName": "CinemaWeb",
       "projectPath": "D:\\ASP.NET\\CinemaWeb\\CinemaWeb.csproj",
-      "packagesPath": "C:\\Users\\HoangLam\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
       "outputPath": "D:\\ASP.NET\\CinemaWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\HoangLam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7517,17 +7517,17 @@
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
-            "version": "[5.0.2, )"
+            "version": "[5.0.1, )"
           },
           "Microsoft.EntityFrameworkCore.Sqlite": {
             "target": "Package",
-            "version": "[5.0.2, )"
+            "version": "[5.0.1, )"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
-            "version": "[5.0.2, )"
+            "version": "[5.0.1, )"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
@@ -7552,7 +7552,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
