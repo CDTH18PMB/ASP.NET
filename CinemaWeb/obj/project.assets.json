@@ -7471,19 +7471,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\Nhan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ASP.NET\\CinemaWeb\\CinemaWeb.csproj",
+      "projectUniqueName": "E:\\ASP.NET\\CinemaWeb\\CinemaWeb.csproj",
       "projectName": "CinemaWeb",
-      "projectPath": "D:\\ASP.NET\\CinemaWeb\\CinemaWeb.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\ASP.NET\\CinemaWeb\\obj\\",
+      "projectPath": "E:\\ASP.NET\\CinemaWeb\\CinemaWeb.csproj",
+      "packagesPath": "C:\\Users\\Nhan\\.nuget\\packages\\",
+      "outputPath": "E:\\ASP.NET\\CinemaWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

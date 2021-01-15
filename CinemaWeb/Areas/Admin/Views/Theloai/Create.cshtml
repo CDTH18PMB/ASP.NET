@@ -1,0 +1,54 @@
+﻿@model CinemaWeb.Areas.Admin.Models.TheloaiModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="card">
+    <div class="card-header">
+        <h1>@(ViewContext.RouteData.Values["id"] != null ?"Chỉnh sửa thể loại phim:":"Thêm thể loại phim mới")</h1 style="text-align:center">
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-4">
+                @*//truy xuất đến id truyền qua đường liên kết*@
+                @*(querystring), id này tồn tại khi chức năng này là chỉnh sửa loại sản phẩm.*@
+                <form asp-action="@(ViewContext.RouteData.Values["id"] != null ?"Edit":"Create")" asp-route-id="@(ViewContext.RouteData.Values["id"] != null ?ViewContext.RouteData.Values["id"]:"")">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    @{
+                        if (ViewContext.RouteData.Values["id"] != null)
+                        {
+                            <input type="hidden" asp-for="MaLoai" />
+                        }
+
+                    }
+                    <div class="form-group">
+                        <label asp-for="TenLoai" class="control-label"></label>
+                        <input asp-for="TenLoai" class="form-control" />
+                        <span asp-validation-for="TenLoai" class="text-danger"></span>
+                    </div>
+                    @*<div class="form-group form-check">
+            <label class="form-check-label">
+                <input class="form-check-input" asp-for="TrangThai" /> @Html.DisplayNameFor(model => model.TrangThai)
+            </label>
+        </div>*@
+                    <input type="hidden" asp-for="TrangThai" value="true" />
+                    <div class="form-group">
+                        <input type="submit" value="@(ViewContext.RouteData.Values["id"] != null ?"Cập nhật:":"Thêm mới")" class="btn btn-primary" />
+                    </div>
+                </form>
+                @{
+                    if (ViewContext.RouteData.Values["id"] != null)
+                    {
+                        <p>
+                            <a asp-action="Index" asp-route-id="" class="btn btn-secondary col-md-12">Trở về thêm mới</a>
+                        </p>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }
