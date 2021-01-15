@@ -6,13 +6,38 @@
 
 <div class="card text-center">
     <div class="card-header">
-        <h2 class="text-center">Quản lý thể loại phim</h2>
+        <h2>Thể Loại Phim</h2>
     </div>
 </div>
 <partial name="Create" /> @*//Thêm Create View vào trong Index View dưới dạng PartialView*@
 <p>
-    <a asp-action="Index" asp-route-id="">Tạo mới</a>
+    <a asp-action="Index" asp-route-id="">Tạo thể loại phim mới</a>
 </p>
+@{
+    if (TempData["Message"] != null)
+    {
+        @section Modal{
+            <div  id="myModal" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-sm" role="document">
+                            <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3 class="modal-title">Thông Báo</h3>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                                        </div>
+                               <div class="modal-body">
+                                    <p>@TempData["Message"]</p>
+                                 </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                </div>
+            </div>
+        }
+    }
+}
+
 <div class="row">
     <div class="col-md-8">
         <div class="card text-center">
@@ -86,14 +111,14 @@
                 </div>
             }
         }
-        
+
     </div>
 </div>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
     <script>
         $('button[name=btn_update_stt').click(function () {
-            console.log("cc");
+
             var id = $(this).attr('data-id');
             var soghe = $(this).attr('data-name');
             var stt = ($(this).attr('data-stt') == 0 ? false : true);
@@ -129,5 +154,8 @@
         setTimeout(function () {
             $('#msg').fadeOut('slow');
         }, 6000);
+    </script>
+    <script>
+        $('#myModal').modal('show');
     </script>
 }

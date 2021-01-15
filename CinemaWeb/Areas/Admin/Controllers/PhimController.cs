@@ -80,6 +80,7 @@ namespace CinemaWeb.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
 
             }
+            
             ViewData["TheLoai"] = new SelectList(_context.TheLoai, "MaLoai", "TenLoai", phimModel.TheLoai);
             return View(phimModel);
         }
@@ -187,5 +188,6 @@ namespace CinemaWeb.Areas.Admin.Controllers
         {
             return _context.Phim.Any(e => e.MaPhim == id);
         }
+        
     }
 }
