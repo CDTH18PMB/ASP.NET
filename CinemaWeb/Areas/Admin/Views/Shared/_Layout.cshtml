@@ -10,9 +10,9 @@
     @await Html.PartialAsync("_SidebarPartial.cshtml")
 
     <div class="main-content">
-        <div class="section__content section__content--p30">
+        @*<div class="section__content section__content--p30">*@
             @RenderBody()
-        </div>
+        @*</div>*@
     </div>
     @RenderSection("Modal", required: false)
     @await Html.PartialAsync("_Modal.cshtml")
